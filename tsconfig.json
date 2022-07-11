@@ -1,0 +1,88 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "jsx": "react-jsx",
+    "module": "CommonJS",
+    "lib": [
+      "ES6",
+      "ESNext",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "strict": true,
+    "moduleResolution": "node",
+    "allowJs": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "noImplicitReturns": true,
+    "removeComments": true,
+    "noFallthroughCasesInSwitch": true,
+    "pretty": true,
+    "outDir": "./dist",
+    "rootDir": "./",
+    "baseUrl": "src",
+    "paths": {
+      "@images/*": [
+        "assets/images/*"
+      ],
+      "@icons/*": [
+        "assets/images/icons/*"
+      ],
+      "@videos/*": [
+        "assets/videos/*"
+      ],
+      "@fonts/*": [
+        "assets/fonts/*"
+      ],
+      "@utils": [
+        "common/utils.ts"
+      ],
+      "@interfaces": [
+        "common/interfaces/index.ts"
+      ],
+      "@config": [
+        "common/config.ts"
+      ],
+      "@schemas": [
+        "common/schemas/index.ts"
+      ],
+      "@services": [
+        "common/services/index.ts"
+      ],
+      "@components": [
+        "components/index.ts"
+      ],
+      "@containers": [
+        "containers/index.ts"
+      ],
+      "@context": [
+        "context/index.ts"
+      ],
+      "@hooks": [
+        "hooks/index.ts"
+      ],
+      "@hoc": [
+        "hoc/index.ts"
+      ],
+      "@pages/*": [
+        "pages/*"
+      ],
+      "@stylesComponents/*": [
+        "styles/components/*"
+      ],
+      "@stylesPages/*": [
+        "styles/pages/*"
+      ],
+      "@styles": [
+        "styles/Globals.scss"
+      ],
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}

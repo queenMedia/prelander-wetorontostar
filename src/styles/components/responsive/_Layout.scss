@@ -1,0 +1,13 @@
+.layout {
+  @include for-size(desktop-xbig) {}
+  @include for-size(desktop-big) {}
+  @include for-size(desktop-mid) {}
+  @include for-size(desktop) {}
+  @include for-size(tablet-landscape) {}
+  @include for-size(tablet-portrait) {}
+  @include for-size(tablet-small) {}
+  @include for-size(phone-xbig) {}
+  @include for-size(phone-big) {}
+  @include for-size(phone-mid) {}
+  @include for-size(phone) {}
+}

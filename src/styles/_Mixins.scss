@@ -1,0 +1,80 @@
+@mixin for-size($size) {
+  @if $size == phone {
+    @media screen and (max-width: 320px) {
+      @content;
+    }
+  } @else if $size == phone-mid {
+    @media screen and (max-width: 375px) {
+      @content;
+    }
+  } @else if $size == phone-big {
+    @media screen and (max-width: 425px) {
+      @content;
+    }
+  } @else if $size == phone-xbig {
+    @media screen and (max-width: 535px) {
+      @content;
+    }
+  } @else if $size == tablet-small {
+    @media screen and (max-width: 635px) {
+      @content;
+    }
+  } @else if $size == tablet-portrait {
+    @media screen and (max-width: 768px) {
+      @content;
+    }
+  } @else if $size == tablet-landscape {
+    @media screen and (max-width: 900px) {
+      @content;
+    }
+  } @else if $size == desktop {
+    @media screen and (max-width: 1024px) {
+      @content;
+    }
+  } @else if $size == desktop-mid {
+    @media screen and (max-width: 1200px) {
+      @content;
+    }
+  } @else if $size == desktop-big {
+    @media screen and (max-width: 1440px) {
+      @content;
+    }
+  } @else if $size == desktop-xbig {
+    @media screen and (max-width: 1920px) {
+      @content;
+    }
+  }
+}
+@mixin flex($justify, $gap: false, $align: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  @if $gap {
+    gap: $gap;
+  }
+}
+@mixin grid($columns, $gap) {
+  display: grid;
+  grid-template-columns: $columns;
+  gap: $gap;
+}
+@mixin text($size, $weight: initial, $line-height: initial, $align: initial) {
+  font-style: normal;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $line-height;
+  text-align: $align;
+}
+@mixin content($width: 1500px, $padding: 0 16px) {
+  display: block;
+  width: 100%;
+  max-width: $width;
+  margin: 0 auto;
+  padding: $padding;
+}
+@mixin background-img($image) {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: $image;
+}

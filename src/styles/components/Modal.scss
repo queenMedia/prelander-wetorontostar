@@ -1,0 +1,12 @@
+@import "../Mixins";
+
+.modal {
+  $root: &;
+  &__title {}
+  &__header {}
+  &__container {}
+  &__content {}
+  &__button {}
+}
+
+@import "./responsive/Modal";
