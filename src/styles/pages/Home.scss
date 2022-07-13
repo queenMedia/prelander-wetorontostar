@@ -1,5 +1,294 @@
 @import "../Mixins";
 
-.home {}
+.home {
+  @include content(1170px, 0);
+  @include flex(center, false, flex-start);
+
+  &__content-text {
+    @include flex(center, false, center);
+    flex-direction: column;
+    padding: 0 16px;
+  }
+
+  &__title {
+    font-family: 'Georgia Regular';
+    @include text(4.8rem, 500, 5.7rem);
+    padding-bottom: 16px;
+    span{
+      text-decoration: underline
+    }
+    &--section {
+      @include text(2.0rem, 400, 2.8rem);
+      font-family: 'Georgia Bold';
+      padding-bottom: 25px;
+    }
+  }
+
+  &__picture {
+    &--center {
+      text-align: center;
+    }
+  }
+  &__img-logos{
+    width: 100%;
+  }
+  &__img-section{
+    width: 100%;
+  }
+
+  &__img-title {
+    @include text(1.6rem, 400, 1.6rem, center);
+    padding-bottom: 20px;
+
+  }
+
+  &__text {
+    @include text(2rem, 400, 2.8rem);
+    padding-bottom: 25px;
+
+    &--description {
+      font-family: 'Georgia Italic';
+    }
+  }
+
+  &__content-link {
+    padding-bottom: 25px;
+  }
+
+  &__link-a {
+    color: #0198bd;
+  }
+
+  &__button-action {
+    @include text(3.0rem, bold, 3.4rem);
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f18b06;
+    border-radius: 10px;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-align: center;
+    width: 80%;
+    display: block;
+    padding: 15px 20px;
+    margin: 20px auto 40px;
+    text-shadow: 0 2px 3px rgb(0 0 0 / 30%);
+    transition: all .3s ease-in-out;
+    &--bottom{
+      @include flex(center);
+      flex-direction: column;
+      background-color: #e20714;
+      font-weight: 400;
+    }
+  }
+  &__img-arrow{
+    width: 50px;
+    margin-top: 10px;
+  }
+
+  &__aside {
+    padding: 0 16px;
+    min-width: 390px;
+  }
+
+  &__aside-content {
+    margin-bottom: 28px
+  }
+
+  &__title-aside {
+    @include text(2.0rem, 500, .5rem);
+    font-family: 'Georgia Regular';
+    color: #666;
+    border-bottom: 2px solid #0198bd;
+    margin-bottom: 20px;
+
+    &--check {
+      line-height: 2.4rem
+    }
+  }
+
+  &__aside-link {
+    @include text(2rem, 400, 2.8rem);
+    font-family: 'Georgia Italic';
+    color: #666;
+  }
+
+  &__text-aside {
+    color: #222;
+  }
+
+  &__aside-link-a {
+    color: #0198bd;
+  }
+
+  &__text-aside-bottom {
+    @include text(2.0rem, 500, 2.8rem);
+    margin-top: 10px;
+    font-family: 'Georgia Bold Italic';
+  }
+
+  &__aside-check-img {
+    border: 1px solid #ccc;
+    background: #f5f9fa;
+    padding: 10px;
+  }
+
+  &__aside-check-content {
+    @include flex(flex-start, false, baseline);
+    margin-bottom: 15px;
+  }
+
+  &__aside-Checkmark {
+    width: 30px;
+    height: 30px;
+  }
+
+  &__text-check {
+    @include text(2.2rem, 500, 2.8rem);
+    font-family: 'Georgia Italic';
+  }
+
+  &__title-check {
+    @include text(2.0rem, 500, 2.8rem);
+    text-decoration: none;
+    color: #0198bd;
+    font-family: 'Georgia Bold Italic';
+    margin-bottom: 5px;
+  }
+
+  &__img-aside {
+    width: 100%;
+    height: auto;
+    &--ads{
+      margin-bottom: 15px;
+    }
+    &--steps {
+      width: calc(100% - 16px);
+      border: 1px solid grey;
+      margin: 10px 8px 5px;
+
+    }
+  }
+
+  &__coments{
+    @include flex(center, false, center);
+    flex-direction: column;
+    width: 100%;
+    
+
+  }
+  &__commets-top{
+    @include flex(space-between, false, center);
+   padding: 20px;
+    width: 100%;
+  }
+  &__coments-content{
+    width: 100%;
+    padding: 15px 0;  
+    
+  }
+  &__coment-box{
+    width: 100%;
+  }
+  &__coments-box{
+    @include flex(flex-start, false, flex-start);
+    border-top: 1px solid #E2E2E2;
+    align-self: flex-start;
+    width: 100%;
+    padding-top: 10px
+  }
+  &__coments-recent{
+    @include text(1.5rem, 400, 1.8rem);
+    color: #3B5998;
+    font-family: 'Lato';
+    font-style: italic;
+    &--add{
+      font-weight: 900;
+    }
+  }
+
+  &__coments-avatar{
+    margin-right: 10px
+  }
+
+  &__coment-name{
+    @include text(1.5rem, 900, 1.7rem);
+    color: #3B5998;
+    font-family: "Lato", sans-serif;
+    font-style: italic;
+    margin-bottom: 4px;
+  }
+  &__coment-text{
+    @include text(1.4rem, 400, 1.7rem);
+    font-family: "Lato", sans-serif;
+    font-style: italic;
+    margin-bottom: 4px;
+  }
+  &__content_reply{
+    @include flex(flex-start, false, center);
+    flex-direction: column;
+  }
+
+  &__coment-reply{
+    @include text(1.4rem, 400, 1.7rem);
+    @include flex(flex-start, 10px, flex-start);
+    font-family: "Lato", sans-serif;
+    font-style: italic;
+    color: #3B5998;
+    align-self: flex-start;
+  }
+  &__reply-bottom{
+    height: 10px;
+  }
+  &__time-ago{
+    color: #808080;
+    border-bottom: 1px dotted #808080;
+  }
+  &__popup{
+    @include flex(center);
+    border: 5px solid white;
+    position: relative;
+    border-radius: 5px;
+  }
+  &__popup-img{
+    width: 100%;
+    height: auto;
+  }
+  &__popup-action{
+    @include text(1.7rem, 600, 1.9rem, center);
+    position: absolute;
+    letter-spacing: 1.1px;
+    bottom: 20px;
+    display: block;
+    background-color: rgba(234, 129, 1, 1);
+    color: #ffffff;
+    border: 1px solid #ea8101;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transform-origin: bottom right;
+    box-shadow: 0px 1px 5px rgb(0 0 0 / 30%);
+    margin: 0 auto;
+    transform-origin: center;
+    white-space: nowrap;
+    transition: all .3s ease-in-out;
+    margin-left: 15px;
+    animation: move  infinite .5s ease;
+    &:hover{
+      transform: scale(1.05);
+      transition: all .3s ease-in-out;
+    }
+  }
+  @keyframes move {
+    0% {
+      transform: scale(0.97);
+    }
+    50% {
+      transform: scale(1.02);
+    }
+    100% {
+      transform: scale(0.97);
+    }
+  }
+}
+
 
 @import "./responsive/Home";

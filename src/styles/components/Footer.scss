@@ -1,5 +1,136 @@
 @import "../Mixins";
 
-.footer {}
+.footer {
+  background: #333;
+  &__redes-content{
+    @include content(1170px);
+    @include flex(space-between, false, center);
+    height: 150px
+  }
+  &__redes-box{
+    @include flex(center);
+    height: 55px;
+  }
+  &__logo-footer{
+    width: 60px;
+    height: auto;
+  }
+  &__redes{
+    @include flex(space-between, false, stretch);
+    flex-direction: column;
+    height: 100%;
+    margin-left: 20px
+  }
+  &__redes-txt{
+    @include text(1.5rem, 400, 1.5rem);
+    font-family: "lato", sans-serif;
+    color: #ffffff;
+  }
+  &__socials-icons{
+    @include flex(flex-start, 10px);
+    color: white;
+    padding-bottom: 5px;
+  }
+  &__social-icons{
+    width: 40px;
+    font-size: 24px;
+  }
+  &__play-store{
+    @include flex(center, 15px);
+  }
+  &__play-store-img{
+    width: 120px;
+  }
+  &__terms{
+    background: #202020;
+    padding: 15px 0;
+  }
+  &__terms-legals{
+    @include flex(center);
+  }
+  &__terms-legals-txt{
+    @include text(1.4rem, 600, 1.5rem);
+    font-family: "lato", sans-serif;
+    color: #ffffff;
+    padding: 12px;
+  }
+  &__action-bottom{
+    background: rgba(0,0,0,0.7);
+    min-height: 80px;
+  }
+  &__actions{
+    @include flex(center);
+    width: 100%;
+    background: rgba(0,0,0,0.7);
+    position: fixed;
+    bottom: 0;
+    height: 80px;
+  }
+  &__actions-button{
+    @include text(2.2rem, 400, 2.4rem);
+    color: #fff;
+    background: #eb6769;
+    border: 1px solid #c85d05;
+    padding: 10px 12px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1.1px
+  }
+  &__notification{
+    @include flex(center);
+    background: white;
+    position: fixed;
+    bottom: 85px;
+    left: 10px;
+    z-index: 4;
+    padding: 15px;
+    border-radius: 3px;
+    background: rgba(255,255,255,0.9);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    animation: notification infinite 15s ease-in-out;
+  }
+  &__notificaction-box{
+    @include flex(center);
+    font-family: "lato", sans-serif;
+    width: 100%;
+    flex-direction: column;
+    margin-left: 15px;
+  }
+  &__notificaction-text{
+    @include text(1.3rem, 400, 1.5rem);
+  }
+  &__notificaction-button{
+    align-self: flex-end;
+    margin-top: 15px;
+    font-weight: 500;
+  }
+  &__notification-img{
+    width: 120px;
+  }
+  @keyframes notification {
+    0% {
+      transform: translateY(200px);
+    }
+    15% {
+      transform: translateY(200px);
+    }
+    18% {
+      transform: translateY(0%);
+    }
+    60% {
+      transform: translateY(0%);
+    }
+    63% {
+      transform: translateY(200px);
+    }
+    100% {
+      transform: translateY(200px);
+    }
+    
+  }
+}
 
 @import "./responsive/Footer";

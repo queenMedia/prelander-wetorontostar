@@ -1,12 +1,72 @@
 .home {
   @include for-size(desktop-xbig) {}
   @include for-size(desktop-big) {}
-  @include for-size(desktop-mid) {}
+  @include for-size(desktop-mid) {
+    @include content(992px, 0);
+    @include flex(center, false, flex-start);
+    &__aside{
+      min-width: 33.3%;
+    }
+    &__content-text{
+      min-width: 66.6%;
+    }
+  }
   @include for-size(desktop) {}
-  @include for-size(tablet-landscape) {}
-  @include for-size(tablet-portrait) {}
+  @include for-size(tablet-landscape) {
+    &__img-logos{
+      width: 70%;
+    }
+    &__img-section{
+      width: 70%;
+    }
+    &__picture{
+      text-align: center;
+    }
+    &__content-text{
+      min-width: inherit;
+    }
+    &__aside-movil{
+      display: none;
+    }
+  }
+  @include for-size(tablet-portrait) {
+    margin-top: 80px;
+    &__title{
+      font-size: 3.0rem;
+      line-height: 3.8rem;
+      &--section{
+        font-size: 2.2rem;
+        line-height: 2.6rem;
+      }
+    }
+    &__text{
+      font-size: 1.8rem;
+      line-height: 2.4rem;
+    }
+    &__img-section{
+      width: 100%;
+    }
+    &__button-action{
+      font-size: 2.4rem;
+      line-height: 2.8rem;
+      width: 90%;
+    }
+    &__img-arrow{
+      width: 30px;
+    }
+  }
   @include for-size(tablet-small) {}
-  @include for-size(phone-xbig) {}
+  @include for-size(phone-xbig) {
+    &__button-action{
+      font-size: 2.0rem;
+      line-height: 2.4rem;
+    }
+    &__title{
+      font-size: 2.5rem;
+      line-height: 3.5rem;
+      
+    }
+  }
   @include for-size(phone-big) {}
   @include for-size(phone-mid) {}
   @include for-size(phone) {}

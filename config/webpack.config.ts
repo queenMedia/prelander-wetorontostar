@@ -99,8 +99,8 @@ const configuration: Configuration = {
       chunkFilename: "styles/[id].css"
     }),
     new HtmlWebpackPlugin({
-      title: "Template Webpack React",
-      favicon: "./public/favicon.svg",
+      title: "SPECIAL REPORT: Justin Trudeau's Latest Investment Has The Government And Big Banks Terrified",
+      favicon: "./public/favicon.ico",
       meta: {
         "theme-color": "#FFFFFF"
       },

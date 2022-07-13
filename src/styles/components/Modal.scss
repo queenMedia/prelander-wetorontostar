@@ -2,11 +2,46 @@
 
 .modal {
   $root: &;
-  &__title {}
-  &__header {}
-  &__container {}
-  &__content {}
-  &__button {}
+  @include flex(center);
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, .83);
+  &[data-close="true"] {
+    #{$root}__container {
+      position: relative;
+    }
+    #{$root}__button {
+      position: absolute;
+      width: 26px;
+      height: 26px;
+      top: 20px;
+      right: 35px;
+      &::after,
+      &::before {
+        position: absolute;
+        content: "";
+        width: 25px;
+        height: 3px;
+        top: 9px;
+        left: 3px;
+        background-color: #fff;
+        border-radius: 4px;
+      }
+      &::after {
+        transform: rotate(-45deg);
+      }
+      &::before {
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  &__container {
+    @include content(max-content);
+    @include flex(center);
+  }
+  
 }
 
 @import "./responsive/Modal";

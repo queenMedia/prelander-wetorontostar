@@ -24,7 +24,7 @@
       @content;
     }
   } @else if $size == tablet-landscape {
-    @media screen and (max-width: 900px) {
+    @media screen and (max-width: 996px) {
       @content;
     }
   } @else if $size == desktop {

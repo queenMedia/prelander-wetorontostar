@@ -1,13 +1,99 @@
 .header {
   @include for-size(desktop-xbig) {}
+
   @include for-size(desktop-big) {}
-  @include for-size(desktop-mid) {}
+
+  @include for-size(desktop-mid) {
+    @include content(992px);
+    padding-bottom: 50px;
+
+    &__nav-box {
+      max-width: 992px;
+    }
+
+    &__nav-options {
+      margin-right: 30px;
+    }
+
+    &__nav-options--fixed {
+      display: none;
+    }
+  }
+
   @include for-size(desktop) {}
-  @include for-size(tablet-landscape) {}
-  @include for-size(tablet-portrait) {}
+
+  @include for-size(tablet-landscape) {
+    &__nav-movil {
+      display: none;
+    }
+
+    &__line-top {
+      height: 70px;
+    }
+
+  }
+
+  @include for-size(tablet-portrait) {
+    position: fixed;
+    background: white;
+    padding: 0;
+    top: 0;
+
+    &__nav {
+      display: none;
+    }
+
+    &__buttons {
+      margin-left: -5px;
+      &--subscribe {
+        background-color: #ffffff;
+        color: #006ed2;
+        border: none;
+      }
+
+      &--singIn {
+        display: none;
+      }
+
+      &--serch {
+        border: none;
+        font-size: 18px;
+      }
+    }
+
+    &__singIn {
+      justify-content: flex-end;
+    }
+
+    &__Newsletter {
+      display: none;
+    }
+
+    &__line-top {
+      height: 50px;
+      align-items: center;
+    }
+
+    &__line-top-logo {
+      width: 180px;
+      margin-left: 20px;
+    }
+  }
+
   @include for-size(tablet-small) {}
+
   @include for-size(phone-xbig) {}
-  @include for-size(phone-big) {}
+
+  @include for-size(phone-big) {
+    &__line-top-logo {
+      width: 120px;
+    }
+    &__buttons{
+      padding: 5px 10px;
+    }
+  }
+
   @include for-size(phone-mid) {}
+
   @include for-size(phone) {}
 }

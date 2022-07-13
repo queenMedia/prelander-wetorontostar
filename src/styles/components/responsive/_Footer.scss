@@ -1,11 +1,70 @@
 .footer {
   @include for-size(desktop-xbig) {}
   @include for-size(desktop-big) {}
-  @include for-size(desktop-mid) {}
+  @include for-size(desktop-mid) {
+    &__redes-content{
+      max-width: (992px);
+    }
+  }
   @include for-size(desktop) {}
   @include for-size(tablet-landscape) {}
-  @include for-size(tablet-portrait) {}
-  @include for-size(tablet-small) {}
+  @include for-size(tablet-portrait) {
+    &__notification{
+      width: 100%;
+      left: 0;
+      right: 0;
+      top: 50px;
+      bottom: inherit;
+      background: rgba(0,0,0,0.8);
+      padding: 10px;
+    }
+    &__notificaction-text{
+      align-self: flex-end;
+      color: rgb(255, 255, 255);
+    }
+    &__notificaction-button{
+      color: rgb(255, 255, 255);
+      margin-top: 10px;
+    }
+    &__notification-img{
+      width: 80px;
+    }
+
+    @keyframes notification {
+      0% {
+        transform: translateY(-200px);
+      }
+      15% {
+        transform: translateY(-200px);
+      }
+      18% {
+        transform: translateY(0%);
+      }
+      60% {
+        transform: translateY(0%);
+      }
+      63% {
+        transform: translateY(-200px);
+      }
+      100% {
+        transform: translateY(-200px);
+      }
+      
+    }
+  }
+  @include for-size(tablet-small) {
+    &__redes-content{
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px ;
+    }
+    &__actions-button{
+      font-size: 1.3rem;
+    }
+    &__logo-footer{
+      width: 50px;
+    }
+  }
   @include for-size(phone-xbig) {}
   @include for-size(phone-big) {}
   @include for-size(phone-mid) {}
