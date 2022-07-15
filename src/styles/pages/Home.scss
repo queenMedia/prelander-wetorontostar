@@ -10,6 +10,16 @@
     padding: 0 16px;
   }
 
+  &__section{
+    width: 100%;
+    &--read{
+      display: block;
+    }
+    &--noRead{
+      display: none;
+    }
+  }
+
   &__title {
     font-family: 'Georgia Regular';
     @include text(4.8rem, 500, 5.7rem);
@@ -255,6 +265,8 @@
   }
   &__popup-action{
     @include text(1.7rem, 600, 1.9rem, center);
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
     position: absolute;
     letter-spacing: 1.1px;
     bottom: 20px;

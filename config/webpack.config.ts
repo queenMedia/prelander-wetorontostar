@@ -18,7 +18,7 @@ const configuration: Configuration = {
     filename: "js/[name].[contenthash].js",
     assetModuleFilename: "assets/images/[hash][ext][query]",
     chunkFilename: "js/[id].[chunkhash].js",
-    publicPath: "/"
+    publicPath: "/musk-special-report/"
   },
   optimization: {
     minimize: true,
@@ -99,7 +99,7 @@ const configuration: Configuration = {
       chunkFilename: "styles/[id].css"
     }),
     new HtmlWebpackPlugin({
-      title: "SPECIAL REPORT: Justin Trudeau's Latest Investment Has The Government And Big Banks Terrified",
+      title: "SPECIAL REPORT: Elon Musk's Latest Investment Has The Government And Big Banks Terrified",
       favicon: "./public/favicon.ico",
       meta: {
         "theme-color": "#FFFFFF"
@@ -110,7 +110,7 @@ const configuration: Configuration = {
     new AddAssetHtmlPlugin({
       glob: path.resolve(paths.output, "./**/*.dll.js"),
       outputPath: "js",
-      publicPath: "/js/"
+      publicPath: "/musk-special-report/js/"
     })
   ]
 };

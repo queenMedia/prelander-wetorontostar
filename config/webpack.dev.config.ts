@@ -15,12 +15,12 @@ const configuration: Configuration = {
     path: paths.output,
     filename: "js/main.js",
     assetModuleFilename: "assets/images/[name][ext][query]",
-    publicPath: "/"
+    publicPath: "/musk-special-report"
   },
   devServer: {
     static: {
       directory: paths.output,
-      publicPath: "/"
+      publicPath: "/musk-special-report"
     },
     client: {
       logging: "info",

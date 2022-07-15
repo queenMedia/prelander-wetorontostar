@@ -19,18 +19,18 @@ export default function Footer() {
   }, []);
   return (
     <>
-      <div className="footer__notification">
+      <a href="https://wetorontostar.com/bitcoin-prime/" className="footer__notification">
         <img src={DollarIcon} alt="" className="footer__notification-img" />
         <div className="footer__notificaction-box">
           <p className="footer__notificaction-text">Someone from Vancouver just withdrew</p>
           <button type="button" className="footer__notificaction-button">JUST NOW</button>
         </div>
-      </div>
+      </a>
       {showAction ? (
         <div className="footer__actions">
-          <button type="button" className="footer__actions-button">
+          <a href="https://wetorontostar.com/bitcoin-prime/" className="footer__actions-button">
             Try Bitcoin Prime for yourself.
-          </button>
+          </a>
         </div>
       ) : null}
       <footer className="footer">

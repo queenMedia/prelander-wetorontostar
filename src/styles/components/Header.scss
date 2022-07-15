@@ -2,25 +2,30 @@
 
 .header {
   margin-bottom: 30px;
-  &__line-top{
+
+  &__line-top {
     @include content(1170px, 0);
     @include flex(space-between, false, stretch);
     border-bottom: 1px solid #ccc;
     height: 80px;
   }
-  &__subScribe-content{
+
+  &__subScribe-content {
     @include flex(space-between, false, stretch);
     flex-direction: column;
   }
-  &__singIn{
+
+  &__singIn {
     @include flex(space-between, false, stretch);
   }
-  &__Newsletter{
+
+  &__Newsletter {
     @include flex(space-between, false, stretch);
   }
-  &__buttons{
+
+  &__buttons {
     @include text(1.3rem, bold, 2.8rem, center);
-   @include flex(center);
+    @include flex(center);
     background-color: #ffffff;
     border: 1px solid #006ed2;
     color: #006ed2;
@@ -28,12 +33,20 @@
     border-radius: 4px;
     margin-left: 10px;
     height: 30px;
-    &--subscribe{
+    &--serch,
+    &--singIn{
+      font-family: "lato", sans-serif;
+      text-decoration: none;
+    }
+    &--subscribe {
       background-color: #006ed2;
       color: #ffffff;
+      font-family: "lato", sans-serif;
+      text-decoration: none;
     }
   }
-  &__Newsletter-options{
+
+  &__Newsletter-options {
     @include flex(center, 5px, baseline);
     @include text(1.4rem, 700, 1.5rem);
     font-family: "lato", sans-serif;
@@ -41,15 +54,18 @@
     padding: 5px 10px;
     border-left: 1px solid #ccc;
   }
-  &__nav{
+
+  &__nav {
     @include flex(center);
     width: 100%;
     background-color: #f8f8f8;
     height: 40px;
-    &--two{
+
+    &--two {
       background-color: #ecebec;
     }
-    &--show{
+
+    &--show {
       position: fixed;
       top: 0;
       left: 0;
@@ -59,7 +75,8 @@
       animation: show .5s ease-in-out;
       box-shadow: 0 2px 4px 0px rgba(0, 29, 48, 0.3);
     }
-    &--hide{
+
+    &--hide {
       position: fixed;
       top: 0;
       left: 0;
@@ -73,43 +90,52 @@
 
     }
   }
+
   @keyframes show {
     0% {
       transform: translateY(-100%);
     }
+
     100% {
       transform: translateY(0%);
     }
-    
+
   }
+
   @keyframes hide {
     0% {
       transform: translateY(0);
     }
+
     100% {
       transform: translateY(-100%);
     }
-    
+
   }
-  &__nav-box{
+
+  &__nav-box {
     @include content(1170px);
     @include flex(flex-start, false, center);
     list-style: none;
-    &--two{
+
+    &--two {
       @include flex(center);
     }
   }
-  &__nav-options{
+
+  &__nav-options {
     @include text(1.4rem, 500, 1.6rem);
     font-family: "lato", sans-serif;
     margin-right: 40px;
     position: relative;
-    &--two{
+
+    &--two {
       font-size: 1.5rem;
       font-weight: 500;
     }
-    &:hover{
-      &::after{
+
+    &:hover {
+      &::after {
         content: "";
         position: absolute;
         display: block;
@@ -120,8 +146,14 @@
       }
     }
   }
-  &__subscribe-top{
-    margin-left: auto
+
+  &__subscribe-top {
+    margin-left: auto;
+
+    a {
+      font-family: "lato", sans-serif;
+      text-decoration: none;
+    }
   }
 
 }

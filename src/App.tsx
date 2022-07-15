@@ -9,7 +9,7 @@ const Home = lazy(() => import("@pages/Home"));
 export default function App() {
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="musk-special-report">
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route

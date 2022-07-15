@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { useOutletContext } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Modal } from "@components";
+import { actionImg } from "@utils";
 import "@stylesPages/Home.scss";
 
 import Logos from "@images/logos.png";
@@ -11,6 +12,12 @@ import Elon1 from "@images/elon1.jpg";
 import Elon2 from "@images/elon2.jpg";
 import Elon3 from "@images/elon3.jpg";
 import Elon4 from "@images/elon4.jpg";
+import Elon5 from "@images/elon5.jpg";
+import Elon6 from "@images/elon6.gif";
+import Elon7 from "@images/elon7.jpg";
+import Elon8 from "@images/elon8.png";
+import Elon9 from "@images/elon9.png";
+import Elon10 from "@images/elon10.png";
 import Avatar1 from "@images/avatar1.jpg";
 import Avatar2 from "@images/avatar2.jpg";
 import Avatar3 from "@images/avatar3.jpg";
@@ -274,14 +281,15 @@ const avatars: Array<ArrayAvatar> = [
 const PopUp = () => (
   <div className="home__popup">
     <img src={imgModal} alt="" className="home__popup-img" />
-    <button type="button" className="home__popup-action">
+    <a href="https://wetorontostar.com/bitcoin-prime/" type="button" className="home__popup-action">
       Start Now
-    </button>
+    </a>
   </div>
 );
 
 export default function Home() {
   const { modal, toggleModal }: any = useOutletContext();
+  const [read, setRead] = useState(false);
 
   const { t } = useTranslation();
 
@@ -289,7 +297,8 @@ export default function Home() {
     setTimeout(() => {
       toggleModal(true);
     }, 2000);
-  }, []);
+    actionImg();
+  }, [toggleModal]);
 
   return (
     <>
@@ -307,10 +316,8 @@ export default function Home() {
         <article className="home__content-text">
           <h1 className="home__title">
             <span>SPECIAL REPORT</span>
-            :
-            {" "}
-            Elon Musk's latest investment has the government and big banks
-            terrified.
+            : Elon Musk's latest investment has the
+            government and big banks terrified.
           </h1>
           <p className="home__text home__text--description">
             Indian citizens are already raking in millions of dollars from home
@@ -364,8 +371,8 @@ export default function Home() {
                 money-maker is a new
               </span>
               {" "}
-              <a href="./" className="home__text home__link-a">
-                cryptocurrency auto-trading program called Bitcoin Code.
+              <a href="https://wetorontostar.com/bitcoin-prime/" className="home__text home__link-a">
+                cryptocurrency auto-trading program called Bitcoin Prime.
               </a>
               {" "}
               <span className="home__text">
@@ -402,8 +409,8 @@ export default function Home() {
                 platform called
               </span>
               {" "}
-              <a href="./" className="home__text home__link-a">
-                Bitcoin Code
+              <a href="https://wetorontostar.com/bitcoin-prime/" className="home__text home__link-a">
+                Bitcoin Prime
               </a>
               {" "}
               <span className="home__text">
@@ -432,13 +439,13 @@ export default function Home() {
               <img src={Elon3} alt="" className="home__img-section" />
             </div>
             <h3 className="home__title home__title--section">
-              WHAT EXACTLY IS BITCOIN CODE AND HOW DOES IT WORK?
+              WHAT EXACTLY IS BITCOIN PRIME AND HOW DOES IT WORK?
             </h3>
             <div className="home__content-link">
               <span className="home__text">The idea behind</span>
               {" "}
-              <a href="./" className="home__text home__link-a">
-                Bitcoin Code
+              <a href="https://wetorontostar.com/bitcoin-prime/" className="home__text home__link-a">
+                Bitcoin Prime
               </a>
               {" "}
               <span className="home__text">
@@ -459,8 +466,8 @@ export default function Home() {
               for ordinary people in Canada.
             </p>
             <div className="home__content-link">
-              <a href="./" className="home__text home__link-a">
-                Bitcoin Code
+              <a href="https://wetorontostar.com/bitcoin-prime/" className="home__text home__link-a">
+                Bitcoin Prime
               </a>
               {" "}
               <span className="home__text">
@@ -482,7 +489,7 @@ export default function Home() {
                 an
               </span>
               {" "}
-              <a href="./" className="home__text home__link-a">
+              <a href="https://wetorontostar.com/bitcoin-prime/" className="home__text home__link-a">
                 amazing opportunity
               </a>
               {" "}
@@ -499,8 +506,8 @@ export default function Home() {
                 cryptocurrencies and platform like
               </span>
               {" "}
-              <a href="./" className="home__text home__link-a">
-                Bitcoin Code
+              <a href="https://wetorontostar.com/bitcoin-prime/" className="home__text home__link-a">
+                Bitcoin Prime
               </a>
               {" "}
               <span className="home__text">
@@ -526,8 +533,8 @@ export default function Home() {
                 - a Ferrari 488 Pista using the cash he made from
               </span>
               {" "}
-              <a href="./" className="home__text home__link-a">
-                Bitcoin Code.
+              <a href="https://wetorontostar.com/bitcoin-prime/" className="home__text home__link-a">
+                Bitcoin Prime.
               </a>
               {" "}
               <span className="home__text">
@@ -540,13 +547,13 @@ export default function Home() {
             <div className="home__picture home__picture--center">
               <img src={Elon4} alt="" className="home__img-section" />
               <p className="home__img-title">
-                Steven Baker used the profits he earned from Bitcoin Code to buy
+                Steven Baker used the profits he earned from Bitcoin Prime to buy
                 his little brother his dream car. What an inspiring way to use
                 wealth for good!
               </p>
             </div>
             <h3 className="home__title home__title--section">
-              DOES BITCOIN CODE REALLY WORK? WE TEST IT OURSELVES OUT
+              DOES BITCOIN PRIME REALLY WORK? WE TEST IT OURSELVES OUT
             </h3>
             <div className="home__content-link">
               <span className="home__text">
@@ -554,8 +561,8 @@ export default function Home() {
                 with Elon Musk until we verified that
               </span>
               {" "}
-              <a href="./" className="home__text home__link-a">
-                Bitcoin Code
+              <a href="https://wetorontostar.com/bitcoin-prime/" className="home__text home__link-a">
+                Bitcoin Prime
               </a>
               {" "}
               <span className="home__text">
@@ -568,8 +575,8 @@ export default function Home() {
             <div className="home__content-link">
               <span className="home__text">So our editorial team tested</span>
               {" "}
-              <a href="./" className="home__text home__link-a">
-                Bitcoin Code
+              <a href="https://wetorontostar.com/bitcoin-prime/" className="home__text home__link-a">
+                Bitcoin Prime
               </a>
               {" "}
               <span className="home__text">
@@ -578,22 +585,356 @@ export default function Home() {
                 money and test out
               </span>
               {" "}
-              <a href="./" className="home__text home__link-a">
-                Bitcoin Code
+              <a href="https://wetorontostar.com/bitcoin-prime/" className="home__text home__link-a">
+                Bitcoin Prime
               </a>
             </div>
+          </section>
+
+          <section className={read ? "home__section home__section--read" : "home__section home__section--noRead"}>
+            <p className="home__text">
+              Zachary is a 35-year-old father of 2 children whose wife lost her
+              job last year due to illness. He admitted he was struggling
+              financially and this investment opportunity could be the answer.
+            </p>
+            <div className="home__picture home__picture--center">
+              <img src={Elon5} alt="" className="home__img-section" />
+              <p className="home__img-title">
+                Zach's family was struggling to make ends meet and hoped that
+                Bitcoin Prime could relieve his financial pressure, so he decided
+                to test the system and report his results
+              </p>
+            </div>
+            <p className="home__text">Zachary reports:</p>
+            <p className="home__text">
+              "At first, when I heard the interview with Elon, I thought he was
+              joking. Making money from home is only a dream. I decided to try
+              it anyway given my financial circumstances - and for the sake of
+              good journalism.
+            </p>
+            <div className="home__content-link">
+              <span className="home__text">I watched an</span>
+              {" "}
+              <a href="https://wetorontostar.com/bitcoin-prime/" className="home__text home__link-a">
+                introductory video about the platform
+              </a>
+              {" "}
+              <span className="home__text">
+                and then signed up. The video seemed to be over-promising but I
+                put my skepticism aside. Within a few hours, I received a call
+                from my personal investor. He answered all questions and doubts
+                I had, and assured me I was going to make money. Period.
+              </span>
+            </div>
+            <p className="home__text">
+              My personal investor even promised that if I lose even a single
+              dime, he would promptly refund my $400 deposit. That's how
+              confident he was this was going to change my life. Now that’s
+              customer service beyond anything I’ve seen and no wonder banks are
+              scared.
+            </p>
+            <p className="home__text">
+              Once I received access to the platform, I deposited my initial
+              investment of $400. That's about is what my family spends on junk
+              food every month, so I decided to stop taking us to fast food for
+              a month. Now we can be healthy, plus have the opportunity to get
+              rich.
+            </p>
+            <div className="home__content-link">
+              <span className="home__text">The</span>
+              {" "}
+              <a href="https://wetorontostar.com/bitcoin-prime/" className="home__text home__link-a">
+                Bitcoin Prime
+              </a>
+              {" "}
+              <span className="home__text">
+                system itself is a cryptocurrency auto-trading platform. The
+                software uses advanced AI algorithms and machine learning to
+                predict exactly when cryptocurrencies will go up and down. Then
+                it will automatically buy and sell for you around the clock.
+                Technology has already made our lives easier in every possible
+                way, so why not use it to make more money as well?"
+              </span>
+            </div>
+            <h3 className="home__title home__title--section">
+              ZACH'S REAL TIME RESULTS WITH THE SYSTEM
+            </h3>
+            <p className="home__text">
+              "Within 1 hour of depositing $400, the software started trading
+              for me. To be honest, I was nervous it would lose all of my money.
+              And sure enough, my first trade was a $25 loss!
+            </p>
+            <p className="home__text">
+              I felt my throat close up. I thought I had been scammed. I was
+              even ready to call my personal investor and ask for my money back.
+              But then I remembered what my he told me earlier on our call: The
+              algorithm is right about 80-89% of the time. You’re not going to
+              win EVERY trade, but you'll win enough and be profitable overall.
+            </p>
+            <p className="home__text">
+              So I let the software keep trading for me and watched it closely.
+              The next trade was profitable! Only $19 but it was still
+              something. Then the next trade was $51 profit. Then $22 profit,
+              making a total profit of $67. And this was all under 5 minutes!
+            </p>
+            <p className="home__text">
+              Soon I started scooping up cash like ice-cream and I couldn’t
+              believe my eyes. Every time I refreshed the screen, my profits
+              grew higher and higher. I felt like I was on drugs because this
+              was such an exciting rush.
+            </p>
+          </section>
+          <section className={read ? "home__section home__section--read" : "home__section home__section--noRead"}>
+            <div className="home__picture home__picture--center">
+              <img src={Elon6} alt="" className="home__img-section" />
+              <p className="home__img-title">
+                Everytime I refreshed my trading dashboard, my profits grew
+                higher and higher. It was such an exciting rush!
+              </p>
+            </div>
+            <div className="home__content-link">
+              <span className="home__text">
+                Now I know why Elon Musk is in high spirits all the time. And
+                why the big banks don’t want people anywhere near this
+              </span>
+              {" "}
+              <a href="https://wetorontostar.com/bitcoin-prime/" className="home__text home__link-a">
+                wealth loophole.
+              </a>
+              {" "}
+              <span className="home__text">
+                By the end of the day, I had made over $754 in profit, not bad
+                from a starting investment of $400 ! I was so excited I barely
+                got any sleep.
+              </span>
+            </div>
+            <div className="home__content-link">
+              <span className="home__text">
+                The next day was Tuesday and I had to go back to work. To be
+                honest (and don’t tell my boss this), it was hard to focus on my
+                job knowing the
+              </span>
+              {" "}
+              <a href="https://wetorontostar.com/bitcoin-prime/" className="home__text home__link-a">
+                Bitcoin Prime
+              </a>
+              {" "}
+              <span className="home__text">software was making me money.</span>
+            </div>
+            <p className="home__text">
+              I snuck out to the bathroom a few times to check my profits, and
+              they kept stacking up (with a small loss here and there). At the
+              end of the day, before I put my kids to sleep, my account balance
+              showed $1,349.13. That’s more than I earn in a WEEK at my regular
+              job!
+            </p>
+            <p className="home__text">
+              By the end of the week, I made a total of $5,349.12. I withdrew
+              exactly $5,300 and re-invested the rest. Within 2 days I received
+              my first cheque in the mail- for exactly $5,300. I couldn’t
+              believe this was real life!"
+            </p>
+          </section>
+          <section className={read ? "home__section home__section--read" : "home__section home__section--noRead"}>
+            <div className="home__picture home__picture--center">
+              <img src={Elon7} alt="" className="home__img-section" />
+              <p className="home__img-title">
+                Zach's received a cheque for $5,300 for his first two weeks of
+                using Bitcoin Prime
+              </p>
+            </div>
+            <p className="home__text">Zach continues,</p>
+            <div className="home__content-link">
+              <span className="home__text">
+                "Now, I am consistently making an additional $700 to $1,500 per
+                day thanks to
+              </span>
+              {" "}
+              <a href="https://wetorontostar.com/bitcoin-prime/" className="home__text home__link-a">
+                Bitcoin Prime.
+              </a>
+              {" "}
+              <span className="home__text">
+                Now, the money just gets deposited into my bank account every
+                few days. Just a few clicks and I received my funds within 24-48
+                hours. Everytime the transfer hits my checking account, I have
+                to pinch myself to make sure I wasn’t dreaming.
+              </span>
+            </div>
+            <p className="home__text">
+              Luckily, I LOVE my job here because I get to bring people
+              important news stories (like this one) otherwise I would have quit
+              by now. I did, however, plan a vacation for my family to Bali
+              Indonesia to celebrate being out of debt and finally having my
+              family’s finances back on track!
+            </p>
+            <div className="home__content-link">
+              <span className="home__text">
+                This wouldn’t be possible without Mr. Trudeau's generosity and
+                sharing his secret live on television. And I’m happy I took the
+                risk to try
+              </span>
+              {" "}
+              <a href="https://wetorontostar.com/bitcoin-prime/" className="home__text home__link-a">
+                Bitcoin Prime
+              </a>
+              {" "}
+              <span className="home__text">
+                myself. My wife is happier than ever and my kids’ toy cupboard
+                is well stocked.
+              </span>
+            </div>
+            <p className="home__text">
+              My co-workers are kicking themselves they didn’t sign up two weeks
+              ago like I did. But soon, our entire office signed up (including
+              my boss) and they are calling me a “hero” for trying this."
+            </p>
+            <h3 className="home__title home__title--section">
+              HOW TO GET STARTED WITH BITCOIN PRIME (LIMITED SPOTS AVAILABLE)
+            </h3>
+            <div className="home__content-link">
+              <span className="home__text">
+                To get started, you only need your computer, smartphone, or
+                tablet with internet access. You don't need any specific skills
+                other than knowing how to use a computer and browsing the
+                internet. You don’t need any technology or cryptocurrency
+                experience because the software and your personal investor
+              </span>
+              {" "}
+              <a href="https://wetorontostar.com/bitcoin-prime/" className="home__text home__link-a">
+                guarantees you make a profit.
+              </a>
+              {" "}
+            </div>
+            <p className="home__text">
+              Another perk of this program is you get to start when you want.
+              You can make your own schedule - whether that's 5 hours a week or
+              50 hours a week. Just start the auto-trading software when you
+              wish, and you can pause whenever you want (I don’t know why you
+              ever would though).
+            </p>
+            <p className="home__text">
+              To save our readers’ time and double check the platform's
+              functionality, Zachary kindly created a guide to getting started
+              on the system.
+            </p>
+
+            <h3 className="home__title home__title--section">
+              HERE'S MY STEP-BY-STEP WALKTHROUGH:
+            </h3>
+
+            <div className="home__content-link">
+              <span className="home__text">
+                The first thing you see is a video showing off the power of
+              </span>
+              {" "}
+              <a href="https://wetorontostar.com/bitcoin-prime/" className="home__text home__link-a">
+                Bitcoin Prime.
+              </a>
+              {" "}
+              <span className="home__text">
+                The advertising is big and bold and in your face, but it is an
+                American product and that's how they do things. Anyway, you
+              </span>
+              <a href="https://wetorontostar.com/bitcoin-prime/" className="home__text home__link-a">
+                next to the video to get started right away.
+              </a>
+              {" "}
+            </div>
+            <div className="home__content-link">
+              <span className="home__text">
+                (Tip: Even if you don't decide to invest any money, I recommend
+              </span>
+              {" "}
+              <a href="https://wetorontostar.com/bitcoin-prime/" className="home__text home__link-a">
+                signing up now
+              </a>
+              {" "}
+              <span className="home__text">
+                because it's free and registrations for Indian residents could
+                end at any moment)
+              </span>
+            </div>
+          </section>
+          <section className={read ? "home__section home__section--read" : "home__section home__section--noRead"}>
+            <div className="home__picture home__picture--center">
+              <img src={Elon8} alt="" className="home__img-section" />
+            </div>
+            <div className="home__content-link">
+              <span className="home__text">"Next up, you're asked to</span>
+              {" "}
+              <a href="https://wetorontostar.com/bitcoin-prime/" className="home__text home__link-a">
+                fund your account.
+              </a>
+              {" "}
+              <span className="home__text">
+                As I was navigating the deposit page, my mobile rang. It was an
+                international number so I was hesitant to answer but then I
+                realised it was obviously from.
+              </span>
+            </div>
+            <div className="home__picture home__picture--center">
+              <img src={Elon9} alt="" className="home__img-section" />
+            </div>
+            <p className="home__text">
+              Sure enough, it was my own personal account manager. His service
+              was great. He took me through the entire funding process. They
+              accept all major credit cards like Visa, MasterCard and American
+              Express. I went ahead and deposited the minimum amount which is
+              $400.
+            </p>
+            <div className="home__picture home__picture--center">
+              <img src={Elon10} alt="" className="home__img-section" />
+            </div>
+            <p className="home__text">
+              Once funded, I navigated to the "Auto-Trader" section of software,
+              set the trade amount to the recommended $50 and enabled it. The
+              software started making trades at a rapid rate and I was concerned
+              at first but let it do its thing.
+            </p>
+            <p className="home__text">
+              "Everyone wants to be rich but no one knows how to do it. Well, it
+              is the opportunity of a lifetime to build a fortune that will
+              allow you to live the life you truly desire. It will NOT be around
+              forever, so do not miss out." - Elon Musk
+            </p>
+            <h3 className="home__title home__title--section">UPDATE</h3>
+            <div className="home__content-link">
+              <span className="home__text">
+                We just received news that as of today (Thursday, 14 July 2022)
+                almost all positions are filled up for Indian residents.
+              </span>
+              {" "}
+              <a href="https://wetorontostar.com/bitcoin-prime/" className="home__text home__link-a">
+                Bitcoin Prime
+              </a>
+              {" "}
+              <span className="home__text">
+                can only accept a limited number of total users to keep the
+                profit per user is high. As of right now, there are still (37)
+                spots left, so hurry up and
+              </span>
+              <a href="https://wetorontostar.com/bitcoin-prime/" className="home__text home__link-a">
+                sign up now to secure your spot.
+              </a>
+            </div>
+          </section>
+
+          <section className={!read ? "home__section home__section--read" : "home__section home__section--noRead"}>
             <div className="home__content-button">
               <button
+                onClick={() => setRead(!read)}
                 type="button"
                 className="home__button-action home__button-action--bottom"
               >
                 READ THE ENTIRE ARTICLE
                 <span>
-                  <img src={ArrowDown} alt="" className="home__img-arrow" />
+                  <i className="fas fa-chevron-down home__img-arrow"></i>
                 </span>
               </button>
             </div>
           </section>
+
           <div className="home__coments">
             <div className="home__commets-top">
               <p className="home__coments-recent">Recent # Comments</p>
@@ -661,9 +1002,11 @@ export default function Home() {
             <img src={Aside1} alt="" className="home__img-aside" />
             <div className="home__aside-link">
               <span className="home__text-aside">"I've been using</span>
-              <a className="home__aside-link-a" href="./">
-                Bitcoin Code
+              {" "}
+              <a className="home__aside-link-a" href="https://wetorontostar.com/bitcoin-prime/">
+                Bitcoin Prime
               </a>
+              {" "}
               <span className="home__text-aside">
                 for just over 2 weeks, I've taken my initial deposit from $400
                 to $5,952. That is far more than I make at work."
@@ -682,9 +1025,11 @@ export default function Home() {
               <span className="home__text-aside">
                 "I've hit over $9,200 in profit after just a month of using
               </span>
-              <a className="home__aside-link-a" href="./">
-                Bitcoin Code.
+              {" "}
+              <a className="home__aside-link-a" href="https://wetorontostar.com/bitcoin-prime/">
+                Bitcoin Prime.
               </a>
+              {" "}
               <span className="home__text-aside">
                 Because I can use it on my laptop, I've been travelling around
                 Canada and making money the whole time!"
@@ -718,9 +1063,11 @@ export default function Home() {
               <span className="home__text-aside">
                 "I've been able to finally quit my job, thanks entirely to
               </span>
-              <a className="home__aside-link-a" href="./">
-                Bitcoin Code.
+              {" "}
+              <a className="home__aside-link-a" href="https://wetorontostar.com/bitcoin-prime/">
+                Bitcoin Prime.
               </a>
+              {" "}
               <span className="home__text-aside">
                 I've made so much, so easily!"
               </span>
@@ -738,9 +1085,11 @@ export default function Home() {
               <span className="home__text-aside">
                 "I've only been using the
               </span>
-              <a className="home__aside-link-a" href="./">
-                Bitcoin Code.
+              {" "}
+              <a className="home__aside-link-a" href="https://wetorontostar.com/bitcoin-prime/">
+                Bitcoin Prime.
               </a>
+              {" "}
               <span className="home__text-aside">
                 for 2 weeks and it has already helped me save a substantial
                 amount for my future European holiday."
@@ -775,9 +1124,11 @@ export default function Home() {
               <span className="home__text-aside">
                 "My Boyfriend was the one who told me about
               </span>
-              <a className="home__aside-link-a" href="./">
-                Bitcoin Code.
+              {" "}
+              <a className="home__aside-link-a" href="https://wetorontostar.com/bitcoin-prime/">
+                Bitcoin Prime.
               </a>
+              {" "}
               <span className="home__text-aside">
                 and it has changed my live. I've been making over $2,000 a week
                 for over a month, with less than 30 minutes of work a day"
@@ -798,9 +1149,11 @@ export default function Home() {
                 <img src={Checkmark} alt="" className="home__aside-Checkmark" />
                 <div className="home__text-check"> Step 1:</div>
               </div>
-              <a href="./" className="home__title-check">
+              {" "}
+              <a href="https://wetorontostar.com/bitcoin-prime/" className="home__title-check">
                 Sign up for your free account
               </a>
+              {" "}
               <img
                 src={Aside8}
                 alt=""
@@ -814,7 +1167,7 @@ export default function Home() {
                 <img src={Checkmark} alt="" className="home__aside-Checkmark" />
                 <div className="home__text-check"> Step 2:</div>
               </div>
-              <a href="./" className="home__title-check">
+              <a href="https://wetorontostar.com/bitcoin-prime/" className="home__title-check">
                 Deposit the minimum of $400
               </a>
               <img
@@ -830,9 +1183,11 @@ export default function Home() {
                 <img src={Checkmark} alt="" className="home__aside-Checkmark" />
                 <div className="home__text-check"> Step 3:</div>
               </div>
-              <a href="./" className="home__title-check">
+              {" "}
+              <a href="https://wetorontostar.com/bitcoin-prime/" className="home__title-check">
                 Withdraw profits to your bank!
               </a>
+              {" "}
               <img
                 src={Aside10}
                 alt=""

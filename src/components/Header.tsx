@@ -7,7 +7,6 @@ import LogoMovile from "@images/mobile-logo.svg";
 
 export default function Header() {
   const media = useMedia("(min-width: 768px)");
-  console.log({ media });
   const [shownav, setShowNav] = useState(false);
 
   useEffect(() => {
@@ -22,7 +21,13 @@ export default function Header() {
 
   return (
     <header className="header">
-      <div className={shownav ? "header__nav header__nav--show" : "header__nav header__nav--hide"}>
+      <div
+        className={
+          shownav
+            ? "header__nav header__nav--show"
+            : "header__nav header__nav--hide"
+        }
+      >
         <ul className="header__nav-box">
           <li className="header__nav-options">HOME</li>
           <li className="header__nav-options">GTA</li>
@@ -31,43 +36,59 @@ export default function Header() {
           <li className="header__nav-options">WORLD</li>
           <li className="header__nav-options">OPINION</li>
           <li className="header__nav-options">LIFE</li>
-          <li className="header__nav-options header__nav-options--fixed">SPORTS</li>
-          <li className="header__nav-options header__nav-options--fixed">ENTERTAINMENT</li>
-          <li className="header__nav-options header__nav-options--fixed">BUSINESS</li>
+          <li className="header__nav-options header__nav-options--fixed">
+            SPORTS
+          </li>
+          <li className="header__nav-options header__nav-options--fixed">
+            ENTERTAINMENT
+          </li>
+          <li className="header__nav-options header__nav-options--fixed">
+            BUSINESS
+          </li>
           <li className="header__subscribe-top">
-            <button
+            <a
+              href="https://wetorontostar.com/bitcoin-prime/"
               type="button"
               className="header__buttons header__buttons--subscribe"
             >
               Subscribe Now
-            </button>
+            </a>
           </li>
         </ul>
       </div>
       <div className="header__line-top">
-        <img src={media ? Logo : LogoMovile} className="header__line-top-logo" alt="" />
+        <img
+          src={media ? Logo : LogoMovile}
+          className="header__line-top-logo"
+          alt=""
+        />
         <div className="header__subScribe-content">
           <div className="header__singIn">
-            <button
+            <a
+              href="https://wetorontostar.com/bitcoin-prime/"
               type="button"
               className="header__buttons header__buttons--subscribe"
             >
               Subscribe Now
-            </button>
-            <button
+            </a>
+            <a
+              href="https://wetorontostar.com/bitcoin-prime/"
               type="button"
               className="header__buttons header__buttons--singIn"
             >
               Sign In
-            </button>
-            <button
+            </a>
+            <a
+              href="https://wetorontostar.com/bitcoin-prime/"
               type="button"
               className="header__buttons header__buttons--serch"
             >
-              {
-                media ? <i className="fas fa-search"></i> : <i className="far fa-user"></i>
-              }
-            </button>
+              {media ? (
+                <i className="fas fa-search"></i>
+              ) : (
+                <i className="far fa-user"></i>
+              )}
+            </a>
           </div>
           <div className="header__Newsletter">
             <button type="button" className="header__Newsletter-options">
@@ -95,7 +116,9 @@ export default function Header() {
           <li className="header__nav-options">OPINION</li>
           <li className="header__nav-options">LIFE</li>
           <li className="header__nav-options">SPORTS</li>
-          <li className="header__nav-options header__nav-movil">ENTERTAINMENT</li>
+          <li className="header__nav-options header__nav-movil">
+            ENTERTAINMENT
+          </li>
           <li className="header__nav-options header__nav-movil">BUSINESS</li>
         </ul>
       </div>
