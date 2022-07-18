@@ -56,16 +56,18 @@ import Aside9 from "@images/aside9.jpg";
 import Aside10 from "@images/aside10.jpg";
 
 import imgModal from "@images/pop.png";
-import ArrowDown from "@icons/arrow-down.png";
 
-interface ArrayAvatar {
+interface Reply {
   name: string;
   avatar: string;
   text: string;
   reply: string;
   like: string;
   timeAgo: string;
-  comentReply?: any | null | [];
+}
+
+interface ArrayAvatar extends Reply {
+  comentReply: Reply[];
 }
 
 const avatars: Array<ArrayAvatar> = [
@@ -320,7 +322,7 @@ export default function Home() {
             government and big banks terrified.
           </h1>
           <p className="home__text home__text--description">
-            Indian citizens are already raking in millions of dollars from home
+            Canadian citizens are already raking in millions of dollars from home
             using this "wealth loophole" - but will it make them leave the
             office at the end of this month?
           </p>
@@ -960,7 +962,7 @@ export default function Home() {
                         <span className="home__time-ago">{avatar.timeAgo}</span>
                       </div>
                       <div className="home__reply-bottom"></div>
-                      {avatar.comentReply.map((reply: any, i: number) => (
+                      {avatar.comentReply.map((reply, i) => (
                         <div className="home__coments-box" key={reply.name}>
                           <img
                             src={reply.avatar}
