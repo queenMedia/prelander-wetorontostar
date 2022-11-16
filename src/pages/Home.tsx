@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { useOutletContext } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Modal } from "@components";
-import { actionImg } from "@utils";
+import { actionImg, actionContent, updateCurrent } from "@utils";
 import "@stylesPages/Home.scss";
 
 import Logos from "@images/logos.png";
@@ -43,16 +43,16 @@ import Avatar24 from "@images/avatar24.jpg";
 import AvatarB from "@images/avatarB.jpg";
 
 import Checkmark from "@images/checkmark.png";
-import ADS from "@images/ads1.jpg";
-import Aside1 from "@images/aside1.png";
-import Aside2 from "@images/aside2.png";
+import Ads from "@images/ads.jpg";
+import Aside1 from "@images/aside1.jpg";
+import Aside2 from "@images/aside2.jpg";
 import Aside3 from "@images/aside3.png";
 import Aside4 from "@images/aside4.png";
 import Aside5 from "@images/aside5.png";
 import Aside6 from "@images/aside6.png";
 import Aside7 from "@images/aside7.png";
 import Aside8 from "@images/aside8.png";
-import Aside9 from "@images/aside9.jpg";
+import Aside9 from "@images/aside9.png";
 import Aside10 from "@images/aside10.jpg";
 
 import imgModal from "@images/pop.png";
@@ -280,18 +280,23 @@ const avatars: Array<ArrayAvatar> = [
   }
 ];
 
-const PopUp = () => (
-  <div className="home__popup">
-    <img src={imgModal} alt="" className="home__popup-img" />
-    <a href="https://wetorontostar.com/bitcoin-prime/" type="button" className="home__popup-action">
-      Start Now
-    </a>
-  </div>
-);
+const PopUp = () => {
+  const current = updateCurrent();
+
+  return (
+    <div className="home__popup">
+      <img src={imgModal} alt="" className="home__popup-img" />
+      <a href={current} target="_blank" rel="noopener noreferrer" type="button" className="home__popup-action">
+        Start Now
+      </a>
+    </div>
+  );
+};
 
 export default function Home() {
   const { modal, toggleModal }: any = useOutletContext();
   const [read, setRead] = useState(false);
+  const [current, setCurrent] = useState("");
 
   const { t } = useTranslation();
 
@@ -300,6 +305,8 @@ export default function Home() {
       toggleModal(true);
     }, 2000);
     actionImg();
+    actionContent();
+    setCurrent(updateCurrent());
   }, [toggleModal]);
 
   return (
@@ -313,10 +320,9 @@ export default function Home() {
       >
         {() => <PopUp />}
       </Modal>
-      ;
       <main className="home">
         <article className="home__content-text">
-          <h1 className="home__title">
+          <h1 className="home__title" data-link>
             <span>SPECIAL REPORT</span>
             : Elon Musk's latest investment has the
             government and big banks terrified.
@@ -373,7 +379,7 @@ export default function Home() {
                 money-maker is a new
               </span>
               {" "}
-              <a href="https://wetorontostar.com/bitcoin-prime/" className="home__text home__link-a">
+              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 cryptocurrency auto-trading program called Bitcoin Prime.
               </a>
               {" "}
@@ -398,7 +404,7 @@ export default function Home() {
               </p>
             </div>
             <div className="home__content-button">
-              <button type="button" className="home__button-action">
+              <button type="button" className="home__button-action" data-link>
                 Get Started now
               </button>
             </div>
@@ -411,7 +417,7 @@ export default function Home() {
                 platform called
               </span>
               {" "}
-              <a href="https://wetorontostar.com/bitcoin-prime/" className="home__text home__link-a">
+              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 Bitcoin Prime
               </a>
               {" "}
@@ -446,7 +452,7 @@ export default function Home() {
             <div className="home__content-link">
               <span className="home__text">The idea behind</span>
               {" "}
-              <a href="https://wetorontostar.com/bitcoin-prime/" className="home__text home__link-a">
+              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 Bitcoin Prime
               </a>
               {" "}
@@ -468,7 +474,7 @@ export default function Home() {
               for ordinary people in Canada.
             </p>
             <div className="home__content-link">
-              <a href="https://wetorontostar.com/bitcoin-prime/" className="home__text home__link-a">
+              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 Bitcoin Prime
               </a>
               {" "}
@@ -491,7 +497,7 @@ export default function Home() {
                 an
               </span>
               {" "}
-              <a href="https://wetorontostar.com/bitcoin-prime/" className="home__text home__link-a">
+              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 amazing opportunity
               </a>
               {" "}
@@ -508,7 +514,7 @@ export default function Home() {
                 cryptocurrencies and platform like
               </span>
               {" "}
-              <a href="https://wetorontostar.com/bitcoin-prime/" className="home__text home__link-a">
+              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 Bitcoin Prime
               </a>
               {" "}
@@ -535,7 +541,7 @@ export default function Home() {
                 - a Ferrari 488 Pista using the cash he made from
               </span>
               {" "}
-              <a href="https://wetorontostar.com/bitcoin-prime/" className="home__text home__link-a">
+              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 Bitcoin Prime.
               </a>
               {" "}
@@ -563,7 +569,7 @@ export default function Home() {
                 with Elon Musk until we verified that
               </span>
               {" "}
-              <a href="https://wetorontostar.com/bitcoin-prime/" className="home__text home__link-a">
+              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 Bitcoin Prime
               </a>
               {" "}
@@ -577,7 +583,7 @@ export default function Home() {
             <div className="home__content-link">
               <span className="home__text">So our editorial team tested</span>
               {" "}
-              <a href="https://wetorontostar.com/bitcoin-prime/" className="home__text home__link-a">
+              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 Bitcoin Prime
               </a>
               {" "}
@@ -587,7 +593,7 @@ export default function Home() {
                 money and test out
               </span>
               {" "}
-              <a href="https://wetorontostar.com/bitcoin-prime/" className="home__text home__link-a">
+              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 Bitcoin Prime
               </a>
             </div>
@@ -617,7 +623,7 @@ export default function Home() {
             <div className="home__content-link">
               <span className="home__text">I watched an</span>
               {" "}
-              <a href="https://wetorontostar.com/bitcoin-prime/" className="home__text home__link-a">
+              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 introductory video about the platform
               </a>
               {" "}
@@ -645,7 +651,7 @@ export default function Home() {
             <div className="home__content-link">
               <span className="home__text">The</span>
               {" "}
-              <a href="https://wetorontostar.com/bitcoin-prime/" className="home__text home__link-a">
+              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 Bitcoin Prime
               </a>
               {" "}
@@ -700,7 +706,7 @@ export default function Home() {
                 why the big banks don’t want people anywhere near this
               </span>
               {" "}
-              <a href="https://wetorontostar.com/bitcoin-prime/" className="home__text home__link-a">
+              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 wealth loophole.
               </a>
               {" "}
@@ -717,7 +723,7 @@ export default function Home() {
                 job knowing the
               </span>
               {" "}
-              <a href="https://wetorontostar.com/bitcoin-prime/" className="home__text home__link-a">
+              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 Bitcoin Prime
               </a>
               {" "}
@@ -752,7 +758,7 @@ export default function Home() {
                 day thanks to
               </span>
               {" "}
-              <a href="https://wetorontostar.com/bitcoin-prime/" className="home__text home__link-a">
+              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 Bitcoin Prime.
               </a>
               {" "}
@@ -777,7 +783,7 @@ export default function Home() {
                 risk to try
               </span>
               {" "}
-              <a href="https://wetorontostar.com/bitcoin-prime/" className="home__text home__link-a">
+              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 Bitcoin Prime
               </a>
               {" "}
@@ -803,7 +809,7 @@ export default function Home() {
                 experience because the software and your personal investor
               </span>
               {" "}
-              <a href="https://wetorontostar.com/bitcoin-prime/" className="home__text home__link-a">
+              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 guarantees you make a profit.
               </a>
               {" "}
@@ -830,7 +836,7 @@ export default function Home() {
                 The first thing you see is a video showing off the power of
               </span>
               {" "}
-              <a href="https://wetorontostar.com/bitcoin-prime/" className="home__text home__link-a">
+              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 Bitcoin Prime.
               </a>
               {" "}
@@ -838,7 +844,7 @@ export default function Home() {
                 The advertising is big and bold and in your face, but it is an
                 American product and that's how they do things. Anyway, you
               </span>
-              <a href="https://wetorontostar.com/bitcoin-prime/" className="home__text home__link-a">
+              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 next to the video to get started right away.
               </a>
               {" "}
@@ -848,7 +854,7 @@ export default function Home() {
                 (Tip: Even if you don't decide to invest any money, I recommend
               </span>
               {" "}
-              <a href="https://wetorontostar.com/bitcoin-prime/" className="home__text home__link-a">
+              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 signing up now
               </a>
               {" "}
@@ -865,7 +871,7 @@ export default function Home() {
             <div className="home__content-link">
               <span className="home__text">"Next up, you're asked to</span>
               {" "}
-              <a href="https://wetorontostar.com/bitcoin-prime/" className="home__text home__link-a">
+              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 fund your account.
               </a>
               {" "}
@@ -907,7 +913,7 @@ export default function Home() {
                 almost all positions are filled up for Indian residents.
               </span>
               {" "}
-              <a href="https://wetorontostar.com/bitcoin-prime/" className="home__text home__link-a">
+              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 Bitcoin Prime
               </a>
               {" "}
@@ -916,7 +922,7 @@ export default function Home() {
                 profit per user is high. As of right now, there are still (37)
                 spots left, so hurry up and
               </span>
-              <a href="https://wetorontostar.com/bitcoin-prime/" className="home__text home__link-a">
+              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 sign up now to secure your spot.
               </a>
             </div>
@@ -953,8 +959,8 @@ export default function Home() {
                     className="home__coments-avatar"
                   />
                   <div className="home__coment-box">
-                    <p className="home__coment-name">{avatar.name}</p>
-                    <p className="home__coment-text">{avatar.text}</p>
+                    <p className="home__coment-name" data-link>{avatar.name}</p>
+                    <p className="home__coment-text" data-link>{avatar.text}</p>
                     <div className="home__content_reply">
                       <div className="home__coment-reply">
                         <span className="home__reply">{avatar.reply}</span>
@@ -970,8 +976,8 @@ export default function Home() {
                             className="home__coments-avatar"
                           />
                           <div className="home__coment-box">
-                            <p className="home__coment-name">{reply.name}</p>
-                            <p className="home__coment-text">{reply.text}</p>
+                            <p className="home__coment-name" data-link>{reply.name}</p>
+                            <p className="home__coment-text" data-link>{reply.text}</p>
                             <div className="home__coment-reply">
                               <span className="home__reply">{reply.reply}</span>
                               <span className="home__like">{reply.like}</span>
@@ -992,11 +998,6 @@ export default function Home() {
         </article>
         <aside className="home__aside home__aside-movil">
           <div className="home__aside-content">
-            <img
-              src={ADS}
-              alt=""
-              className="home__img-aside home__img-aside--ads"
-            />
             <h4 className="home__title home__title-aside">READER RESULTS</h4>
           </div>
           <div className="home__aside-content">
@@ -1005,42 +1006,40 @@ export default function Home() {
             <div className="home__aside-link">
               <span className="home__text-aside">"I've been using</span>
               {" "}
-              <a className="home__aside-link-a" href="https://wetorontostar.com/bitcoin-prime/">
+              <a className="home__aside-link-a" href={current} target="_blank" rel="noopener noreferrer">
                 Bitcoin Prime
               </a>
               {" "}
               <span className="home__text-aside">
-                for just over 2 weeks, I've taken my initial deposit from $400
-                to $5,952. That is far more than I make at work."
+                for just over 2 weeks, I've taken my initial deposit from $250 to $5,802. That is far more than I make at work.
               </span>
             </div>
             <p className="home__text-aside-bottom">
               Kyle McLennan
               <br></br>
-              Calgary, Canada
+              Sydney, Australia
             </p>
           </div>
           <div className="home__aside-content">
-            <h4 className="home__title home__title-aside">PROFIT: $9,284</h4>
+            <h4 className="home__title home__title-aside">PROFIT: $9,200</h4>
             <img src={Aside2} alt="" className="home__img-aside" />
             <div className="home__aside-link">
               <span className="home__text-aside">
                 "I've hit over $9,200 in profit after just a month of using
               </span>
               {" "}
-              <a className="home__aside-link-a" href="https://wetorontostar.com/bitcoin-prime/">
+              <a className="home__aside-link-a" href={current} target="_blank" rel="noopener noreferrer">
                 Bitcoin Prime.
               </a>
               {" "}
               <span className="home__text-aside">
-                Because I can use it on my laptop, I've been travelling around
-                Canada and making money the whole time!"
+                Because I can use it on my laptop, I've been travelling around Australia and making money the whole time!"
               </span>
             </div>
             <p className="home__text-aside-bottom">
-              Sean Black
+              Jonathan Morris
               <br></br>
-              Toronto, Canada
+              Willunga, Australia
             </p>
           </div>
           <div className="home__aside-content">
@@ -1053,9 +1052,9 @@ export default function Home() {
               </span>
             </div>
             <p className="home__text-aside-bottom">
-              Lydia Bartlett
+              Lilly Peterson
               <br></br>
-              Montreal, Canada
+              Rockhampton, QLD
             </p>
           </div>
           <div className="home__aside-content">
@@ -1066,7 +1065,7 @@ export default function Home() {
                 "I've been able to finally quit my job, thanks entirely to
               </span>
               {" "}
-              <a className="home__aside-link-a" href="https://wetorontostar.com/bitcoin-prime/">
+              <a className="home__aside-link-a" href={current} target="_blank" rel="noopener noreferrer">
                 Bitcoin Prime.
               </a>
               {" "}
@@ -1075,9 +1074,9 @@ export default function Home() {
               </span>
             </div>
             <p className="home__text-aside-bottom">
-              Matthew Stephens
+              Fredic Paul
               <br></br>
-              TVictoria, Canada
+              Perth, WA
             </p>
           </div>
           <div className="home__aside-content">
@@ -1085,22 +1084,21 @@ export default function Home() {
             <img src={Aside5} alt="" className="home__img-aside" />
             <div className="home__aside-link">
               <span className="home__text-aside">
-                "I've only been using the
+                "Iv'e only been using the
               </span>
               {" "}
-              <a className="home__aside-link-a" href="https://wetorontostar.com/bitcoin-prime/">
+              <a className="home__aside-link-a" href={current} target="_blank" rel="noopener noreferrer">
                 Bitcoin Prime.
               </a>
               {" "}
               <span className="home__text-aside">
-                for 2 weeks and it has already helped me save a substantial
-                amount for my future European holiday."
+                for 2 weeks and it has already paid for my European holiday."
               </span>
             </div>
             <p className="home__text-aside-bottom">
-              Maya Ryan
+              Julia Keaton
               <br></br>
-              Hamilton, Canada
+              Werribee, VIC
             </p>
           </div>
           <div className="home__aside-content">
@@ -1114,9 +1112,9 @@ export default function Home() {
               </span>
             </div>
             <p className="home__text-aside-bottom">
-              Leon Gould & William Moore
+              Jordan Moss & Travis Parks
               <br></br>
-              Windsor, Canada
+              Essendon, VIC
             </p>
           </div>
           <div className="home__aside-content">
@@ -1127,7 +1125,7 @@ export default function Home() {
                 "My Boyfriend was the one who told me about
               </span>
               {" "}
-              <a className="home__aside-link-a" href="https://wetorontostar.com/bitcoin-prime/">
+              <a className="home__aside-link-a" href={current} target="_blank" rel="noopener noreferrer">
                 Bitcoin Prime.
               </a>
               {" "}
@@ -1137,9 +1135,9 @@ export default function Home() {
               </span>
             </div>
             <p className="home__text-aside-bottom">
-              Alexandra Patterson
+              Brianna Wiggans
               <br></br>
-              Edmonton, Canada
+              Tamworth, NSW
             </p>
           </div>
           <div className="home__aside-content">
@@ -1152,7 +1150,7 @@ export default function Home() {
                 <div className="home__text-check"> Step 1:</div>
               </div>
               {" "}
-              <a href="https://wetorontostar.com/bitcoin-prime/" className="home__title-check">
+              <a href={current} target="_blank" rel="noopener noreferrer" className="home__title-check">
                 Sign up for your free account
               </a>
               {" "}
@@ -1169,8 +1167,8 @@ export default function Home() {
                 <img src={Checkmark} alt="" className="home__aside-Checkmark" />
                 <div className="home__text-check"> Step 2:</div>
               </div>
-              <a href="https://wetorontostar.com/bitcoin-prime/" className="home__title-check">
-                Deposit the minimum of $400
+              <a href={current} target="_blank" rel="noopener noreferrer" className="home__title-check">
+                Deposit the minimum of $250
               </a>
               <img
                 src={Aside9}
@@ -1186,7 +1184,7 @@ export default function Home() {
                 <div className="home__text-check"> Step 3:</div>
               </div>
               {" "}
-              <a href="https://wetorontostar.com/bitcoin-prime/" className="home__title-check">
+              <a href={current} target="_blank" rel="noopener noreferrer" className="home__title-check">
                 Withdraw profits to your bank!
               </a>
               {" "}
