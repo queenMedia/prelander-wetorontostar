@@ -27,7 +27,7 @@ i18n
       escapeValue: false
     },
     backend: {
-      loadPath: "/musk-special-tstar/locales/{{lng}}/{{ns}}.json"
+      loadPath: "/star-prime/locales/{{lng}}/{{ns}}.json"
     }
   });
 

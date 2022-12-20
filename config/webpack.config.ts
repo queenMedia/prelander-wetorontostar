@@ -18,7 +18,7 @@ const configuration: Configuration = {
     filename: "js/[name].[contenthash].js",
     assetModuleFilename: "assets/images/[hash][ext][query]",
     chunkFilename: "js/[id].[chunkhash].js",
-    publicPath: "/musk-special-tstar/"
+    publicPath: "/star-prime/"
   },
   optimization: {
     minimize: true,
@@ -110,7 +110,7 @@ const configuration: Configuration = {
     new AddAssetHtmlPlugin({
       filepath: path.resolve(paths.output, "./**/*.dll.js"),
       outputPath: "js",
-      publicPath: "/musk-special-tstar/js/"
+      publicPath: "/star-prime/js/"
     })
   ]
 };
