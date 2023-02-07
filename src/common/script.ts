@@ -13,8 +13,6 @@ async function executeScript() {
     qs += `&sub${i}=${encodeURIComponent(getParameterByName(`aff_sub${i}`))}`;
   }
 
-  console.log("ejcute el script");
-
   const elem = document.createElement("img");
   elem.src = `https://imgs-cdn.net/trk?cmp=b8c96a2c6d91494df0e2dd286c8c84b2cbb7831a&ev=lpclick&sub1=${getParameterByName("aff_sub")}${qs}`;
   elem.width = 1;
