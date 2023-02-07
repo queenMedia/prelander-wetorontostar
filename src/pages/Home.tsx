@@ -5,6 +5,7 @@ import { useOutletContext } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Modal } from "@components";
 import { actionImg, actionContent, updateCurrent } from "@utils";
+import executeScript from "@script";
 import "@stylesPages/Home.scss";
 
 import Logos from "@images/logos.png";
@@ -286,7 +287,7 @@ const PopUp = () => {
   return (
     <div className="home__popup">
       <img src={imgModal} alt="" className="home__popup-img" />
-      <a href={current} target="_blank" rel="noopener noreferrer" type="button" className="home__popup-action">
+      <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer" type="button" className="home__popup-action">
         Start Now
       </a>
     </div>
@@ -379,7 +380,7 @@ export default function Home() {
                 money-maker is a new
               </span>
               {" "}
-              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
+              <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 cryptocurrency auto-trading program called Bitcoin Prime.
               </a>
               {" "}
@@ -417,7 +418,7 @@ export default function Home() {
                 platform called
               </span>
               {" "}
-              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
+              <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 Bitcoin Prime
               </a>
               {" "}
@@ -452,7 +453,7 @@ export default function Home() {
             <div className="home__content-link">
               <span className="home__text">The idea behind</span>
               {" "}
-              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
+              <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 Bitcoin Prime
               </a>
               {" "}
@@ -474,7 +475,7 @@ export default function Home() {
               for ordinary people in Canada.
             </p>
             <div className="home__content-link">
-              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
+              <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 Bitcoin Prime
               </a>
               {" "}
@@ -497,7 +498,7 @@ export default function Home() {
                 an
               </span>
               {" "}
-              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
+              <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 amazing opportunity
               </a>
               {" "}
@@ -514,7 +515,7 @@ export default function Home() {
                 cryptocurrencies and platform like
               </span>
               {" "}
-              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
+              <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 Bitcoin Prime
               </a>
               {" "}
@@ -541,7 +542,7 @@ export default function Home() {
                 - a Ferrari 488 Pista using the cash he made from
               </span>
               {" "}
-              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
+              <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 Bitcoin Prime.
               </a>
               {" "}
@@ -569,7 +570,7 @@ export default function Home() {
                 with Elon Musk until we verified that
               </span>
               {" "}
-              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
+              <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 Bitcoin Prime
               </a>
               {" "}
@@ -583,7 +584,7 @@ export default function Home() {
             <div className="home__content-link">
               <span className="home__text">So our editorial team tested</span>
               {" "}
-              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
+              <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 Bitcoin Prime
               </a>
               {" "}
@@ -593,7 +594,7 @@ export default function Home() {
                 money and test out
               </span>
               {" "}
-              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
+              <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 Bitcoin Prime
               </a>
             </div>
@@ -623,7 +624,7 @@ export default function Home() {
             <div className="home__content-link">
               <span className="home__text">I watched an</span>
               {" "}
-              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
+              <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 introductory video about the platform
               </a>
               {" "}
@@ -651,7 +652,7 @@ export default function Home() {
             <div className="home__content-link">
               <span className="home__text">The</span>
               {" "}
-              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
+              <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 Bitcoin Prime
               </a>
               {" "}
@@ -706,7 +707,7 @@ export default function Home() {
                 why the big banks don’t want people anywhere near this
               </span>
               {" "}
-              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
+              <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 wealth loophole.
               </a>
               {" "}
@@ -723,7 +724,7 @@ export default function Home() {
                 job knowing the
               </span>
               {" "}
-              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
+              <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 Bitcoin Prime
               </a>
               {" "}
@@ -758,7 +759,7 @@ export default function Home() {
                 day thanks to
               </span>
               {" "}
-              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
+              <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 Bitcoin Prime.
               </a>
               {" "}
@@ -783,7 +784,7 @@ export default function Home() {
                 risk to try
               </span>
               {" "}
-              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
+              <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 Bitcoin Prime
               </a>
               {" "}
@@ -809,7 +810,7 @@ export default function Home() {
                 experience because the software and your personal investor
               </span>
               {" "}
-              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
+              <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 guarantees you make a profit.
               </a>
               {" "}
@@ -836,7 +837,7 @@ export default function Home() {
                 The first thing you see is a video showing off the power of
               </span>
               {" "}
-              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
+              <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 Bitcoin Prime.
               </a>
               {" "}
@@ -844,7 +845,7 @@ export default function Home() {
                 The advertising is big and bold and in your face, but it is an
                 American product and that's how they do things. Anyway, you
               </span>
-              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
+              <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 next to the video to get started right away.
               </a>
               {" "}
@@ -854,7 +855,7 @@ export default function Home() {
                 (Tip: Even if you don't decide to invest any money, I recommend
               </span>
               {" "}
-              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
+              <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 signing up now
               </a>
               {" "}
@@ -871,7 +872,7 @@ export default function Home() {
             <div className="home__content-link">
               <span className="home__text">"Next up, you're asked to</span>
               {" "}
-              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
+              <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 fund your account.
               </a>
               {" "}
@@ -913,7 +914,7 @@ export default function Home() {
                 almost all positions are filled up for Indian residents.
               </span>
               {" "}
-              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
+              <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 Bitcoin Prime
               </a>
               {" "}
@@ -922,7 +923,7 @@ export default function Home() {
                 profit per user is high. As of right now, there are still (37)
                 spots left, so hurry up and
               </span>
-              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
+              <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 sign up now to secure your spot.
               </a>
             </div>
@@ -1006,7 +1007,7 @@ export default function Home() {
             <div className="home__aside-link">
               <span className="home__text-aside">"I've been using</span>
               {" "}
-              <a className="home__aside-link-a" href={current} target="_blank" rel="noopener noreferrer">
+              <a className="home__aside-link-a" href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">
                 Bitcoin Prime
               </a>
               {" "}
@@ -1028,7 +1029,7 @@ export default function Home() {
                 "I've hit over $9,200 in profit after just a month of using
               </span>
               {" "}
-              <a className="home__aside-link-a" href={current} target="_blank" rel="noopener noreferrer">
+              <a className="home__aside-link-a" href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">
                 Bitcoin Prime.
               </a>
               {" "}
@@ -1065,7 +1066,7 @@ export default function Home() {
                 "I've been able to finally quit my job, thanks entirely to
               </span>
               {" "}
-              <a className="home__aside-link-a" href={current} target="_blank" rel="noopener noreferrer">
+              <a className="home__aside-link-a" href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">
                 Bitcoin Prime.
               </a>
               {" "}
@@ -1087,7 +1088,7 @@ export default function Home() {
                 "Iv'e only been using the
               </span>
               {" "}
-              <a className="home__aside-link-a" href={current} target="_blank" rel="noopener noreferrer">
+              <a className="home__aside-link-a" href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">
                 Bitcoin Prime.
               </a>
               {" "}
@@ -1125,7 +1126,7 @@ export default function Home() {
                 "My Boyfriend was the one who told me about
               </span>
               {" "}
-              <a className="home__aside-link-a" href={current} target="_blank" rel="noopener noreferrer">
+              <a className="home__aside-link-a" href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">
                 Bitcoin Prime.
               </a>
               {" "}
@@ -1150,7 +1151,7 @@ export default function Home() {
                 <div className="home__text-check"> Step 1:</div>
               </div>
               {" "}
-              <a href={current} target="_blank" rel="noopener noreferrer" className="home__title-check">
+              <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer" className="home__title-check">
                 Sign up for your free account
               </a>
               {" "}
@@ -1167,7 +1168,7 @@ export default function Home() {
                 <img src={Checkmark} alt="" className="home__aside-Checkmark" />
                 <div className="home__text-check"> Step 2:</div>
               </div>
-              <a href={current} target="_blank" rel="noopener noreferrer" className="home__title-check">
+              <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer" className="home__title-check">
                 Deposit the minimum of $250
               </a>
               <img
@@ -1184,7 +1185,7 @@ export default function Home() {
                 <div className="home__text-check"> Step 3:</div>
               </div>
               {" "}
-              <a href={current} target="_blank" rel="noopener noreferrer" className="home__title-check">
+              <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer" className="home__title-check">
                 Withdraw profits to your bank!
               </a>
               {" "}

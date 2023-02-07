@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useMedia } from "@hooks";
 import "@stylesComponents/Header.scss";
 import { actionContent, updateCurrent } from "@utils";
+import executeScript from "@script";
 
 import Logo from "@images/logo-toronto.svg";
 import LogoRound from "@images/logo-round.svg";
@@ -41,28 +42,29 @@ export default function Header() {
               alt=""
             />
           </li>
-          <li className="header__nav-options"><a href={current} target="_blank" rel="noopener noreferrer">HOME</a></li>
-          <li className="header__nav-options"><a href={current} target="_blank" rel="noopener noreferrer">GTA</a></li>
-          <li className="header__nav-options"><a href={current} target="_blank" rel="noopener noreferrer">CANADA</a></li>
-          <li className="header__nav-options"><a href={current} target="_blank" rel="noopener noreferrer">POLITICS</a></li>
-          <li className="header__nav-options"><a href={current} target="_blank" rel="noopener noreferrer">WORLD</a></li>
-          <li className="header__nav-options"><a href={current} target="_blank" rel="noopener noreferrer">OPINION</a></li>
-          <li className="header__nav-options"><a href={current} target="_blank" rel="noopener noreferrer">LIFE</a></li>
+          <li className="header__nav-options"><a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">HOME</a></li>
+          <li className="header__nav-options"><a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">GTA</a></li>
+          <li className="header__nav-options"><a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">CANADA</a></li>
+          <li className="header__nav-options"><a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">POLITICS</a></li>
+          <li className="header__nav-options"><a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">WORLD</a></li>
+          <li className="header__nav-options"><a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">OPINION</a></li>
+          <li className="header__nav-options"><a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">LIFE</a></li>
           <li className="header__nav-options header__nav-options--fixed">
-            <a href={current} target="_blank" rel="noopener noreferrer">SPORTS</a>
+            <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">SPORTS</a>
           </li>
           <li className="header__nav-options header__nav-options--fixed">
-            <a href={current} target="_blank" rel="noopener noreferrer">ENTERTAINMENT</a>
+            <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">ENTERTAINMENT</a>
           </li>
           <li className="header__nav-options header__nav-options--fixed">
-            <a href={current} target="_blank" rel="noopener noreferrer">BUSINESS</a>
+            <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">BUSINESS</a>
           </li>
           <li className="header__nav-options header__nav-options--fixed">
-            <a href={current} target="_blank" rel="noopener noreferrer">PODCATS</a>
+            <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">PODCATS</a>
           </li>
           <li className="header__subscribe-top">
             <a
               href={current}
+              onClick={() => executeScript()}
               target="_blank"
               rel="noopener noreferrer"
               type="button"
@@ -72,6 +74,7 @@ export default function Header() {
             </a>
             <a
               href={current}
+              onClick={() => executeScript()}
               target="_blank"
               rel="noopener noreferrer"
               type="button"
@@ -94,6 +97,7 @@ export default function Header() {
           <div className="header__singIn">
             <a
               href={current}
+              onClick={() => executeScript()}
               target="_blank"
               rel="noopener noreferrer"
               type="button"
@@ -105,6 +109,7 @@ export default function Header() {
             </a>
             <a
               href={current}
+              onClick={() => executeScript()}
               target="_blank"
               rel="noopener noreferrer"
               type="button"
@@ -116,6 +121,7 @@ export default function Header() {
             </a>
             <a
               href={current}
+              onClick={() => executeScript()}
               target="_blank"
               rel="noopener noreferrer"
               type="button"
@@ -129,11 +135,11 @@ export default function Header() {
             </a>
           </div>
           <div className="header__Newsletter">
-            <a href={current} target="_blank" rel="noopener noreferrer" className="header__Newsletter-options">
+            <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer" className="header__Newsletter-options">
               <i className="fas fa-envelope"></i>
               <span className="header__fas">Newsletter</span>
             </a>
-            <a href={current} target="_blank" rel="noopener noreferrer" className="header__Newsletter-options">
+            <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer" className="header__Newsletter-options">
               <i className="fas fa-file-alt"></i>
               <span className="header__fas">Today´s paper</span>
             </a>
@@ -142,35 +148,35 @@ export default function Header() {
       </div>
       <div className="header__nav">
         <ul className="header__nav-box">
-          <li className="header__nav-options"><a href={current} target="_blank" rel="noopener noreferrer" className="active">HOME</a></li>
-          <li className="header__nav-options"><a href={current} target="_blank" rel="noopener noreferrer">GTA</a></li>
-          <li className="header__nav-options"><a href={current} target="_blank" rel="noopener noreferrer">CANADA</a></li>
-          <li className="header__nav-options"><a href={current} target="_blank" rel="noopener noreferrer">POLITICS</a></li>
-          <li className="header__nav-options"><a href={current} target="_blank" rel="noopener noreferrer">WORLD</a></li>
-          <li className="header__nav-options"><a href={current} target="_blank" rel="noopener noreferrer">OPINION</a></li>
-          <li className="header__nav-options"><a href={current} target="_blank" rel="noopener noreferrer">LIFE</a></li>
-          <li className="header__nav-options"><a href={current} target="_blank" rel="noopener noreferrer">SPORTS</a></li>
+          <li className="header__nav-options"><a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer" className="active">HOME</a></li>
+          <li className="header__nav-options"><a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">GTA</a></li>
+          <li className="header__nav-options"><a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">CANADA</a></li>
+          <li className="header__nav-options"><a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">POLITICS</a></li>
+          <li className="header__nav-options"><a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">WORLD</a></li>
+          <li className="header__nav-options"><a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">OPINION</a></li>
+          <li className="header__nav-options"><a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">LIFE</a></li>
+          <li className="header__nav-options"><a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">SPORTS</a></li>
           <li className="header__nav-options header__nav-movil">
-            <a href={current} target="_blank" rel="noopener noreferrer">ENTERTAINMENT</a>
+            <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">ENTERTAINMENT</a>
           </li>
-          <li className="header__nav-options header__nav-movil"><a href={current} target="_blank" rel="noopener noreferrer">BUSINESS</a></li>
-          <li className="header__nav-options header__nav-movil"><a href={current} target="_blank" rel="noopener noreferrer">PODCATS</a></li>
+          <li className="header__nav-options header__nav-movil"><a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">BUSINESS</a></li>
+          <li className="header__nav-options header__nav-movil"><a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">PODCATS</a></li>
         </ul>
       </div>
       <div className="header__nav header__nav--two">
         <ul className="header__nav-box header__nav-box--two">
           <li className="header__nav-options header__nav-options--two header__nav-options--first">
-            <a href={current} target="_blank" rel="noopener noreferrer">
+            <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">
               Federal Politics
             </a>
           </li>
           <li className="header__nav-options header__nav-options--two">
-            <a href={current} target="_blank" rel="noopener noreferrer">
+            <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">
               Provincial Politics
             </a>
           </li>
           <li className="header__nav-options header__nav-options--two">
-            <a href={current} target="_blank" rel="noopener noreferrer">
+            <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">
               Political Opinion
             </a>
           </li>

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { updateCurrent, accordion } from "@utils";
+import executeScript from "@script";
 
 import "@stylesComponents/Footer.scss";
 
@@ -24,7 +25,7 @@ export default function Footer() {
   }, []);
   return (
     <>
-      <a href={current} target="_blank" rel="noopener noreferrer" className="footer__notification">
+      <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer" className="footer__notification">
         <img src={DollarIcon} alt="" className="footer__notification-img" />
         <div className="footer__notificaction-box">
           <p className="footer__notificaction-text">Someone from Vancouver just withdrew</p>
@@ -33,7 +34,7 @@ export default function Footer() {
       </a>
       {showAction ? (
         <div className="footer__actions">
-          <a href={current} target="_blank" rel="noopener noreferrer" className="footer__actions-button">
+          <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer" className="footer__actions-button">
             Try Bitcoin Prime for yourself.
           </a>
         </div>
@@ -47,17 +48,17 @@ export default function Footer() {
             <div className="footer__item footer__item--no-padding">
               <div className="footer__row footer__row--menu">
                 <div className="footer__item footer__item--responsive">
-                  <a href={current} target="_blank" rel="noopener noreferrer">
+                  <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">
                     <h3 className="footer__item-title footer__item-title">About</h3>
                   </a>
                 </div>
                 <div className="footer__item footer__item--responsive">
-                  <a href={current} target="_blank" rel="noopener noreferrer">
+                  <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">
                     <h3 className="footer__item-title footer__item-title">Contact Us</h3>
                   </a>
                 </div>
                 <div className="footer__item footer__item--responsive">
-                  <a href={current} target="_blank" rel="noopener noreferrer">
+                  <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">
                     <h3 className="footer__item-title footer__item-title">Feedback</h3>
                   </a>
                 </div>
@@ -65,43 +66,43 @@ export default function Footer() {
                   <h3 className="footer__item-title footer__item-title--submenu" onClick={(e) => accordion(e)}>Thestar.com</h3>
                   <ul className="footer__links">
                     <li className="footer__links-item">
-                      <a className="footer__links-anchor" href={current} target="_blank" rel="noopener noreferrer">Subscribe to the Star</a>
+                      <a className="footer__links-anchor" href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">Subscribe to the Star</a>
                     </li>
                     <li className="footer__links-item">
-                      <a className="footer__links-anchor" href={current} target="_blank" rel="noopener noreferrer">Manage Star Subscription</a>
+                      <a className="footer__links-anchor" href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">Manage Star Subscription</a>
                     </li>
                     <li className="footer__links-item">
-                      <a className="footer__links-anchor" href={current} target="_blank" rel="noopener noreferrer">Gift a Star Subscription</a>
+                      <a className="footer__links-anchor" href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">Gift a Star Subscription</a>
                     </li>
                     <li className="footer__links-item">
-                      <a className="footer__links-anchor" href={current} target="_blank" rel="noopener noreferrer">Redeem a Star Gift Subscription</a>
+                      <a className="footer__links-anchor" href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">Redeem a Star Gift Subscription</a>
                     </li>
                     <li className="footer__links-item">
-                      <a className="footer__links-anchor" href={current} target="_blank" rel="noopener noreferrer">Feedback</a>
+                      <a className="footer__links-anchor" href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">Feedback</a>
                     </li>
                     <li className="footer__links-item">
-                      <a className="footer__links-anchor" href={current} target="_blank" rel="noopener noreferrer">Removal request</a>
+                      <a className="footer__links-anchor" href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">Removal request</a>
                     </li>
                     <li className="footer__links-item">
-                      <a className="footer__links-anchor" href={current} target="_blank" rel="noopener noreferrer">Site Map</a>
+                      <a className="footer__links-anchor" href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">Site Map</a>
                     </li>
                     <li className="footer__links-item">
-                      <a className="footer__links-anchor" href={current} target="_blank" rel="noopener noreferrer">Newsletters</a>
+                      <a className="footer__links-anchor" href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">Newsletters</a>
                     </li>
                     <li className="footer__links-item">
-                      <a className="footer__links-anchor" href={current} target="_blank" rel="noopener noreferrer">Homefinder.ca</a>
+                      <a className="footer__links-anchor" href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">Homefinder.ca</a>
                     </li>
                     <li className="footer__links-item">
-                      <a className="footer__links-anchor" href={current} target="_blank" rel="noopener noreferrer">Corrections</a>
+                      <a className="footer__links-anchor" href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">Corrections</a>
                     </li>
                     <li className="footer__links-item">
-                      <a className="footer__links-anchor" href={current} target="_blank" rel="noopener noreferrer">Today&apos;s News</a>
+                      <a className="footer__links-anchor" href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">Today&apos;s News</a>
                     </li>
                     <li className="footer__links-item">
-                      <a className="footer__links-anchor" href={current} target="_blank" rel="noopener noreferrer">Flyers</a>
+                      <a className="footer__links-anchor" href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">Flyers</a>
                     </li>
                     <li className="footer__links-item">
-                      <a className="footer__links-anchor" href={current} target="_blank" rel="noopener noreferrer">Contests</a>
+                      <a className="footer__links-anchor" href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">Contests</a>
                     </li>
                   </ul>
                 </div>
@@ -109,52 +110,52 @@ export default function Footer() {
                   <h3 className="footer__item-title footer__item-title--submenu" onClick={(e) => accordion(e)}>Toronto Star Newspapers Ltd.</h3>
                   <ul className="footer__links">
                     <li className="footer__links-item">
-                      <a className="footer__links-anchor" href={current} target="_blank" rel="noopener noreferrer">Subscribe to Home Delivery</a>
+                      <a className="footer__links-anchor" href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">Subscribe to Home Delivery</a>
                     </li>
                     <li className="footer__links-item">
-                      <a className="footer__links-anchor" href={current} target="_blank" rel="noopener noreferrer">Manage Home Delivery Subscription</a>
+                      <a className="footer__links-anchor" href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">Manage Home Delivery Subscription</a>
                     </li>
                     <li className="footer__links-item">
-                      <a className="footer__links-anchor" href={current} target="_blank" rel="noopener noreferrer">Corporate Group Subscriptions</a>
+                      <a className="footer__links-anchor" href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">Corporate Group Subscriptions</a>
                     </li>
                     <li className="footer__links-item">
-                      <a className="footer__links-anchor" href={current} target="_blank" rel="noopener noreferrer">About</a>
+                      <a className="footer__links-anchor" href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">About</a>
                     </li>
                     <li className="footer__links-item">
-                      <a className="footer__links-anchor" href={current} target="_blank" rel="noopener noreferrer">Torstar Journalistic Standards</a>
+                      <a className="footer__links-anchor" href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">Torstar Journalistic Standards</a>
                     </li>
                     <li className="footer__links-item">
-                      <a className="footer__links-anchor" href={current} target="_blank" rel="noopener noreferrer">Atkinson Principles</a>
+                      <a className="footer__links-anchor" href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">Atkinson Principles</a>
                     </li>
                     <li className="footer__links-item">
-                      <a className="footer__links-anchor" href={current} target="_blank" rel="noopener noreferrer">Glossary</a>
+                      <a className="footer__links-anchor" href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">Glossary</a>
                     </li>
                     <li className="footer__links-item">
-                      <a className="footer__links-anchor" href={current} target="_blank" rel="noopener noreferrer">Trust Project</a>
+                      <a className="footer__links-anchor" href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">Trust Project</a>
                     </li>
                     <li className="footer__links-item">
-                      <a className="footer__links-anchor" href={current} target="_blank" rel="noopener noreferrer">Contact Us</a>
+                      <a className="footer__links-anchor" href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">Contact Us</a>
                     </li>
                     <li className="footer__links-item">
-                      <a className="footer__links-anchor" href={current} target="_blank" rel="noopener noreferrer">Contact Webmaster</a>
+                      <a className="footer__links-anchor" href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">Contact Webmaster</a>
                     </li>
                     <li className="footer__links-item">
-                      <a className="footer__links-anchor" href={current} target="_blank" rel="noopener noreferrer">FAQ</a>
+                      <a className="footer__links-anchor" href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">FAQ</a>
                     </li>
                     <li className="footer__links-item">
-                      <a className="footer__links-anchor" href={current} target="_blank" rel="noopener noreferrer">News Releases</a>
+                      <a className="footer__links-anchor" href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">News Releases</a>
                     </li>
                     <li className="footer__links-item">
-                      <a className="footer__links-anchor" href={current} target="_blank" rel="noopener noreferrer">Star Internships</a>
+                      <a className="footer__links-anchor" href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">Star Internships</a>
                     </li>
                     <li className="footer__links-item">
-                      <a className="footer__links-anchor" href={current} target="_blank" rel="noopener noreferrer">Careers @ the Star</a>
+                      <a className="footer__links-anchor" href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">Careers @ the Star</a>
                     </li>
                     <li className="footer__links-item">
-                      <a className="footer__links-anchor" href={current} target="_blank" rel="noopener noreferrer">Star ePaper Edition</a>
+                      <a className="footer__links-anchor" href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">Star ePaper Edition</a>
                     </li>
                     <li className="footer__links-item">
-                      <a className="footer__links-anchor" href={current} target="_blank" rel="noopener noreferrer">Reprint and License</a>
+                      <a className="footer__links-anchor" href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">Reprint and License</a>
                     </li>
                   </ul>
                 </div>
@@ -162,16 +163,16 @@ export default function Footer() {
                   <h3 className="footer__item-title footer__item-title--submenu" onClick={(e) => accordion(e)}>Advertising</h3>
                   <ul className="footer__links">
                     <li className="footer__links-item">
-                      <a className="footer__links-anchor" href={current} target="_blank" rel="noopener noreferrer">Advertise with Us</a>
+                      <a className="footer__links-anchor" href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">Advertise with Us</a>
                     </li>
                     <li className="footer__links-item">
-                      <a className="footer__links-anchor" href={current} target="_blank" rel="noopener noreferrer">Advertising Terms</a>
+                      <a className="footer__links-anchor" href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">Advertising Terms</a>
                     </li>
                     <li className="footer__links-item">
-                      <a className="footer__links-anchor" href={current} target="_blank" rel="noopener noreferrer">Special Features</a>
+                      <a className="footer__links-anchor" href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">Special Features</a>
                     </li>
                     <li className="footer__links-item">
-                      <a className="footer__links-anchor" href={current} target="_blank" rel="noopener noreferrer">Election Ads Registry</a>
+                      <a className="footer__links-anchor" href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">Election Ads Registry</a>
                     </li>
                   </ul>
                 </div>
@@ -179,19 +180,19 @@ export default function Footer() {
                   <h3 className="footer__item-title footer__item-title--submenu" onClick={(e) => accordion(e)}>Initiatives</h3>
                   <ul className="footer__links">
                     <li className="footer__links-item">
-                      <a className="footer__links-anchor" href={current} target="_blank" rel="noopener noreferrer">Santa Claus Fund</a>
+                      <a className="footer__links-anchor" href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">Santa Claus Fund</a>
                     </li>
                     <li className="footer__links-item">
-                      <a className="footer__links-anchor" href={current} target="_blank" rel="noopener noreferrer">Fresh Air Fund</a>
+                      <a className="footer__links-anchor" href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">Fresh Air Fund</a>
                     </li>
                     <li className="footer__links-item">
-                      <a className="footer__links-anchor" href={current} target="_blank" rel="noopener noreferrer">Star Advisers</a>
+                      <a className="footer__links-anchor" href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">Star Advisers</a>
                     </li>
                     <li className="footer__links-item">
-                      <a className="footer__links-anchor" href={current} target="_blank" rel="noopener noreferrer">Classroom Connection</a>
+                      <a className="footer__links-anchor" href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">Classroom Connection</a>
                     </li>
                     <li className="footer__links-item">
-                      <a className="footer__links-anchor" href={current} target="_blank" rel="noopener noreferrer">Toronto Star Archives</a>
+                      <a className="footer__links-anchor" href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">Toronto Star Archives</a>
                     </li>
                   </ul>
                 </div>
@@ -200,24 +201,24 @@ export default function Footer() {
           </div>
           <div className="footer__networks">
             <div className="footer__networks-icons">
-              <a href={current} target="_blank" rel="noopener noreferrer" className="footer__networks-anchor">
+              <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer" className="footer__networks-anchor">
                 <i className="fab fa-facebook-f footer__networks-icon"></i>
               </a>
-              <a href={current} target="_blank" rel="noopener noreferrer" className="footer__networks-anchor">
+              <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer" className="footer__networks-anchor">
                 <i className="fab fa-twitter footer__networks-icon"></i>
               </a>
-              <a href={current} target="_blank" rel="noopener noreferrer" className="footer__networks-anchor">
+              <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer" className="footer__networks-anchor">
                 <i className="fab fa-youtube footer__networks-icon"></i>
               </a>
-              <a href={current} target="_blank" rel="noopener noreferrer" className="footer__networks-anchor">
+              <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer" className="footer__networks-anchor">
                 <i className="fab fa-instagram footer__networks-icon"></i>
               </a>
             </div>
             <div className="footer__networks-stores">
-              <a href={current} target="_blank" rel="noopener noreferrer" className="footer__networks-store">
+              <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer" className="footer__networks-store">
                 <img className="footer__networks-store__img" src={Android} alt="" />
               </a>
-              <a href={current} target="_blank" rel="noopener noreferrer" className="footer__networks-store">
+              <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer" className="footer__networks-store">
                 <img className="footer__networks-store__img" src={Ios} alt="" />
               </a>
             </div>
