@@ -16,8 +16,9 @@
   // --success-color: ;
   // --error-color: ;
   // --warning-color: ;
-  --primary-font: "'Georgia Regular', serif";
-  // --secondary-font: ;
+  --primary-font: 'Georgia Regular', serif;
+  --secondary-font: 'Merriweather Sans', sans-serif;
+  --font-awesome: 'Font Awesome 5 Free';
 }
 
 html {
@@ -40,9 +41,6 @@ button {
   cursor: pointer;
   transition: all 0.1s linear;
 }
-button:active {
-  transform: translateY(4px);
-}
 
 #modal-root,
 #loader-root {
@@ -50,8 +48,12 @@ button:active {
 }
 
 #modal-root {
-  z-index: 50;
+  z-index: 20;
 }
 #loader-root {
-  z-index: 100;
+  z-index: 30;
+}
+
+.link {
+  cursor: pointer;
 }

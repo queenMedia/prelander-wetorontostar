@@ -9,6 +9,71 @@
   @include for-size(desktop) {}
   @include for-size(tablet-landscape) {}
   @include for-size(tablet-portrait) {
+    &__row {
+      &--menu {
+        flex-direction: column;
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+    }
+    &__item {
+      flex: 1;
+      display: block;
+      padding-left: 20px;
+      padding-right: 20px;
+      border-bottom: 1px solid #262626;
+      &--no-padding {
+        padding-left: 0px;
+        padding-right: 0px;
+        border: none;
+      }
+      &--logo {
+        max-width: 45px;
+        padding-left: 0px;
+        padding-right: 0px;
+        border: none;
+        display: block;
+      }
+      &--responsive {
+        display: block;
+        a {
+          text-decoration: none;
+        }
+      }
+      &--no-responsive {
+        display: none;
+      }
+    }
+    &__item-title {
+      font-size: 15px;
+      margin-bottom: 0px;
+      line-height: 40px;     
+    }
+    &__item-title--submenu {
+      position: relative;
+      padding-right: 30px;
+      &::after {
+        content: "\f078";
+        position: absolute;
+        right: 0px;
+        color: #fff;
+        font-family: var(--font-awesome);
+        font-weight: 800;
+        transition: transform 300ms ease-in-out;
+      }
+    }
+    &__links {
+      display: none;
+      padding: 10px;
+    }
+    &__item-title--submenu.active ~ &__links {
+      display: block;
+    }
+    &__item-title--submenu.active {
+      &::after {
+        transform: rotate(-180deg);
+      }
+    }
     &__notification{
       width: 100%;
       left: 0;
@@ -16,7 +81,7 @@
       top: 50px;
       bottom: inherit;
       background: rgba(0,0,0,0.8);
-      padding: 10px;
+      padding: 10px 20px;
     }
     &__notificaction-text{
       align-self: flex-end;
@@ -53,16 +118,28 @@
     }
   }
   @include for-size(tablet-small) {
-    &__redes-content{
+    &__row {
       flex-direction: column;
-      justify-content: center;
-      gap: 20px ;
+      &--menu {
+        flex-direction: column;
+        padding-left: 0px;
+        padding-right: 0px;
+      }
+    }
+    &__item {
+        padding-left: 0px;
+        padding-right: 0px;
+      &--logo {
+        padding-bottom: 30px;
+      }
+    }
+    &__networks {
+      padding: 30px 20px;
+      flex-direction: column;
+      align-items: center;
     }
     &__actions-button{
       font-size: 1.3rem;
-    }
-    &__logo-footer{
-      width: 50px;
     }
   }
   @include for-size(phone-xbig) {}

@@ -60,3 +60,16 @@ export function actionContent() {
     });
   }
 }
+
+export function accordion(e: React.MouseEvent<HTMLElement>) {
+  const width = window.innerWidth || document.documentElement.clientWidth;
+  const select = e.currentTarget;
+
+  if (width <= 768) {
+    if (!select.classList.contains("active")) {
+      select.classList.add("active");
+    } else {
+      select.classList.remove("active");
+    }
+  }
+}

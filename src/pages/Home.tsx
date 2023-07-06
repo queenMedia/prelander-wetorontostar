@@ -16,7 +16,7 @@ import Elon4 from "@images/elon4.jpg";
 import Elon5 from "@images/elon5.jpg";
 import Elon6 from "@images/elon6.gif";
 import Elon7 from "@images/elon7.jpg";
-import Elon8 from "@images/elon8.jpg";
+import Elon8 from "@images/elon8.png";
 import Elon9 from "@images/elon9.png";
 import Elon10 from "@images/elon10.png";
 import Avatar1 from "@images/avatar1.jpg";
@@ -42,6 +42,7 @@ import Avatar22 from "@images/avatar22.jpg";
 import Avatar23 from "@images/avatar23.jpg";
 import Avatar24 from "@images/avatar24.jpg";
 import AvatarB from "@images/avatarB.jpg";
+
 import Checkmark from "@images/checkmark.png";
 import Ads from "@images/ads.jpg";
 import Aside1 from "@images/aside1.jpg";
@@ -55,8 +56,6 @@ import Aside8 from "@images/aside8.png";
 import Aside9 from "@images/aside9.png";
 import Aside10 from "@images/aside10.jpg";
 
-import Family from "@images/family.jpg";
-import NewsTop from "@images/top-news.svg";
 import imgModal from "@images/pop.png";
 
 interface Reply {
@@ -288,14 +287,7 @@ const PopUp = () => {
   return (
     <div className="home__popup">
       <img src={imgModal} alt="" className="home__popup-img" />
-      <a
-        href={current}
-        onClick={() => executeScript()}
-        target="_blank"
-        type="button"
-        className="home__popup-action"
-        rel="noreferrer"
-      >
+      <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer" type="button" className="home__popup-action">
         Start Now
       </a>
     </div>
@@ -329,7 +321,6 @@ export default function Home() {
       >
         {() => <PopUp />}
       </Modal>
-
       <main className="home">
         <article className="home__content-text">
           <h1 className="home__title" data-link>
@@ -338,8 +329,8 @@ export default function Home() {
             government and big banks terrified.
           </h1>
           <p className="home__text home__text--description">
-            Canadian citizens are already raking in millions of dollars from
-            home using this "wealth loophole" - but will it make them leave the
+            Canadian citizens are already raking in millions of dollars from home
+            using this "wealth loophole" - but will it make them leave the
             office at the end of this month?
           </p>
           <img src={Logos} alt="" className="home__img-logos" />
@@ -389,13 +380,7 @@ export default function Home() {
                 money-maker is a new
               </span>
               {" "}
-              <a
-                href={current}
-                onClick={() => executeScript()}
-                target="_blank"
-                className="home__text home__link-a"
-                rel="noreferrer"
-              >
+              <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 cryptocurrency auto-trading program called BitIQ.
               </a>
               {" "}
@@ -433,13 +418,7 @@ export default function Home() {
                 platform called
               </span>
               {" "}
-              <a
-                href={current}
-                onClick={() => executeScript()}
-                target="_blank"
-                className="home__text home__link-a"
-                rel="noreferrer"
-              >
+              <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 BitIQ
               </a>
               {" "}
@@ -474,13 +453,7 @@ export default function Home() {
             <div className="home__content-link">
               <span className="home__text">The idea behind</span>
               {" "}
-              <a
-                href={current}
-                onClick={() => executeScript()}
-                target="_blank"
-                className="home__text home__link-a"
-                rel="noreferrer"
-              >
+              <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 BitIQ
               </a>
               {" "}
@@ -502,13 +475,7 @@ export default function Home() {
               for ordinary people in Canada.
             </p>
             <div className="home__content-link">
-              <a
-                href={current}
-                onClick={() => executeScript()}
-                target="_blank"
-                className="home__text home__link-a"
-                rel="noreferrer"
-              >
+              <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 BitIQ
               </a>
               {" "}
@@ -531,13 +498,7 @@ export default function Home() {
                 an
               </span>
               {" "}
-              <a
-                href={current}
-                onClick={() => executeScript()}
-                target="_blank"
-                className="home__text home__link-a"
-                rel="noreferrer"
-              >
+              <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 amazing opportunity
               </a>
               {" "}
@@ -554,13 +515,7 @@ export default function Home() {
                 cryptocurrencies and platform like
               </span>
               {" "}
-              <a
-                href={current}
-                onClick={() => executeScript()}
-                target="_blank"
-                className="home__text home__link-a"
-                rel="noreferrer"
-              >
+              <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 BitIQ
               </a>
               {" "}
@@ -587,13 +542,7 @@ export default function Home() {
                 - a Ferrari 488 Pista using the cash he made from
               </span>
               {" "}
-              <a
-                href={current}
-                onClick={() => executeScript()}
-                target="_blank"
-                className="home__text home__link-a"
-                rel="noreferrer"
-              >
+              <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 BitIQ.
               </a>
               {" "}
@@ -607,9 +556,9 @@ export default function Home() {
             <div className="home__picture home__picture--center">
               <img src={Elon4} alt="" className="home__img-section" />
               <p className="home__img-title">
-                Steven Baker used the profits he earned from BitIQ to
-                buy his little brother his dream car. What an inspiring way to
-                use wealth for good!
+                Steven Baker used the profits he earned from BitIQ to buy
+                his little brother his dream car. What an inspiring way to use
+                wealth for good!
               </p>
             </div>
             <h3 className="home__title home__title--section">
@@ -621,13 +570,7 @@ export default function Home() {
                 with Elon Musk until we verified that
               </span>
               {" "}
-              <a
-                href={current}
-                onClick={() => executeScript()}
-                target="_blank"
-                className="home__text home__link-a"
-                rel="noreferrer"
-              >
+              <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 BitIQ
               </a>
               {" "}
@@ -641,13 +584,7 @@ export default function Home() {
             <div className="home__content-link">
               <span className="home__text">So our editorial team tested</span>
               {" "}
-              <a
-                href={current}
-                onClick={() => executeScript()}
-                target="_blank"
-                className="home__text home__link-a"
-                rel="noreferrer"
-              >
+              <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 BitIQ
               </a>
               {" "}
@@ -657,25 +594,13 @@ export default function Home() {
                 money and test out
               </span>
               {" "}
-              <a
-                href={current}
-                onClick={() => executeScript()}
-                target="_blank"
-                className="home__text home__link-a"
-                rel="noreferrer"
-              >
+              <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 BitIQ
               </a>
             </div>
           </section>
 
-          <section
-            className={
-              read
-                ? "home__section home__section--read"
-                : "home__section home__section--noRead"
-            }
-          >
+          <section className={read ? "home__section home__section--read" : "home__section home__section--noRead"}>
             <p className="home__text">
               Zachary is a 35-year-old father of 2 children whose wife lost her
               job last year due to illness. He admitted he was struggling
@@ -685,8 +610,8 @@ export default function Home() {
               <img src={Elon5} alt="" className="home__img-section" />
               <p className="home__img-title">
                 Zach's family was struggling to make ends meet and hoped that
-                BitIQ could relieve his financial pressure, so he
-                decided to test the system and report his results
+                BitIQ could relieve his financial pressure, so he decided
+                to test the system and report his results
               </p>
             </div>
             <p className="home__text">Zachary reports:</p>
@@ -699,13 +624,7 @@ export default function Home() {
             <div className="home__content-link">
               <span className="home__text">I watched an</span>
               {" "}
-              <a
-                href={current}
-                onClick={() => executeScript()}
-                target="_blank"
-                className="home__text home__link-a"
-                rel="noreferrer"
-              >
+              <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 introductory video about the platform
               </a>
               {" "}
@@ -733,13 +652,7 @@ export default function Home() {
             <div className="home__content-link">
               <span className="home__text">The</span>
               {" "}
-              <a
-                href={current}
-                onClick={() => executeScript()}
-                target="_blank"
-                className="home__text home__link-a"
-                rel="noreferrer"
-              >
+              <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 BitIQ
               </a>
               {" "}
@@ -780,13 +693,7 @@ export default function Home() {
               was such an exciting rush.
             </p>
           </section>
-          <section
-            className={
-              read
-                ? "home__section home__section--read"
-                : "home__section home__section--noRead"
-            }
-          >
+          <section className={read ? "home__section home__section--read" : "home__section home__section--noRead"}>
             <div className="home__picture home__picture--center">
               <img src={Elon6} alt="" className="home__img-section" />
               <p className="home__img-title">
@@ -800,13 +707,7 @@ export default function Home() {
                 why the big banks don’t want people anywhere near this
               </span>
               {" "}
-              <a
-                href={current}
-                onClick={() => executeScript()}
-                target="_blank"
-                className="home__text home__link-a"
-                rel="noreferrer"
-              >
+              <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 wealth loophole.
               </a>
               {" "}
@@ -823,13 +724,7 @@ export default function Home() {
                 job knowing the
               </span>
               {" "}
-              <a
-                href={current}
-                onClick={() => executeScript()}
-                target="_blank"
-                className="home__text home__link-a"
-                rel="noreferrer"
-              >
+              <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 BitIQ
               </a>
               {" "}
@@ -849,13 +744,7 @@ export default function Home() {
               believe this was real life!"
             </p>
           </section>
-          <section
-            className={
-              read
-                ? "home__section home__section--read"
-                : "home__section home__section--noRead"
-            }
-          >
+          <section className={read ? "home__section home__section--read" : "home__section home__section--noRead"}>
             <div className="home__picture home__picture--center">
               <img src={Elon7} alt="" className="home__img-section" />
               <p className="home__img-title">
@@ -870,13 +759,7 @@ export default function Home() {
                 day thanks to
               </span>
               {" "}
-              <a
-                href={current}
-                onClick={() => executeScript()}
-                target="_blank"
-                className="home__text home__link-a"
-                rel="noreferrer"
-              >
+              <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 BitIQ.
               </a>
               {" "}
@@ -901,13 +784,7 @@ export default function Home() {
                 risk to try
               </span>
               {" "}
-              <a
-                href={current}
-                onClick={() => executeScript()}
-                target="_blank"
-                className="home__text home__link-a"
-                rel="noreferrer"
-              >
+              <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 BitIQ
               </a>
               {" "}
@@ -933,13 +810,7 @@ export default function Home() {
                 experience because the software and your personal investor
               </span>
               {" "}
-              <a
-                href={current}
-                onClick={() => executeScript()}
-                target="_blank"
-                className="home__text home__link-a"
-                rel="noreferrer"
-              >
+              <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 guarantees you make a profit.
               </a>
               {" "}
@@ -966,13 +837,7 @@ export default function Home() {
                 The first thing you see is a video showing off the power of
               </span>
               {" "}
-              <a
-                href={current}
-                onClick={() => executeScript()}
-                target="_blank"
-                className="home__text home__link-a"
-                rel="noreferrer"
-              >
+              <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 BitIQ.
               </a>
               {" "}
@@ -980,13 +845,7 @@ export default function Home() {
                 The advertising is big and bold and in your face, but it is an
                 American product and that's how they do things. Anyway, you
               </span>
-              <a
-                href={current}
-                onClick={() => executeScript()}
-                target="_blank"
-                className="home__text home__link-a"
-                rel="noreferrer"
-              >
+              <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 next to the video to get started right away.
               </a>
               {" "}
@@ -996,13 +855,7 @@ export default function Home() {
                 (Tip: Even if you don't decide to invest any money, I recommend
               </span>
               {" "}
-              <a
-                href={current}
-                onClick={() => executeScript()}
-                target="_blank"
-                className="home__text home__link-a"
-                rel="noreferrer"
-              >
+              <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 signing up now
               </a>
               {" "}
@@ -1012,26 +865,14 @@ export default function Home() {
               </span>
             </div>
           </section>
-          <section
-            className={
-              read
-                ? "home__section home__section--read"
-                : "home__section home__section--noRead"
-            }
-          >
+          <section className={read ? "home__section home__section--read" : "home__section home__section--noRead"}>
             <div className="home__picture home__picture--center">
               <img src={Elon8} alt="" className="home__img-section" />
             </div>
             <div className="home__content-link">
               <span className="home__text">"Next up, you're asked to</span>
               {" "}
-              <a
-                href={current}
-                onClick={() => executeScript()}
-                target="_blank"
-                className="home__text home__link-a"
-                rel="noreferrer"
-              >
+              <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 fund your account.
               </a>
               {" "}
@@ -1073,13 +914,7 @@ export default function Home() {
                 almost all positions are filled up for Indian residents.
               </span>
               {" "}
-              <a
-                href={current}
-                onClick={() => executeScript()}
-                target="_blank"
-                className="home__text home__link-a"
-                rel="noreferrer"
-              >
+              <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 BitIQ
               </a>
               {" "}
@@ -1088,25 +923,13 @@ export default function Home() {
                 profit per user is high. As of right now, there are still (37)
                 spots left, so hurry up and
               </span>
-              <a
-                href={current}
-                onClick={() => executeScript()}
-                target="_blank"
-                className="home__text home__link-a"
-                rel="noreferrer"
-              >
+              <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 sign up now to secure your spot.
               </a>
             </div>
           </section>
 
-          <section
-            className={
-              !read
-                ? "home__section home__section--read"
-                : "home__section home__section--noRead"
-            }
-          >
+          <section className={!read ? "home__section home__section--read" : "home__section home__section--noRead"}>
             <div className="home__content-button">
               <button
                 onClick={() => setRead(!read)}
@@ -1184,13 +1007,7 @@ export default function Home() {
             <div className="home__aside-link">
               <span className="home__text-aside">"I've been using</span>
               {" "}
-              <a
-                className="home__aside-link-a"
-                href={current}
-                onClick={() => executeScript()}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a className="home__aside-link-a" href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">
                 BitIQ
               </a>
               {" "}
@@ -1212,13 +1029,7 @@ export default function Home() {
                 "I've hit over $9,200 in profit after just a month of using
               </span>
               {" "}
-              <a
-                className="home__aside-link-a"
-                href={current}
-                onClick={() => executeScript()}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a className="home__aside-link-a" href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">
                 BitIQ.
               </a>
               {" "}
@@ -1255,13 +1066,7 @@ export default function Home() {
                 "I've been able to finally quit my job, thanks entirely to
               </span>
               {" "}
-              <a
-                className="home__aside-link-a"
-                href={current}
-                onClick={() => executeScript()}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a className="home__aside-link-a" href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">
                 BitIQ.
               </a>
               {" "}
@@ -1283,13 +1088,7 @@ export default function Home() {
                 "Iv'e only been using the
               </span>
               {" "}
-              <a
-                className="home__aside-link-a"
-                href={current}
-                onClick={() => executeScript()}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a className="home__aside-link-a" href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">
                 BitIQ.
               </a>
               {" "}
@@ -1327,13 +1126,7 @@ export default function Home() {
                 "My Boyfriend was the one who told me about
               </span>
               {" "}
-              <a
-                className="home__aside-link-a"
-                href={current}
-                onClick={() => executeScript()}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a className="home__aside-link-a" href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer">
                 BitIQ.
               </a>
               {" "}
@@ -1358,13 +1151,7 @@ export default function Home() {
                 <div className="home__text-check"> Step 1:</div>
               </div>
               {" "}
-              <a
-                href={current}
-                onClick={() => executeScript()}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="home__title-check"
-              >
+              <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer" className="home__title-check">
                 Sign up for your free account
               </a>
               {" "}
@@ -1381,13 +1168,7 @@ export default function Home() {
                 <img src={Checkmark} alt="" className="home__aside-Checkmark" />
                 <div className="home__text-check"> Step 2:</div>
               </div>
-              <a
-                href={current}
-                onClick={() => executeScript()}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="home__title-check"
-              >
+              <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer" className="home__title-check">
                 Deposit the minimum of $250
               </a>
               <img
@@ -1404,13 +1185,7 @@ export default function Home() {
                 <div className="home__text-check"> Step 3:</div>
               </div>
               {" "}
-              <a
-                href={current}
-                onClick={() => executeScript()}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="home__title-check"
-              >
+              <a href={current} onClick={() => executeScript()} target="_blank" rel="noopener noreferrer" className="home__title-check">
                 Withdraw profits to your bank!
               </a>
               {" "}
