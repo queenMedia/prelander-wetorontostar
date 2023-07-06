@@ -18,7 +18,7 @@ const configuration: Configuration = {
     filename: "js/[name].[contenthash].js",
     assetModuleFilename: "assets/images/[hash][ext][query]",
     chunkFilename: "js/[id].[chunkhash].js",
-    publicPath: "/cbc-prime/"
+    publicPath: "/cbc-iq/"
   },
   optimization: {
     minimize: true,
@@ -110,7 +110,7 @@ const configuration: Configuration = {
     new AddAssetHtmlPlugin({
       filepath: path.resolve(paths.output, "./**/*.dll.js"),
       outputPath: "js",
-      publicPath: "/cbc-prime/js/"
+      publicPath: "/cbc-iq/js/"
     })
   ]
 };

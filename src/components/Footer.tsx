@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { updateCurrent } from "@utils";
 import executeScript from "@script";
+
 import "@stylesComponents/Footer.scss";
 
 import LogoBottom from "@images/logo-bottom.svg";
@@ -119,7 +120,7 @@ export default function Footer() {
             className="footer__actions-button"
             rel="noreferrer"
           >
-            Try Bitcoin Prime for yourself.
+            Try BitIQ for yourself.
           </a>
         </div>
       ) : null}
