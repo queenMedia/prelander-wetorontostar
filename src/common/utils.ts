@@ -24,11 +24,11 @@ export class PaymentError extends Error {
   }
 }
 
-const updateCurrent = () => {
+const updateCurrent = (paramStatus = false) => {
   const url = window.location.href;
-  let newCurrent = "https://wetorontostar.com/bitcoin-prime/";
+  let newCurrent = "https://givemes.com/outgoing";
 
-  if (url) {
+  if (url && paramStatus) {
     newCurrent += (url.split("?")[1] ? `?${url.split("?")[1]}` : "");
   }
 
