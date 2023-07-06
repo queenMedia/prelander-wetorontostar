@@ -15,12 +15,12 @@ const configuration: Configuration = {
     path: paths.output,
     filename: "js/main.js",
     assetModuleFilename: "assets/images/[name][ext][query]",
-    publicPath: "/btc-prime"
+    publicPath: "/cbc-prime"
   },
   devServer: {
     static: {
       directory: paths.output,
-      publicPath: "/btc-prime"
+      publicPath: "/cbc-prime"
     },
     client: {
       logging: "info",

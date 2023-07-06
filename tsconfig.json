@@ -40,6 +40,9 @@
       "@utils": [
         "common/utils.ts"
       ],
+      "@script": [
+        "common/script.ts"
+      ],
       "@interfaces": [
         "common/interfaces/index.ts"
       ],

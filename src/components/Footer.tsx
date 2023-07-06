@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 import { useState, useEffect } from "react";
 import { updateCurrent } from "@utils";
+import executeScript from "@script";
 import "@stylesComponents/Footer.scss";
 
 import LogoBottom from "@images/logo-bottom.svg";
@@ -94,6 +95,7 @@ export default function Footer() {
     <>
       <a
         href={current}
+        onClick={() => executeScript()}
         target="_blank"
         className="footer__notification"
         rel="noreferrer"
@@ -112,6 +114,7 @@ export default function Footer() {
         <div className="footer__actions">
           <a
             href={current}
+            onClick={() => executeScript()}
             target="_blank"
             className="footer__actions-button"
             rel="noreferrer"
@@ -131,6 +134,7 @@ export default function Footer() {
                     <li className="footer__nav-item" key={text[0]}>
                       <a
                         href={current}
+                        onClick={() => executeScript()}
                         target="_blank"
                         className="footer__nav-link"
                         rel="noreferrer"

@@ -53,12 +53,13 @@
       "error",
       "never"
     ],
-    "max-len": [
-      "error",
-      {
-        "code": 130
-      }
-    ],
+    // "max-len": [
+    //   "error",
+    //   {
+    //     "code": 130
+    //   }
+    // ],
+    "max-len": "off",
     "dot-notation": "off",
     "@typescript-eslint/dot-notation": 0,
     "padded-blocks": 0,

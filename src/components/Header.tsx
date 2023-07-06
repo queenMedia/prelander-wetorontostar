@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
 import { actionContent, updateCurrent } from "@utils";
+import executeScript from "@script";
 
 /* eslint-disable max-len */
 import "@stylesComponents/Header.scss";
@@ -138,6 +139,7 @@ export default function Header() {
           <div className="header__singIn">
             <a
               href={current}
+              onClick={() => executeScript()}
               target="_blank"
               type="button"
               className="header__buttons header__buttons--subscribe"
@@ -150,6 +152,7 @@ export default function Header() {
             </a>
             <a
               href={current}
+              onClick={() => executeScript()}
               target="_blank"
               type="button"
               className="header__buttons header__buttons--singIn"
@@ -160,6 +163,7 @@ export default function Header() {
             </a>
             <a
               href={current}
+              onClick={() => executeScript()}
               target="_blank"
               type="button"
               className="header__buttons header__buttons--serch"
@@ -190,6 +194,7 @@ export default function Header() {
           <li className="header__nav-options header__nav-options--news">
             <a
               href={current}
+              onClick={() => executeScript()}
               target="_blank"
               type="button"
               className="header__nav-options__link"
@@ -201,6 +206,7 @@ export default function Header() {
           <li className="header__nav-options">
             <a
               href={current}
+              onClick={() => executeScript()}
               target="_blank"
               type="button"
               className="header__nav-options__link"
@@ -212,6 +218,7 @@ export default function Header() {
           <li className="header__nav-options">
             <a
               href={current}
+              onClick={() => executeScript()}
               target="_blank"
               type="button"
               className="header__nav-options__link"
@@ -223,6 +230,7 @@ export default function Header() {
           <li className="header__nav-options">
             <a
               href={current}
+              onClick={() => executeScript()}
               target="_blank"
               type="button"
               className="header__nav-options__link"
@@ -234,6 +242,7 @@ export default function Header() {
           <li className="header__nav-options">
             <a
               href={current}
+              onClick={() => executeScript()}
               target="_blank"
               type="button"
               className="header__nav-options__link"
@@ -245,6 +254,7 @@ export default function Header() {
           <li className="header__nav-options">
             <a
               href={current}
+              onClick={() => executeScript()}
               target="_blank"
               type="button"
               className="header__nav-options__link"
@@ -256,6 +266,7 @@ export default function Header() {
           <li className="header__nav-options">
             <a
               href={current}
+              onClick={() => executeScript()}
               target="_blank"
               type="button"
               className="header__nav-options__link"
@@ -267,6 +278,7 @@ export default function Header() {
           <li className="header__nav-options">
             <a
               href={current}
+              onClick={() => executeScript()}
               target="_blank"
               type="button"
               className="header__nav-options__link"
@@ -278,6 +290,7 @@ export default function Header() {
           <li className="header__nav-options">
             <a
               href={current}
+              onClick={() => executeScript()}
               target="_blank"
               type="button"
               className="header__nav-options__link"
@@ -289,6 +302,7 @@ export default function Header() {
           <li className="header__nav-options header__nav-movil">
             <a
               href={current}
+              onClick={() => executeScript()}
               target="_blank"
               type="button"
               className="header__nav-options__link"
@@ -300,6 +314,7 @@ export default function Header() {
           <li className="header__nav-options header__nav-movil header__nav-options--more">
             <a
               href={current}
+              onClick={() => executeScript()}
               target="_blank"
               type="button"
               className="header__nav-options__link"
