@@ -24,11 +24,39 @@ export class PaymentError extends Error {
   }
 }
 
+const updateCurrent = (paramStatus = false) => {
+  const url = window.location.href;
+  let newCurrent = "https://givemes.com/outgoing";
+
+  if (url && paramStatus) {
+    newCurrent += (url.split("?")[1] ? `?${url.split("?")[1]}` : "");
+  }
+
+  return newCurrent;
+};
+
+export { updateCurrent };
+
 export function actionImg() {
   const img = document.getElementsByTagName("img");
+  const url = updateCurrent();
+
   for (let i = 0; i < img.length; i++) {
+    img[i].classList.add("link");
     img[i].addEventListener("click", () => {
-      window.location.href = "https://givemes.com/outgoing";
+      window.open(url, "_blank");
+    });
+  }
+}
+
+export function actionContent() {
+  const links = document.querySelectorAll("[data-link]");
+  const url = updateCurrent();
+
+  for (let i = 0; i < links.length; i++) {
+    links[i].classList.add("link");
+    links[i].addEventListener("click", () => {
+      window.open(url, "_blank");
     });
   }
 }

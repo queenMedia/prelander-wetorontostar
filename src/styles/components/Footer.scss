@@ -1,49 +1,80 @@
 @import "../Mixins";
 
 .footer {
-  background: #333;
   &__redes-content{
     @include content(1170px);
     @include flex(space-between, false, center);
-    height: 150px
   }
   &__redes-box{
-    @include flex(center);
-    height: 55px;
+    @include flex(center, 15px 20px, flex-start);
+    flex-wrap: wrap;
+    margin-top: 50px;
+    margin-bottom: 40px;
   }
-  &__logo-footer{
-    width: 60px;
-    height: auto;
+  &__nav-column{
+    flex: 1;
+    min-width: 150px;
+    a{
+      text-decoration: none;
+      
+    }
   }
-  &__redes{
-    @include flex(space-between, false, stretch);
-    flex-direction: column;
-    height: 100%;
-    margin-left: 20px
-  }
-  &__redes-txt{
-    @include text(1.5rem, 400, 1.5rem);
+  &__nav-title{
+    @include text(1.9rem, 700, 2.0rem);
     font-family: "lato", sans-serif;
-    color: #ffffff;
+    margin-bottom: 30px;
   }
-  &__socials-icons{
-    @include flex(flex-start, 10px);
-    color: white;
-    padding-bottom: 5px;
+  &__nav-item{
+    @include text(1.5rem, 500, 2.0rem);
+    font-family: "lato", sans-serif;
+    list-style: none;
+    margin-bottom: 8px;
   }
-  &__social-icons{
-    width: 40px;
-    font-size: 24px;
+  &__Link{
+    color: #0550c8;
+    &--dark{
+      color: rgb(20, 20, 20);
+    }
   }
-  &__play-store{
-    @include flex(center, 15px);
-  }
-  &__play-store-img{
-    width: 120px;
-  }
+
+  
+  // &__logo-footer{
+  //   width: 60px;
+  //   height: auto;
+  // }
+  // &__redes{
+  //   @include flex(space-between, false, stretch);
+  //   flex-direction: column;
+  //   height: 100%;
+  //   margin-left: 20px
+  // }
+  // &__redes-txt{
+  //   @include text(1.5rem, 400, 1.5rem);
+  //   font-family: "lato", sans-serif;
+  //   color: #ffffff;
+  // }
+  // &__socials-icons{
+  //   @include flex(flex-start, 10px);
+  //   color: white;
+  //   padding-bottom: 5px;
+  // }
+  // &__social-icons{
+  //   width: 40px;
+  //   font-size: 24px;
+  // }
+  // &__play-store{
+  //   @include flex(center, 15px);
+  // }
+  // &__play-store-img{
+  //   width: 120px;
+  // }
   &__terms{
     background: #202020;
-    padding: 15px 0;
+    padding: 5px 0;
+  }
+
+  &__terms-box{
+    height: auto;
   }
   &__terms-legals{
     @include flex(center);

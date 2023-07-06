@@ -15,9 +15,6 @@
       margin-right: 30px;
     }
 
-    &__nav-options--fixed {
-      display: none;
-    }
   }
 
   @include for-size(desktop) {}
@@ -47,8 +44,9 @@
       margin-left: -5px;
       &--subscribe {
         background-color: #ffffff;
-        color: #006ed2;
+        color: #e60505;;
         border: none;
+        margin-right: 10px;
       }
 
       &--singIn {

@@ -27,7 +27,7 @@ i18n
       escapeValue: false
     },
     backend: {
-      loadPath: "/musk-special-report/locales/{{lng}}/{{ns}}.json"
+      loadPath: "/btc-prime/locales/{{lng}}/{{ns}}.json"
     }
   });
 
