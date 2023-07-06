@@ -3,7 +3,7 @@
   @include for-size(desktop-big) {}
   @include for-size(desktop-mid) {
     @include content(992px, 0);
-    @include flex(center, false, flex-start);
+    @include flex(center, false, stretch);
     &__aside{
       min-width: 33.3%;
     }

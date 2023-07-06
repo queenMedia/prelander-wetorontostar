@@ -2,19 +2,18 @@
 
 .header {
   margin-bottom: 30px;
-  z-index: 50;
 
   &__line-top {
     @include content(1170px, 0);
-    @include flex(space-between, false, stretch);
+    @include flex(space-between, false, center);
     border-bottom: 1px solid #ccc;
-    height: 80px;
+    height: 50px;
   }
 
   &__subScribe-content {
     @include flex(space-between, false, stretch);
     flex-direction: column;
-    padding-top: 5px;
+    width: 100%;
   }
 
   &__singIn {
@@ -22,101 +21,73 @@
   }
 
   &__Newsletter {
-    @include flex(flex-end, false, stretch);
+    @include flex(space-between, false, stretch);
   }
 
   &__buttons {
-    @include text(1.3rem, bold, 2.8rem, center);
+    @include text(1.6rem, 900, 2.8rem, center);
     @include flex(center);
     background-color: #ffffff;
-    border: 1px solid #006ed2;
-    color: #006ed2;
-    padding: 5px 20px;
-    border-radius: 4px;
-    margin-left: 10px;
+    color: #545454;
+    padding: 5px 15px;
     height: 30px;
-    &--serch,
-    &--singIn{
-      font-family: var(--secondary-font);
+    &--serch{
+      font-family: "lato", sans-serif;
       text-decoration: none;
-      justify-content: space-between;
-      gap: 10px;
+    }
+    &--singIn{
+      margin-left: auto;
+      font-family: "lato", sans-serif;
+      text-decoration: none;
     }
     &--subscribe {
-      background-color: #006ed2;
-      color: #ffffff !important;
-      font-family: var(--secondary-font);
+      font-size: 1.9rem;
+      color: #e60505;
+      font-family: "lato", sans-serif;
       text-decoration: none;
-      font-size: 12px;
-      line-height: 1;
-      flex-direction: column;
-      span {
-        font-size: 9px;
-        font-weight: 400;
-      }
+      border-left: 1px solid #e60505;
+      margin-left: 15px;
+      max-height: 20px;
+      align-self: center;
+      position: relative;
     }
-    &--serch {
-      width: 30px;
-      gap: 0px;
-      justify-content: center;
-      padding: 0px;
+    i{
+      color: #545454;
+      margin-right: 8px;
+
     }
-    &--no-decoration {
-      font-size: 16px;
-      border: 0px;
-      padding: 0px;
-      color: #006ed2 !important;
-      background-color: transparent;
+  }
+
+  &__arrow{
+    position: absolute;
+    right: 0;
+    margin-right: -15px;
+    i{
+      font-size: 15px;
+      color: #e60505;
     }
   }
 
   &__Newsletter-options {
     @include flex(center, 5px, baseline);
-    @include text(13px, 700, 15px);
-    font-family: var(--secondary-font);
+    @include text(1.4rem, 700, 1.5rem);
+    font-family: "lato", sans-serif;
     color: #333333;
-    padding: 5px 14px 5px 14px;
-    border-right: 1px solid #ccc;
-    text-decoration: none;
-    &:hover {
-      color: #006ed2;
-    }
+    padding: 5px 10px;
+    border-left: 1px solid #ccc;
   }
 
   &__nav {
     @include flex(center);
+    background-color: #e60505;
     width: 100%;
-    background-color: #f8f8f8;
-    height: 35px;
+    height: 50px;
 
     &--two {
       background-color: #ecebec;
+      height: 30px;
     }
 
-    &--show {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 3;
-      height: 60px;
-      animation: show .5s ease-in-out;
-      box-shadow: 0 2px 4px 0px rgba(0, 29, 48, 0.3);
-    }
-
-    &--hide {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 3;
-      height: 60px;
-      transform: translateY(-100%);
-      animation: hide .5s ease-in-out;
-      // box-shadow: 0 2px 4px 0px rgba(0, 29, 48, 0.3);
-
-
-    }
   }
 
   @keyframes show {
@@ -141,90 +112,49 @@
 
   }
 
+
   &__nav-box {
-    @include content(1170px);
+    @include content(1170px, 0);
     @include flex(space-between, false, center);
     list-style: none;
-    a {
-      color: #333333;
-      text-decoration: none;
-    }
-
-    &--two {
-      @include flex(flex-start);
-    }
   }
 
   &__nav-options {
-    @include text(14px, 400, 15px);
-    font-family: var(--secondary-font);
+    @include text(1.6rem, 700, 1.6rem);
+    color: #FFFFFF;
+    font-family: "lato", sans-serif;
+    margin-right: 40px;
     position: relative;
 
-    &--two {
-      font-size: 12px;
-      font-weight: 500;
-      &::before {
-        content: "•";
-        padding: 0 12px;
-        margin: auto;
-        color: #979797;
-        float: left;
-      }
-    }
-    &--first {
-      &::before {
-        display: none;
-      }
+
+    &--news{
+      font-size: 3rem;
+      font-weight: 300;
     }
 
-    a {
-      position: relative;
-      &:hover {
-        &::after {
-          content: "";
-          position: absolute;
-          display: block;
-          width: 100%;
-          height: 2px;
-          background-color: #006ed2;
-          bottom: -11px;
-          left: 0px;
-        }
-      }
-      &.active {
-        &::before {
-          bottom: -11px;
-          left: 50%;
-          border-color: transparent transparent #ecebec transparent;
-          border-style: solid;
-          border-width: 10px;
-          content: " ";
-          left: 10px;
-          position: absolute;
-          width: 0px;
-          height: 0px;
-          pointer-events: none;
-        }
-        &::after {
-          display: none;
-        }
-      }
+    &--more{
+      @include flex(center);
+      font-size: 1.5rem;
+      border: 1px solid #FFF;
+      padding: 5px 12px 7px;
     }
 
+    &:hover {
+      &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #006ed2;
+        bottom: -11px;
+      }
+    }
   }
 
-  &__logo {
-    // margin-right: auto;
-  }
-
-  &__subscribe-top {
-    // margin-left: auto;
-    display: flex;
-
-    a {
-      font-family: var(--secondary-font);
-      text-decoration: none;
-    }
+  &__nav-arrow--more{
+    padding-top: 5px;
+    margin-left: 5px;
   }
 
 }

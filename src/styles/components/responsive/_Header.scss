@@ -4,12 +4,10 @@
   @include for-size(desktop-big) {}
 
   @include for-size(desktop-mid) {
-    @include content(100%);
+    @include content(992px);
     padding-bottom: 50px;
-    padding: 0px;
 
-    &__nav-box,
-    &__line-top {
+    &__nav-box {
       max-width: 992px;
     }
 
@@ -17,9 +15,6 @@
       margin-right: 30px;
     }
 
-    &__nav-options--fixed {
-      display: none;
-    }
   }
 
   @include for-size(desktop) {}
@@ -45,16 +40,13 @@
       display: none;
     }
 
-    &__subScribe-content {
-      padding-right: 10px;
-    }
-
     &__buttons {
       margin-left: -5px;
       &--subscribe {
         background-color: #ffffff;
-        color: #006ed2;
+        color: #e60505;;
         border: none;
+        margin-right: 10px;
       }
 
       &--singIn {

@@ -1,110 +1,80 @@
 @import "../Mixins";
 
 .footer {
-  border-top: 4px solid hsl(209, 100%, 41%);
-  background: #333;
-  &__content {
+  &__redes-content{
     @include content(1170px);
-    height: auto;
-    position: relative;
-    padding: 30px 20px;
+    @include flex(space-between, false, center);
   }
-  &__row {
-    display: flex;
-    justify-content: center;
-    &--menu {
-      flex-direction: row;
-    }
+  &__redes-box{
+    @include flex(center, 15px 20px, flex-start);
+    flex-wrap: wrap;
+    margin-top: 50px;
+    margin-bottom: 40px;
   }
-  &__item {
+  &__nav-column{
     flex: 1;
-    display: block;
-    padding-left: 56px;
-    &--no-padding {
-      padding-left: 0px;
-    }
-    &--logo {
-      max-width: 45px;
-      padding-left: 0px;
-    }
-    &--responsive {
-      display: none;
+    min-width: 150px;
+    a{
+      text-decoration: none;
+      
     }
   }
-  &__logo {
-    max-width: 100%;
-    object-fit: contain;
-  }
-  &__item-title {
-    font-size: 15px;
-    font-weight: 400;
-    color: #fff;
+  &__nav-title{
+    @include text(1.9rem, 700, 2.0rem);
+    font-family: "lato", sans-serif;
     margin-bottom: 30px;
-    display: block;
-    text-align: left;
-    font-family: var(--secondary-font);
   }
-  &__links {
-    width: 100%;
-    height: auto;
-    position: relative;
+  &__nav-item{
+    @include text(1.5rem, 500, 2.0rem);
+    font-family: "lato", sans-serif;
     list-style: none;
-    margin-left: 18px;
+    margin-bottom: 8px;
   }
-  &__links-item {
-    position: relative;
-    padding: 0 0 8px;
-    &::before {
-      color: #007ac2;
-      content: "\2022";
-      display: inline-block;
-      font-size: 20px;
-      left: -15px;
-      position: absolute;
-      top: -1px;
+  &__Link{
+    color: #0550c8;
+    &--dark{
+      color: rgb(20, 20, 20);
     }
   }
-  &__links-anchor {
-    font-family: var(--secondary-font);
-    color: #fff;
-    font-size: 14px;
-    text-decoration: none;
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-  &__networks {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    gap: 20px;
-    margin: 0 auto;
-    padding: 30px 60px 30px 85px;
-  }
-  &__networks-icons {
-    padding: 0;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-  &__networks-anchor {
-    color: #fff;
-    text-decoration: none;
-  }
-  &__networks-icon {
-    font-size: 24px;
-  }
-  &__networks-stores {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
+
   
+  // &__logo-footer{
+  //   width: 60px;
+  //   height: auto;
+  // }
+  // &__redes{
+  //   @include flex(space-between, false, stretch);
+  //   flex-direction: column;
+  //   height: 100%;
+  //   margin-left: 20px
+  // }
+  // &__redes-txt{
+  //   @include text(1.5rem, 400, 1.5rem);
+  //   font-family: "lato", sans-serif;
+  //   color: #ffffff;
+  // }
+  // &__socials-icons{
+  //   @include flex(flex-start, 10px);
+  //   color: white;
+  //   padding-bottom: 5px;
+  // }
+  // &__social-icons{
+  //   width: 40px;
+  //   font-size: 24px;
+  // }
+  // &__play-store{
+  //   @include flex(center, 15px);
+  // }
+  // &__play-store-img{
+  //   width: 120px;
+  // }
   &__terms{
     background: #202020;
-    padding: 15px 0;
+    padding: 5px 0;
+  }
+
+  &__terms-box{
+    height: auto;
   }
   &__terms-legals{
     @include flex(center);
@@ -126,7 +96,6 @@
     position: fixed;
     bottom: 0;
     height: 80px;
-    z-index: 5;
   }
   &__actions-button{
     @include text(2.2rem, 400, 2.4rem);
@@ -156,7 +125,6 @@
     background: rgba(255,255,255,0.9);
     box-shadow: 0 0 10px rgba(0, 0, 0, .2);
     animation: notification infinite 15s ease-in-out;
-    z-index: 10;
   }
   &__notificaction-box{
     @include flex(center);
