@@ -2,7 +2,7 @@
 
 .home {
   @include content(1170px, 0);
-  @include flex(center, false, stretch);
+  @include flex(center, false, flex-start);
 
   &__content-text {
     @include flex(center, false, center);
@@ -10,14 +10,12 @@
     padding: 0 16px;
   }
 
-  &__section {
+  &__section{
     width: 100%;
-
-    &--read {
+    &--read{
       display: block;
     }
-
-    &--noRead {
+    &--noRead{
       display: none;
     }
   }
@@ -26,11 +24,9 @@
     font-family: 'Georgia Regular';
     @include text(4.8rem, 500, 5.7rem);
     padding-bottom: 16px;
-
-    span {
+    span{
       text-decoration: underline
     }
-
     &--section {
       @include text(2.0rem, 400, 2.8rem);
       font-family: 'Georgia Bold';
@@ -43,12 +39,10 @@
       text-align: center;
     }
   }
-
-  &__img-logos {
+  &__img-logos{
     width: 100%;
   }
-
-  &__img-section {
+  &__img-section{
     width: 100%;
   }
 
@@ -89,48 +83,35 @@
     margin: 20px auto 40px;
     text-shadow: 0 2px 3px rgb(0 0 0 / 30%);
     transition: all .3s ease-in-out;
-
-    &--bottom {
+    &--bottom{
       @include flex(center);
       flex-direction: column;
       background-color: #e20714;
       font-weight: 400;
     }
   }
-
-  &__img-arrow {
+  &__img-arrow{
     width: 50px;
     margin-top: 10px;
   }
 
   &__aside {
-    @include flex(center);
-    flex-direction: column;
     padding: 0 16px;
     min-width: 390px;
   }
 
-  &__sticky-content {
-    flex-grow: 1;
-  }
-
   &__aside-content {
-    margin-bottom: 28px;
-    padding: 16px;
-    padding-bottom: 0;
-    position: sticky;
-    top: 0;
-
-    &--top {
-      border: 1px solid #303030;
-    }
+    margin-bottom: 28px
   }
 
   &__title-aside {
-    @include text(2.5rem, 700, .5rem);
-    font-family: "lato", sans-serif;
+    @include text(2.0rem, 500, .5rem);
+    font-family: 'Georgia Regular';
+    color: #666;
+    border-bottom: 2px solid #0198bd;
+    margin-bottom: 20px;
 
-    &--news {
+    &--check {
       line-height: 2.4rem
     }
   }
@@ -155,83 +136,28 @@
     font-family: 'Georgia Bold Italic';
   }
 
-  &__aside-news-img {
-    &--top{
-      margin-top: 30px; 
-    }
+  &__aside-check-img {
+    border: 1px solid #ccc;
+    background: #f5f9fa;
+    padding: 10px;
   }
 
-  &__aside-news-content {
-    @include flex(flex-start, false, stretch);
-    position: relative;
-    padding-bottom: 15px;
+  &__aside-check-content {
+    @include flex(flex-start, false, baseline);
     margin-bottom: 15px;
-    border-bottom: 1px solid rgb(181, 181, 181);
-
-    &--top {
-      margin-bottom: 0;
-      padding-bottom: 0;
-      margin-left: 20px;
-    }
   }
 
-  &__aside-newsmark {
-    @include text(2.5rem, 900, 2.8rem, center);
-    position: relative;
-    z-index: 2;
-
-    &--top {
-      @include text(1.5rem, 700, 2rem, center);
-      font-family: "lato", sans-serif;
-      color: #FFF;
-      width: 30px;
-      min-width: 30px;
-      margin-top: -15px;
-      margin-left: -20px;
-      background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 45%, rgba(230,5,5,1) 45%, rgba(230,5,5,1) 55%, rgba(255,255,255,1) 55%, rgba(255,255,255,1) 100%);
-
-      &::before {
-        content: '';
-        position: absolute;
-        top: -4px;
-        left: 0px;
-        width: 30px;
-        height: 30px;
-        background-color: #e60505;
-        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.3);
-        border-radius: 50%;
-        z-index: -1;
-      }
-    }
+  &__aside-Checkmark {
+    width: 30px;
+    height: 30px;
   }
 
-  &__text-box {
-    margin-left: 10px;
-    z-index: 1;
-    &--top{
-      padding: 8px 0 ;
-    }
+  &__text-check {
+    @include text(2.2rem, 500, 2.8rem);
+    font-family: 'Georgia Italic';
   }
 
-  &__text-news {
-    @include text(1.5rem, 700, 2.2rem);
-    font-family: "lato", sans-serif;
-
-    &--sub {
-      @include text(1.3rem, 400, 1.8rem);
-      font-family: "lato", sans-serif;
-      margin-top: 8px;
-    }
-
-    &--top {
-      @include text(1.4rem, 400, 1.8rem);
-      color: #e60505;
-      font-family: "lato", sans-serif;
-      margin-bottom: 4px;
-    }
-  }
-
-  &__title-news {
+  &__title-check {
     @include text(2.0rem, 500, 2.8rem);
     text-decoration: none;
     color: #0198bd;
@@ -242,91 +168,77 @@
   &__img-aside {
     width: 100%;
     height: auto;
-
-    &--ads {
+    &--ads{
       margin-bottom: 15px;
     }
-
     &--steps {
       width: calc(100% - 16px);
       border: 1px solid grey;
       margin: 10px 8px 5px;
 
     }
-    &--info{
-      font-family: "lato", sans-serif;
-      text-align: right;
-    }
   }
 
-  &__coments {
+  &__coments{
     @include flex(center, false, center);
     flex-direction: column;
     width: 100%;
-
+    
 
   }
-
-  &__commets-top {
+  &__commets-top{
     @include flex(space-between, false, center);
-    padding: 20px;
+   padding: 20px;
     width: 100%;
   }
-
-  &__coments-content {
+  &__coments-content{
     width: 100%;
-    padding: 15px 0;
-
+    padding: 15px 0;  
+    
   }
-
-  &__coment-box {
+  &__coment-box{
     width: 100%;
   }
-
-  &__coments-box {
+  &__coments-box{
     @include flex(flex-start, false, flex-start);
     border-top: 1px solid #E2E2E2;
     align-self: flex-start;
     width: 100%;
     padding-top: 10px
   }
-
-  &__coments-recent {
+  &__coments-recent{
     @include text(1.5rem, 400, 1.8rem);
     color: #3B5998;
     font-family: 'Lato';
     font-style: italic;
-
-    &--add {
+    &--add{
       font-weight: 900;
     }
   }
 
-  &__coments-avatar {
+  &__coments-avatar{
     margin-right: 10px
   }
 
-  &__coment-name {
+  &__coment-name{
     @include text(1.5rem, 900, 1.7rem);
     color: #3B5998;
     font-family: "Lato", sans-serif;
     font-style: italic;
     margin-bottom: 4px;
   }
-
-  &__coment-text {
+  &__coment-text{
     @include text(1.4rem, 400, 1.7rem);
     font-family: "Lato", sans-serif;
     font-style: italic;
     margin-bottom: 4px;
   }
-
-  &__content_reply {
+  &__content_reply{
     @include flex(flex-start, false, center);
     flex-direction: column;
   }
 
-  &__coment-reply {
+  &__coment-reply{
     @include text(1.4rem, 400, 1.7rem);
     @include flex(flex-start, 10px, flex-start);
     font-family: "Lato", sans-serif;
@@ -334,29 +246,24 @@
     color: #3B5998;
     align-self: flex-start;
   }
-
-  &__reply-bottom {
+  &__reply-bottom{
     height: 10px;
   }
-
-  &__time-ago {
+  &__time-ago{
     color: #808080;
     border-bottom: 1px dotted #808080;
   }
-
-  &__popup {
+  &__popup{
     @include flex(center);
     border: 5px solid white;
     position: relative;
     border-radius: 5px;
   }
-
-  &__popup-img {
+  &__popup-img{
     width: 100%;
     height: auto;
   }
-
-  &__popup-action {
+  &__popup-action{
     @include text(1.7rem, 600, 1.9rem, center);
     font-family: 'Lato', sans-serif;
     text-decoration: none;
@@ -376,23 +283,19 @@
     white-space: nowrap;
     transition: all .3s ease-in-out;
     margin-left: 15px;
-    animation: move infinite .5s ease;
-
-    &:hover {
+    animation: move  infinite .5s ease;
+    &:hover{
       transform: scale(1.05);
       transition: all .3s ease-in-out;
     }
   }
-
   @keyframes move {
     0% {
       transform: scale(0.97);
     }
-
     50% {
       transform: scale(1.02);
     }
-
     100% {
       transform: scale(0.97);
     }

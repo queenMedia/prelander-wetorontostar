@@ -27,7 +27,7 @@ i18n
       escapeValue: false
     },
     backend: {
-      loadPath: "/musk-special-canada/locales/{{lng}}/{{ns}}.json"
+      loadPath: "/musk-special-tstar/locales/{{lng}}/{{ns}}.json"
     }
   });
 

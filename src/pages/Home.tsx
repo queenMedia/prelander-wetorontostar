@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { useOutletContext } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Modal } from "@components";
-import { actionImg, updateCurrent } from "@utils";
+import { actionImg, actionContent, updateCurrent } from "@utils";
 import "@stylesPages/Home.scss";
 
 import Logos from "@images/logos.png";
@@ -42,8 +42,19 @@ import Avatar23 from "@images/avatar23.jpg";
 import Avatar24 from "@images/avatar24.jpg";
 import AvatarB from "@images/avatarB.jpg";
 
-import Family from "@images/family.jpg";
-import NewsTop from "@images/top-news.svg";
+import Checkmark from "@images/checkmark.png";
+import Ads from "@images/ads.jpg";
+import Aside1 from "@images/aside1.jpg";
+import Aside2 from "@images/aside2.jpg";
+import Aside3 from "@images/aside3.png";
+import Aside4 from "@images/aside4.png";
+import Aside5 from "@images/aside5.png";
+import Aside6 from "@images/aside6.png";
+import Aside7 from "@images/aside7.png";
+import Aside8 from "@images/aside8.png";
+import Aside9 from "@images/aside9.png";
+import Aside10 from "@images/aside10.jpg";
+
 import imgModal from "@images/pop.png";
 
 interface Reply {
@@ -275,13 +286,7 @@ const PopUp = () => {
   return (
     <div className="home__popup">
       <img src={imgModal} alt="" className="home__popup-img" />
-      <a
-        href={current}
-        target="_blank"
-        type="button"
-        className="home__popup-action"
-        rel="noreferrer"
-      >
+      <a href={current} target="_blank" rel="noopener noreferrer" type="button" className="home__popup-action">
         Start Now
       </a>
     </div>
@@ -298,9 +303,10 @@ export default function Home() {
   useEffect(() => {
     setTimeout(() => {
       toggleModal(true);
-      setCurrent(updateCurrent());
     }, 2000);
     actionImg();
+    actionContent();
+    setCurrent(updateCurrent());
   }, [toggleModal]);
 
   return (
@@ -314,17 +320,16 @@ export default function Home() {
       >
         {() => <PopUp />}
       </Modal>
-      ;
       <main className="home">
         <article className="home__content-text">
-          <h1 className="home__title">
+          <h1 className="home__title" data-link>
             <span>SPECIAL REPORT</span>
             : Elon Musk's latest investment has the
             government and big banks terrified.
           </h1>
           <p className="home__text home__text--description">
-            Canadian citizens are already raking in millions of dollars from
-            home using this "wealth loophole" - but will it make them leave the
+            Canadian citizens are already raking in millions of dollars from home
+            using this "wealth loophole" - but will it make them leave the
             office at the end of this month?
           </p>
           <img src={Logos} alt="" className="home__img-logos" />
@@ -374,12 +379,7 @@ export default function Home() {
                 money-maker is a new
               </span>
               {" "}
-              <a
-                href={current}
-                target="_blank"
-                className="home__text home__link-a"
-                rel="noreferrer"
-              >
+              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 cryptocurrency auto-trading program called Bitcoin Prime.
               </a>
               {" "}
@@ -404,7 +404,7 @@ export default function Home() {
               </p>
             </div>
             <div className="home__content-button">
-              <button type="button" className="home__button-action">
+              <button type="button" className="home__button-action" data-link>
                 Get Started now
               </button>
             </div>
@@ -417,12 +417,7 @@ export default function Home() {
                 platform called
               </span>
               {" "}
-              <a
-                href={current}
-                target="_blank"
-                className="home__text home__link-a"
-                rel="noreferrer"
-              >
+              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 Bitcoin Prime
               </a>
               {" "}
@@ -457,12 +452,7 @@ export default function Home() {
             <div className="home__content-link">
               <span className="home__text">The idea behind</span>
               {" "}
-              <a
-                href={current}
-                target="_blank"
-                className="home__text home__link-a"
-                rel="noreferrer"
-              >
+              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 Bitcoin Prime
               </a>
               {" "}
@@ -484,12 +474,7 @@ export default function Home() {
               for ordinary people in Canada.
             </p>
             <div className="home__content-link">
-              <a
-                href={current}
-                target="_blank"
-                className="home__text home__link-a"
-                rel="noreferrer"
-              >
+              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 Bitcoin Prime
               </a>
               {" "}
@@ -512,12 +497,7 @@ export default function Home() {
                 an
               </span>
               {" "}
-              <a
-                href={current}
-                target="_blank"
-                className="home__text home__link-a"
-                rel="noreferrer"
-              >
+              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 amazing opportunity
               </a>
               {" "}
@@ -534,12 +514,7 @@ export default function Home() {
                 cryptocurrencies and platform like
               </span>
               {" "}
-              <a
-                href={current}
-                target="_blank"
-                className="home__text home__link-a"
-                rel="noreferrer"
-              >
+              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 Bitcoin Prime
               </a>
               {" "}
@@ -566,12 +541,7 @@ export default function Home() {
                 - a Ferrari 488 Pista using the cash he made from
               </span>
               {" "}
-              <a
-                href={current}
-                target="_blank"
-                className="home__text home__link-a"
-                rel="noreferrer"
-              >
+              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 Bitcoin Prime.
               </a>
               {" "}
@@ -585,9 +555,9 @@ export default function Home() {
             <div className="home__picture home__picture--center">
               <img src={Elon4} alt="" className="home__img-section" />
               <p className="home__img-title">
-                Steven Baker used the profits he earned from Bitcoin Prime to
-                buy his little brother his dream car. What an inspiring way to
-                use wealth for good!
+                Steven Baker used the profits he earned from Bitcoin Prime to buy
+                his little brother his dream car. What an inspiring way to use
+                wealth for good!
               </p>
             </div>
             <h3 className="home__title home__title--section">
@@ -599,12 +569,7 @@ export default function Home() {
                 with Elon Musk until we verified that
               </span>
               {" "}
-              <a
-                href={current}
-                target="_blank"
-                className="home__text home__link-a"
-                rel="noreferrer"
-              >
+              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 Bitcoin Prime
               </a>
               {" "}
@@ -618,12 +583,7 @@ export default function Home() {
             <div className="home__content-link">
               <span className="home__text">So our editorial team tested</span>
               {" "}
-              <a
-                href={current}
-                target="_blank"
-                className="home__text home__link-a"
-                rel="noreferrer"
-              >
+              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 Bitcoin Prime
               </a>
               {" "}
@@ -633,24 +593,13 @@ export default function Home() {
                 money and test out
               </span>
               {" "}
-              <a
-                href={current}
-                target="_blank"
-                className="home__text home__link-a"
-                rel="noreferrer"
-              >
+              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 Bitcoin Prime
               </a>
             </div>
           </section>
 
-          <section
-            className={
-              read
-                ? "home__section home__section--read"
-                : "home__section home__section--noRead"
-            }
-          >
+          <section className={read ? "home__section home__section--read" : "home__section home__section--noRead"}>
             <p className="home__text">
               Zachary is a 35-year-old father of 2 children whose wife lost her
               job last year due to illness. He admitted he was struggling
@@ -660,8 +609,8 @@ export default function Home() {
               <img src={Elon5} alt="" className="home__img-section" />
               <p className="home__img-title">
                 Zach's family was struggling to make ends meet and hoped that
-                Bitcoin Prime could relieve his financial pressure, so he
-                decided to test the system and report his results
+                Bitcoin Prime could relieve his financial pressure, so he decided
+                to test the system and report his results
               </p>
             </div>
             <p className="home__text">Zachary reports:</p>
@@ -674,12 +623,7 @@ export default function Home() {
             <div className="home__content-link">
               <span className="home__text">I watched an</span>
               {" "}
-              <a
-                href={current}
-                target="_blank"
-                className="home__text home__link-a"
-                rel="noreferrer"
-              >
+              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 introductory video about the platform
               </a>
               {" "}
@@ -707,12 +651,7 @@ export default function Home() {
             <div className="home__content-link">
               <span className="home__text">The</span>
               {" "}
-              <a
-                href={current}
-                target="_blank"
-                className="home__text home__link-a"
-                rel="noreferrer"
-              >
+              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 Bitcoin Prime
               </a>
               {" "}
@@ -753,13 +692,7 @@ export default function Home() {
               was such an exciting rush.
             </p>
           </section>
-          <section
-            className={
-              read
-                ? "home__section home__section--read"
-                : "home__section home__section--noRead"
-            }
-          >
+          <section className={read ? "home__section home__section--read" : "home__section home__section--noRead"}>
             <div className="home__picture home__picture--center">
               <img src={Elon6} alt="" className="home__img-section" />
               <p className="home__img-title">
@@ -773,12 +706,7 @@ export default function Home() {
                 why the big banks don’t want people anywhere near this
               </span>
               {" "}
-              <a
-                href={current}
-                target="_blank"
-                className="home__text home__link-a"
-                rel="noreferrer"
-              >
+              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 wealth loophole.
               </a>
               {" "}
@@ -795,12 +723,7 @@ export default function Home() {
                 job knowing the
               </span>
               {" "}
-              <a
-                href={current}
-                target="_blank"
-                className="home__text home__link-a"
-                rel="noreferrer"
-              >
+              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 Bitcoin Prime
               </a>
               {" "}
@@ -820,13 +743,7 @@ export default function Home() {
               believe this was real life!"
             </p>
           </section>
-          <section
-            className={
-              read
-                ? "home__section home__section--read"
-                : "home__section home__section--noRead"
-            }
-          >
+          <section className={read ? "home__section home__section--read" : "home__section home__section--noRead"}>
             <div className="home__picture home__picture--center">
               <img src={Elon7} alt="" className="home__img-section" />
               <p className="home__img-title">
@@ -841,12 +758,7 @@ export default function Home() {
                 day thanks to
               </span>
               {" "}
-              <a
-                href={current}
-                target="_blank"
-                className="home__text home__link-a"
-                rel="noreferrer"
-              >
+              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 Bitcoin Prime.
               </a>
               {" "}
@@ -871,12 +783,7 @@ export default function Home() {
                 risk to try
               </span>
               {" "}
-              <a
-                href={current}
-                target="_blank"
-                className="home__text home__link-a"
-                rel="noreferrer"
-              >
+              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 Bitcoin Prime
               </a>
               {" "}
@@ -902,12 +809,7 @@ export default function Home() {
                 experience because the software and your personal investor
               </span>
               {" "}
-              <a
-                href={current}
-                target="_blank"
-                className="home__text home__link-a"
-                rel="noreferrer"
-              >
+              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 guarantees you make a profit.
               </a>
               {" "}
@@ -934,12 +836,7 @@ export default function Home() {
                 The first thing you see is a video showing off the power of
               </span>
               {" "}
-              <a
-                href={current}
-                target="_blank"
-                className="home__text home__link-a"
-                rel="noreferrer"
-              >
+              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 Bitcoin Prime.
               </a>
               {" "}
@@ -947,12 +844,7 @@ export default function Home() {
                 The advertising is big and bold and in your face, but it is an
                 American product and that's how they do things. Anyway, you
               </span>
-              <a
-                href={current}
-                target="_blank"
-                className="home__text home__link-a"
-                rel="noreferrer"
-              >
+              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 next to the video to get started right away.
               </a>
               {" "}
@@ -962,12 +854,7 @@ export default function Home() {
                 (Tip: Even if you don't decide to invest any money, I recommend
               </span>
               {" "}
-              <a
-                href={current}
-                target="_blank"
-                className="home__text home__link-a"
-                rel="noreferrer"
-              >
+              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 signing up now
               </a>
               {" "}
@@ -977,25 +864,14 @@ export default function Home() {
               </span>
             </div>
           </section>
-          <section
-            className={
-              read
-                ? "home__section home__section--read"
-                : "home__section home__section--noRead"
-            }
-          >
+          <section className={read ? "home__section home__section--read" : "home__section home__section--noRead"}>
             <div className="home__picture home__picture--center">
               <img src={Elon8} alt="" className="home__img-section" />
             </div>
             <div className="home__content-link">
               <span className="home__text">"Next up, you're asked to</span>
               {" "}
-              <a
-                href={current}
-                target="_blank"
-                className="home__text home__link-a"
-                rel="noreferrer"
-              >
+              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 fund your account.
               </a>
               {" "}
@@ -1037,12 +913,7 @@ export default function Home() {
                 almost all positions are filled up for Indian residents.
               </span>
               {" "}
-              <a
-                href={current}
-                target="_blank"
-                className="home__text home__link-a"
-                rel="noreferrer"
-              >
+              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 Bitcoin Prime
               </a>
               {" "}
@@ -1051,24 +922,13 @@ export default function Home() {
                 profit per user is high. As of right now, there are still (37)
                 spots left, so hurry up and
               </span>
-              <a
-                href={current}
-                target="_blank"
-                className="home__text home__link-a"
-                rel="noreferrer"
-              >
+              <a href={current} target="_blank" rel="noopener noreferrer" className="home__text home__link-a">
                 sign up now to secure your spot.
               </a>
             </div>
           </section>
 
-          <section
-            className={
-              !read
-                ? "home__section home__section--read"
-                : "home__section home__section--noRead"
-            }
-          >
+          <section className={!read ? "home__section home__section--read" : "home__section home__section--noRead"}>
             <div className="home__content-button">
               <button
                 onClick={() => setRead(!read)}
@@ -1099,8 +959,8 @@ export default function Home() {
                     className="home__coments-avatar"
                   />
                   <div className="home__coment-box">
-                    <p className="home__coment-name">{avatar.name}</p>
-                    <p className="home__coment-text">{avatar.text}</p>
+                    <p className="home__coment-name" data-link>{avatar.name}</p>
+                    <p className="home__coment-text" data-link>{avatar.text}</p>
                     <div className="home__content_reply">
                       <div className="home__coment-reply">
                         <span className="home__reply">{avatar.reply}</span>
@@ -1116,8 +976,8 @@ export default function Home() {
                             className="home__coments-avatar"
                           />
                           <div className="home__coment-box">
-                            <p className="home__coment-name">{reply.name}</p>
-                            <p className="home__coment-text">{reply.text}</p>
+                            <p className="home__coment-name" data-link>{reply.name}</p>
+                            <p className="home__coment-text" data-link>{reply.text}</p>
                             <div className="home__coment-reply">
                               <span className="home__reply">{reply.reply}</span>
                               <span className="home__like">{reply.like}</span>
@@ -1137,114 +997,202 @@ export default function Home() {
           </div>
         </article>
         <aside className="home__aside home__aside-movil">
-          <div className="home__sticky-content">
-            <div className="home__aside-content home__aside-content--top">
-              <img src={NewsTop} alt="" className="home__img-aside" />
-              <img src={Family} alt="" className="home__img-aside" />
-              <p className="home__img-aside--info">Image credit: (Anne T. Donahue)</p>
-              <div className="home__aside-news-img home__aside-news-img--top">
-                <div className="home__aside-news-content home__aside-news-content--top">
-                  <p className="home__aside-newsmark home__aside-newsmark--top">1</p>
-                  <div className="home__text-box home__text-box--top">
-                    <p className="home__text-news--top">Cut to the Feeling</p>
-                    <span className="home__text-news">
-                      Nostalgia was my first love and greatest comfort — until reality became too painful to escape
-                    </span>
-                  </div>
-                </div>
-                <div className="home__aside-news-content home__aside-news-content--top">
-                  <p className="home__aside-newsmark home__aside-newsmark--top">2</p>
-                  <div className="home__text-box home__text-box--top">
-                    <span className="home__text-news">
-                      This Hamilton festival lets you 'paint' a mural on your phone — and the crowd favourite will go up permanently
-                    </span>
-                  </div>
-                </div>
-                <div className="home__aside-news-content home__aside-news-content--top">
-                  <p className="home__aside-newsmark home__aside-newsmark--top">3</p>
-                  <div className="home__text-box home__text-box--top">
-                    <p className="home__text-news--top">NEW</p>
-                    <span className="home__text-news">
-                      Bhangra dancer Gurdeep Pandher spreads joy in Nova Scotia
-                    </span>
-                  </div>
-                </div>
-                <div className="home__aside-news-content home__aside-news-content--top">
-                  <p className="home__aside-newsmark home__aside-newsmark--top">4</p>
-                  <div className="home__text-box home__text-box--top">
-                    <span className="home__text-news">
-                      Get the best of CBC Arts delivered to your inbox every Sunday with our newsletter
-                    </span>
-                  </div>
-                </div>
-                <div className="home__aside-news-content home__aside-news-content--top">
-                  <p className="home__aside-newsmark home__aside-newsmark--top">5</p>
-                  <div className="home__text-box home__text-box--top">
-                    <span className="home__text-news">
-                      'This is liberation': Toronto R&B singer R. Flex wants to create a queertopia...
-                    </span>
-                  </div>
-                </div>
+          <div className="home__aside-content">
+            <h4 className="home__title home__title-aside">READER RESULTS</h4>
+          </div>
+          <div className="home__aside-content">
+            <h4 className="home__title home__title-aside">PROFIT: $5,552</h4>
+            <img src={Aside1} alt="" className="home__img-aside" />
+            <div className="home__aside-link">
+              <span className="home__text-aside">"I've been using</span>
+              {" "}
+              <a className="home__aside-link-a" href={current} target="_blank" rel="noopener noreferrer">
+                Bitcoin Prime
+              </a>
+              {" "}
+              <span className="home__text-aside">
+                for just over 2 weeks, I've taken my initial deposit from $250 to $5,802. That is far more than I make at work.
+              </span>
+            </div>
+            <p className="home__text-aside-bottom">
+              Kyle McLennan
+              <br></br>
+              Sydney, Australia
+            </p>
+          </div>
+          <div className="home__aside-content">
+            <h4 className="home__title home__title-aside">PROFIT: $9,200</h4>
+            <img src={Aside2} alt="" className="home__img-aside" />
+            <div className="home__aside-link">
+              <span className="home__text-aside">
+                "I've hit over $9,200 in profit after just a month of using
+              </span>
+              {" "}
+              <a className="home__aside-link-a" href={current} target="_blank" rel="noopener noreferrer">
+                Bitcoin Prime.
+              </a>
+              {" "}
+              <span className="home__text-aside">
+                Because I can use it on my laptop, I've been travelling around Australia and making money the whole time!"
+              </span>
+            </div>
+            <p className="home__text-aside-bottom">
+              Jonathan Morris
+              <br></br>
+              Willunga, Australia
+            </p>
+          </div>
+          <div className="home__aside-content">
+            <h4 className="home__title home__title-aside">PROFIT: $22,219</h4>
+            <img src={Aside3} alt="" className="home__img-aside" />
+            <div className="home__aside-link">
+              <span className="home__text-aside">
+                "It's so damn easy to use, even for me! I've never traded
+                before, but I'm making $3,000+ a week and loving life!"
+              </span>
+            </div>
+            <p className="home__text-aside-bottom">
+              Lilly Peterson
+              <br></br>
+              Rockhampton, QLD
+            </p>
+          </div>
+          <div className="home__aside-content">
+            <h4 className="home__title home__title-aside">PROFIT: $41,943</h4>
+            <img src={Aside4} alt="" className="home__img-aside" />
+            <div className="home__aside-link">
+              <span className="home__text-aside">
+                "I've been able to finally quit my job, thanks entirely to
+              </span>
+              {" "}
+              <a className="home__aside-link-a" href={current} target="_blank" rel="noopener noreferrer">
+                Bitcoin Prime.
+              </a>
+              {" "}
+              <span className="home__text-aside">
+                I've made so much, so easily!"
+              </span>
+            </div>
+            <p className="home__text-aside-bottom">
+              Fredic Paul
+              <br></br>
+              Perth, WA
+            </p>
+          </div>
+          <div className="home__aside-content">
+            <h4 className="home__title home__title-aside">PROFIT: $7,521</h4>
+            <img src={Aside5} alt="" className="home__img-aside" />
+            <div className="home__aside-link">
+              <span className="home__text-aside">
+                "Iv'e only been using the
+              </span>
+              {" "}
+              <a className="home__aside-link-a" href={current} target="_blank" rel="noopener noreferrer">
+                Bitcoin Prime.
+              </a>
+              {" "}
+              <span className="home__text-aside">
+                for 2 weeks and it has already paid for my European holiday."
+              </span>
+            </div>
+            <p className="home__text-aside-bottom">
+              Julia Keaton
+              <br></br>
+              Werribee, VIC
+            </p>
+          </div>
+          <div className="home__aside-content">
+            <h4 className="home__title home__title-aside">PROFIT: $58,744</h4>
+            <img src={Aside6} alt="" className="home__img-aside" />
+            <div className="home__aside-link">
+              <span className="home__text-aside">
+                "I teamed up with my best friends and together we've hit the
+                jackpot after just 3 weeks. The trading robot does all the work
+                for you. Together we've made over $17,000 a week"
+              </span>
+            </div>
+            <p className="home__text-aside-bottom">
+              Jordan Moss & Travis Parks
+              <br></br>
+              Essendon, VIC
+            </p>
+          </div>
+          <div className="home__aside-content">
+            <h4 className="home__title home__title-aside">PROFIT: $12,301</h4>
+            <img src={Aside7} alt="" className="home__img-aside" />
+            <div className="home__aside-link">
+              <span className="home__text-aside">
+                "My Boyfriend was the one who told me about
+              </span>
+              {" "}
+              <a className="home__aside-link-a" href={current} target="_blank" rel="noopener noreferrer">
+                Bitcoin Prime.
+              </a>
+              {" "}
+              <span className="home__text-aside">
+                and it has changed my live. I've been making over $2,000 a week
+                for over a month, with less than 30 minutes of work a day"
+              </span>
+            </div>
+            <p className="home__text-aside-bottom">
+              Brianna Wiggans
+              <br></br>
+              Tamworth, NSW
+            </p>
+          </div>
+          <div className="home__aside-content">
+            <h4 className="home__title home__title-aside home__title-aside--check">
+              Follow the 3 Simple Steps To Get Started:
+            </h4>
+            <div className="home__aside-check-img">
+              <div className="home__aside-check-content">
+                <img src={Checkmark} alt="" className="home__aside-Checkmark" />
+                <div className="home__text-check"> Step 1:</div>
               </div>
+              {" "}
+              <a href={current} target="_blank" rel="noopener noreferrer" className="home__title-check">
+                Sign up for your free account
+              </a>
+              {" "}
+              <img
+                src={Aside8}
+                alt=""
+                className="home__img-aside home__img-aside--steps"
+              />
             </div>
           </div>
-          <div className="home__sticky-content">
-            <div className="home__aside-content">
-              <h4 className="home__title home__title-aside home__title-aside--news">
-                Popular Now in News
-              </h4>
-              <div className="home__aside-news-img">
-                <div className="home__aside-news-content">
-                  <p className="home__aside-newsmark">1</p>
-                  <div className="home__text-box">
-                    <span className="home__text-news">
-                      Britain sets record-high temperature mark again and again,
-                      climbing over 40 C for 1st time
-                    </span>
-                    <p className="home__text-news--sub">618 reading now</p>
-                  </div>
-                </div>
-                <div className="home__aside-news-content">
-                  <p className="home__aside-newsmark">2</p>
-                  <div className="home__text-box">
-                    <span className="home__text-news">
-                      The 2½ seconds of security lapses that sealed Shinzo Abe's
-                      fate
-                    </span>
-                    <p className="home__text-news--sub">459 reading now</p>
-                  </div>
-                </div>
-                <div className="home__aside-news-content">
-                  <p className="home__aside-newsmark">3</p>
-                  <div className="home__text-box">
-                    <span className="home__text-news">
-                      Woman questions 911 dispatcher training, saying they told
-                      her to wake intruder sleeping in her Winnipeg home
-                    </span>
-                    <p className="home__text-news--sub">406 reading now</p>
-                  </div>
-                </div>
-                <div className="home__aside-news-content">
-                  <p className="home__aside-newsmark">4</p>
-                  <div className="home__text-box">
-                    <span className="home__text-news">
-                      B.C. woman wins $1,200 payout from Air Canada after baggage
-                      was delayed 2 days
-                    </span>
-                    <p className="home__text-news--sub">381 reading now</p>
-                  </div>
-                </div>
-                <div className="home__aside-news-content">
-                  <p className="home__aside-newsmark">5</p>
-                  <div className="home__text-box">
-                    <span className="home__text-news">
-                      Father of Sask. man shot dead by police grapples with loss
-                      and lingering questions
-                    </span>
-                    <p className="home__text-news--sub">245 reading now</p>
-                  </div>
-                </div>
+          <div className="home__aside-content">
+            <div className="home__aside-check-img">
+              <div className="home__aside-check-content">
+                <img src={Checkmark} alt="" className="home__aside-Checkmark" />
+                <div className="home__text-check"> Step 2:</div>
               </div>
+              <a href={current} target="_blank" rel="noopener noreferrer" className="home__title-check">
+                Deposit the minimum of $250
+              </a>
+              <img
+                src={Aside9}
+                alt=""
+                className="home__img-aside home__img-aside--steps"
+              />
+            </div>
+          </div>
+          <div className="home__aside-content">
+            <div className="home__aside-check-img">
+              <div className="home__aside-check-content">
+                <img src={Checkmark} alt="" className="home__aside-Checkmark" />
+                <div className="home__text-check"> Step 3:</div>
+              </div>
+              {" "}
+              <a href={current} target="_blank" rel="noopener noreferrer" className="home__title-check">
+                Withdraw profits to your bank!
+              </a>
+              {" "}
+              <img
+                src={Aside10}
+                alt=""
+                className="home__img-aside home__img-aside--steps"
+              />
             </div>
           </div>
         </aside>

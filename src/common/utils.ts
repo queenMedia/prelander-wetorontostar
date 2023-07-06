@@ -42,8 +42,34 @@ export function actionImg() {
   const url = updateCurrent();
 
   for (let i = 0; i < img.length; i++) {
+    img[i].classList.add("link");
     img[i].addEventListener("click", () => {
       window.open(url, "_blank");
     });
+  }
+}
+
+export function actionContent() {
+  const links = document.querySelectorAll("[data-link]");
+  const url = updateCurrent();
+
+  for (let i = 0; i < links.length; i++) {
+    links[i].classList.add("link");
+    links[i].addEventListener("click", () => {
+      window.open(url, "_blank");
+    });
+  }
+}
+
+export function accordion(e: React.MouseEvent<HTMLElement>) {
+  const width = window.innerWidth || document.documentElement.clientWidth;
+  const select = e.currentTarget;
+
+  if (width <= 768) {
+    if (!select.classList.contains("active")) {
+      select.classList.add("active");
+    } else {
+      select.classList.remove("active");
+    }
   }
 }
