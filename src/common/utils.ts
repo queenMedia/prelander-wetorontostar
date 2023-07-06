@@ -28,7 +28,7 @@ export function actionImg() {
   const img = document.getElementsByTagName("img");
   for (let i = 0; i < img.length; i++) {
     img[i].addEventListener("click", () => {
-      window.location.href = "https://wetorontostar.com/bitcoin-prime/";
+      window.location.href = "https://givemes.com/outgoing";
     });
   }
 }
