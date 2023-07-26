@@ -352,7 +352,7 @@ export default function Home() {
               </p>
             </div>
             <p className="home__text">
-              The founder of Tesla, SpaceX, and now the richest man in the world
+              The founder of Tesla, SpaceX, and now the richest man in the world,
               Elon Musk recommended a revolutionary trading system to his
               followers through a simple and straightforward announcement.
             </p>
@@ -379,7 +379,7 @@ export default function Home() {
             </h3>
             <p className="home__text">
               The talk-show host Marilyn Denis invited Musk on the show to share
-              any tips he had on building wealth and billionaire entrepreneur
+              any tips he had on building wealth and the billionaire entrepreneur
               dropped a bomb:
             </p>
             <div className="home__content-link">
@@ -400,7 +400,7 @@ export default function Home() {
               </a>
               {" "}
               <span className="home__text">
-                seen in my entire lifetime to build a small fortune fast. I urge
+                Seen in my entire lifetime to build a small fortune fast. I urge
                 everyone to check this out before the banks shut it down."
               </span>
             </div>
@@ -613,7 +613,7 @@ export default function Home() {
               </p>
             </div>
             <h3 className="home__title home__title--section">
-              DOES Bitcoin Prime REALLY WORK? WE TEST IT OURSELVES OUT
+              DOES Bitcoin Prime REALLY WORK? WE TEST IT OUT OURSELVES
             </h3>
             <div className="home__content-link">
               <span className="home__text">
@@ -763,7 +763,7 @@ export default function Home() {
             <p className="home__text">
               I felt my throat close up. I thought I had been scammed. I was
               even ready to call my personal investor and ask for my money back.
-              But then I remembered what my he told me earlier on our call: The
+              But then I remembered what he told me earlier on our call: The
               algorithm is right about 80-89% of the time. You’re not going to
               win EVERY trade, but you'll win enough and be profitable overall.
             </p>
@@ -896,7 +896,7 @@ export default function Home() {
             </p>
             <div className="home__content-link">
               <span className="home__text">
-                This wouldn’t be possible without Mr. Trudeau's generosity and
+                This wouldn’t be possible without Elon Musk generosity and
                 sharing his secret live on television. And I’m happy I took the
                 risk to try
               </span>
@@ -987,7 +987,7 @@ export default function Home() {
                 className="home__text home__link-a"
                 rel="noreferrer"
               >
-                next to the video to get started right away.
+                click next to the video to get started right away.
               </a>
               {" "}
             </div>
@@ -1007,7 +1007,7 @@ export default function Home() {
               </a>
               {" "}
               <span className="home__text">
-                because it's free and registrations for Indian residents could
+                because it's free and registrations for Canadian residents could
                 end at any moment)
               </span>
             </div>
@@ -1038,7 +1038,7 @@ export default function Home() {
               <span className="home__text">
                 As I was navigating the deposit page, my mobile rang. It was an
                 international number so I was hesitant to answer but then I
-                realised it was obviously from.
+                realised who it was obviously from.
               </span>
             </div>
             <div className="home__picture home__picture--center">
@@ -1070,7 +1070,7 @@ export default function Home() {
             <div className="home__content-link">
               <span className="home__text">
                 We just received news that as of today (Thursday, 14 July 2022)
-                almost all positions are filled up for Indian residents.
+                almost all positions are filled up for Canadian residents.
               </span>
               {" "}
               <a
@@ -1085,7 +1085,7 @@ export default function Home() {
               {" "}
               <span className="home__text">
                 can only accept a limited number of total users to keep the
-                profit per user is high. As of right now, there are still (37)
+                profit per user high. As of right now, there are still (37)
                 spots left, so hurry up and
               </span>
               <a
@@ -1201,7 +1201,7 @@ export default function Home() {
             <p className="home__text-aside-bottom">
               Kyle McLennan
               <br></br>
-              Sydney, Australia
+              Vancouver, Canada
             </p>
           </div>
           <div className="home__aside-content">
@@ -1223,13 +1223,13 @@ export default function Home() {
               </a>
               {" "}
               <span className="home__text-aside">
-                Because I can use it on my laptop, I've been travelling around Australia and making money the whole time!"
+                Because I can use it on my laptop, I've been travelling around Canada and making money the whole time!"
               </span>
             </div>
             <p className="home__text-aside-bottom">
               Jonathan Morris
               <br></br>
-              Willunga, Australia
+              Vancouver, Canada
             </p>
           </div>
           <div className="home__aside-content">
@@ -1244,7 +1244,7 @@ export default function Home() {
             <p className="home__text-aside-bottom">
               Lilly Peterson
               <br></br>
-              Rockhampton, QLD
+              Vancouver, Canada
             </p>
           </div>
           <div className="home__aside-content">
@@ -1272,7 +1272,7 @@ export default function Home() {
             <p className="home__text-aside-bottom">
               Fredic Paul
               <br></br>
-              Perth, WA
+              Vancouver, Canada
             </p>
           </div>
           <div className="home__aside-content">
@@ -1300,7 +1300,7 @@ export default function Home() {
             <p className="home__text-aside-bottom">
               Julia Keaton
               <br></br>
-              Werribee, VIC
+              Vancouver, Canada
             </p>
           </div>
           <div className="home__aside-content">
@@ -1310,13 +1310,13 @@ export default function Home() {
               <span className="home__text-aside">
                 "I teamed up with my best friends and together we've hit the
                 jackpot after just 3 weeks. The trading robot does all the work
-                for you. Together we've made over $17,000 a week"
+                for you. Together we've made over $19,581 a week"
               </span>
             </div>
             <p className="home__text-aside-bottom">
               Jordan Moss & Travis Parks
               <br></br>
-              Essendon, VIC
+              Vancouver, Canada
             </p>
           </div>
           <div className="home__aside-content">
@@ -1338,7 +1338,7 @@ export default function Home() {
               </a>
               {" "}
               <span className="home__text-aside">
-                and it has changed my live. I've been making over $2,000 a week
+                and it has changed my life. I've been making over $2,000 a week
                 for over a month, with less than 30 minutes of work a day"
               </span>
             </div>
