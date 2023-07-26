@@ -27,7 +27,7 @@ i18n
       escapeValue: false
     },
     backend: {
-      loadPath: "/cbc-iq/locales/{{lng}}/{{ns}}.json"
+      loadPath: "/cbc-prime/locales/{{lng}}/{{ns}}.json"
     }
   });
 
