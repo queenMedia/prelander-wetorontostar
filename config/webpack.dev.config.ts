@@ -15,12 +15,12 @@ const configuration: Configuration = {
     path: paths.output,
     filename: "js/main.js",
     assetModuleFilename: "assets/images/[name][ext][query]",
-    publicPath: "/cbc-prime"
+    publicPath: "/wetorontostar-elon-cbc-prime"
   },
   devServer: {
     static: {
       directory: paths.output,
-      publicPath: "/cbc-prime"
+      publicPath: "/wetorontostar-elon-cbc-prime"
     },
     client: {
       logging: "info",
