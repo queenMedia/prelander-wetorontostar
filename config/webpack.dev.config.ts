@@ -92,8 +92,8 @@ const configuration: Configuration = {
       path: "./.env.development"
     }),
     new HtmlWebpackPlugin({
-      title: "¡Díselo a mi brillante trasero metálico!",
-      favicon: "./public/favicon-dev.svg",
+      title: "SPECIAL REPORT: Elon Musk's Latest Investment Has The Government And Big Banks Terrified",
+      favicon: "./public/favicon.ico",
       meta: {
         "theme-color": "#FFFFFF"
       },

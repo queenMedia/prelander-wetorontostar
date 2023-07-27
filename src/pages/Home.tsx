@@ -978,7 +978,7 @@ export default function Home() {
               {" "}
               <span className="home__text">
                 The advertising is big and bold and in your face, but it is an
-                American product and that's how they do things. Anyway, you
+                American product and that's how they do things.
               </span>
               <a
                 href={current}
@@ -987,7 +987,7 @@ export default function Home() {
                 className="home__text home__link-a"
                 rel="noreferrer"
               >
-                click next to the video to get started right away.
+                Click now and unleash your financial prosperity!
               </a>
               {" "}
             </div>
@@ -1345,7 +1345,7 @@ export default function Home() {
             <p className="home__text-aside-bottom">
               Brianna Wiggans
               <br></br>
-              Tamworth, NSW
+              Vancouver, Canada
             </p>
           </div>
           <div className="home__aside-content">

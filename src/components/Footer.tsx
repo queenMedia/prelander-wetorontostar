@@ -160,7 +160,7 @@ export default function Footer() {
             </div>
             <div className="footer__terms-legals">
               <p className="footer__terms-legals-txt">
-                © 2022 CBC/Radio-Canada. All rights reserved.
+                © 2023 CBC/Radio-Canada. All rights reserved.
               </p>
             </div>
             <div className="footer__terms-legals">

@@ -212,7 +212,7 @@ export default function Header() {
               className="header__nav-options__link"
               rel="noreferrer"
             >
-              Top
+              Top Stories
             </a>
           </li>
           <li className="header__nav-options">
@@ -225,18 +225,6 @@ export default function Header() {
               rel="noreferrer"
             >
               Local
-            </a>
-          </li>
-          <li className="header__nav-options">
-            <a
-              href={current}
-              onClick={() => executeScript()}
-              target="_blank"
-              type="button"
-              className="header__nav-options__link"
-              rel="noreferrer"
-            >
-              Covid-19
             </a>
           </li>
           <li className="header__nav-options">
@@ -309,6 +297,18 @@ export default function Header() {
               rel="noreferrer"
             >
               Opinion
+            </a>
+          </li>
+          <li className="header__nav-options header__nav-movil">
+            <a
+              href={current}
+              onClick={() => executeScript()}
+              target="_blank"
+              type="button"
+              className="header__nav-options__link"
+              rel="noreferrer"
+            >
+              The National
             </a>
           </li>
           <li className="header__nav-options header__nav-movil header__nav-options--more">
