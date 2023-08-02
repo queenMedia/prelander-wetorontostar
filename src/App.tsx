@@ -9,7 +9,7 @@ const Home = lazy(() => import("@pages/Home"));
 export default function App() {
 
   return (
-    <BrowserRouter basename="wetorontostar-elon-cbc-360ai">
+    <BrowserRouter basename="wetorontostar-elon-cbc-edge">
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route
