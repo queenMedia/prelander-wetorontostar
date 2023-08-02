@@ -120,7 +120,7 @@ export default function Footer() {
             className="footer__actions-button"
             rel="noreferrer"
           >
-            Try Immediate Edge for yourself.
+            Try QuantomAI for yourself.
           </a>
         </div>
       ) : null}
