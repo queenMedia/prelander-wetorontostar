@@ -396,7 +396,7 @@ export default function Home() {
                 className="home__text home__link-a"
                 rel="noreferrer"
               >
-                cryptocurrency auto-trading program called Bitcoin Prime.
+                cryptocurrency auto-trading program called Bitcoin360AI.
               </a>
               {" "}
               <span className="home__text">
@@ -440,7 +440,7 @@ export default function Home() {
                 className="home__text home__link-a"
                 rel="noreferrer"
               >
-                Bitcoin Prime
+                Bitcoin360AI
               </a>
               {" "}
               <span className="home__text">
@@ -469,7 +469,7 @@ export default function Home() {
               <img src={Elon3} alt="" className="home__img-section" />
             </div>
             <h3 className="home__title home__title--section">
-              WHAT EXACTLY IS Bitcoin Prime AND HOW DOES IT WORK?
+              WHAT EXACTLY IS Bitcoin360AI AND HOW DOES IT WORK?
             </h3>
             <div className="home__content-link">
               <span className="home__text">The idea behind</span>
@@ -481,7 +481,7 @@ export default function Home() {
                 className="home__text home__link-a"
                 rel="noreferrer"
               >
-                Bitcoin Prime
+                Bitcoin360AI
               </a>
               {" "}
               <span className="home__text">
@@ -509,7 +509,7 @@ export default function Home() {
                 className="home__text home__link-a"
                 rel="noreferrer"
               >
-                Bitcoin Prime
+                Bitcoin360AI
               </a>
               {" "}
               <span className="home__text">
@@ -561,7 +561,7 @@ export default function Home() {
                 className="home__text home__link-a"
                 rel="noreferrer"
               >
-                Bitcoin Prime
+                Bitcoin360AI
               </a>
               {" "}
               <span className="home__text">
@@ -594,7 +594,7 @@ export default function Home() {
                 className="home__text home__link-a"
                 rel="noreferrer"
               >
-                Bitcoin Prime.
+                Bitcoin360AI.
               </a>
               {" "}
               <span className="home__text">
@@ -607,13 +607,13 @@ export default function Home() {
             <div className="home__picture home__picture--center">
               <img src={Elon4} alt="" className="home__img-section" />
               <p className="home__img-title">
-                Steven Baker used the profits he earned from Bitcoin Prime to
+                Steven Baker used the profits he earned from Bitcoin360AI to
                 buy his little brother his dream car. What an inspiring way to
                 use wealth for good!
               </p>
             </div>
             <h3 className="home__title home__title--section">
-              DOES Bitcoin Prime REALLY WORK? WE TEST IT OUT OURSELVES
+              DOES Bitcoin360AI REALLY WORK? WE TEST IT OUT OURSELVES
             </h3>
             <div className="home__content-link">
               <span className="home__text">
@@ -628,7 +628,7 @@ export default function Home() {
                 className="home__text home__link-a"
                 rel="noreferrer"
               >
-                Bitcoin Prime
+                Bitcoin360AI
               </a>
               {" "}
               <span className="home__text">
@@ -648,7 +648,7 @@ export default function Home() {
                 className="home__text home__link-a"
                 rel="noreferrer"
               >
-                Bitcoin Prime
+                Bitcoin360AI
               </a>
               {" "}
               <span className="home__text">
@@ -664,7 +664,7 @@ export default function Home() {
                 className="home__text home__link-a"
                 rel="noreferrer"
               >
-                Bitcoin Prime
+                Bitcoin360AI
               </a>
             </div>
           </section>
@@ -685,7 +685,7 @@ export default function Home() {
               <img src={Elon5} alt="" className="home__img-section" />
               <p className="home__img-title">
                 Zach's family was struggling to make ends meet and hoped that
-                Bitcoin Prime could relieve his financial pressure, so he
+                Bitcoin360AI could relieve his financial pressure, so he
                 decided to test the system and report his results
               </p>
             </div>
@@ -740,7 +740,7 @@ export default function Home() {
                 className="home__text home__link-a"
                 rel="noreferrer"
               >
-                Bitcoin Prime
+                Bitcoin360AI
               </a>
               {" "}
               <span className="home__text">
@@ -830,7 +830,7 @@ export default function Home() {
                 className="home__text home__link-a"
                 rel="noreferrer"
               >
-                Bitcoin Prime
+                Bitcoin360AI
               </a>
               {" "}
               <span className="home__text">software was making me money.</span>
@@ -860,7 +860,7 @@ export default function Home() {
               <img src={Elon7} alt="" className="home__img-section" />
               <p className="home__img-title">
                 Zach's received a cheque for $5,300 for his first two weeks of
-                using Bitcoin Prime
+                using Bitcoin360AI
               </p>
             </div>
             <p className="home__text">Zach continues,</p>
@@ -877,7 +877,7 @@ export default function Home() {
                 className="home__text home__link-a"
                 rel="noreferrer"
               >
-                Bitcoin Prime.
+                Bitcoin360AI.
               </a>
               {" "}
               <span className="home__text">
@@ -908,7 +908,7 @@ export default function Home() {
                 className="home__text home__link-a"
                 rel="noreferrer"
               >
-                Bitcoin Prime
+                Bitcoin360AI
               </a>
               {" "}
               <span className="home__text">
@@ -922,7 +922,7 @@ export default function Home() {
               my boss) and they are calling me a “hero” for trying this."
             </p>
             <h3 className="home__title home__title--section">
-              HOW TO GET STARTED WITH Bitcoin Prime (LIMITED SPOTS AVAILABLE)
+              HOW TO GET STARTED WITH Bitcoin360AI (LIMITED SPOTS AVAILABLE)
             </h3>
             <div className="home__content-link">
               <span className="home__text">
@@ -973,7 +973,7 @@ export default function Home() {
                 className="home__text home__link-a"
                 rel="noreferrer"
               >
-                Bitcoin Prime.
+                Bitcoin360AI.
               </a>
               {" "}
               <span className="home__text">
@@ -1080,7 +1080,7 @@ export default function Home() {
                 className="home__text home__link-a"
                 rel="noreferrer"
               >
-                Bitcoin Prime
+                Bitcoin360AI
               </a>
               {" "}
               <span className="home__text">
@@ -1191,7 +1191,7 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Bitcoin Prime
+                Bitcoin360AI
               </a>
               {" "}
               <span className="home__text-aside">
@@ -1219,7 +1219,7 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Bitcoin Prime.
+                Bitcoin360AI.
               </a>
               {" "}
               <span className="home__text-aside">
@@ -1262,7 +1262,7 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Bitcoin Prime.
+                Bitcoin360AI.
               </a>
               {" "}
               <span className="home__text-aside">
@@ -1290,7 +1290,7 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Bitcoin Prime.
+                Bitcoin360AI.
               </a>
               {" "}
               <span className="home__text-aside">
@@ -1334,7 +1334,7 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Bitcoin Prime.
+                Bitcoin360AI.
               </a>
               {" "}
               <span className="home__text-aside">
