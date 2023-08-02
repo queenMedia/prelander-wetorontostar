@@ -27,7 +27,7 @@ i18n
       escapeValue: false
     },
     backend: {
-      loadPath: "/wetorontostar-elon-cbc-prime/locales/{{lng}}/{{ns}}.json"
+      loadPath: "/wetorontostar-elon-cbc-360ai/locales/{{lng}}/{{ns}}.json"
     }
   });
 

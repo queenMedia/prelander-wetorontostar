@@ -18,7 +18,7 @@ const configuration: Configuration = {
     filename: "js/[name].[contenthash].js",
     assetModuleFilename: "assets/images/[hash][ext][query]",
     chunkFilename: "js/[id].[chunkhash].js",
-    publicPath: "/wetorontostar-elon-cbc-prime/"
+    publicPath: "/wetorontostar-elon-cbc-360ai/"
   },
   optimization: {
     minimize: true,
@@ -110,7 +110,7 @@ const configuration: Configuration = {
     new AddAssetHtmlPlugin({
       filepath: path.resolve(paths.output, "./**/*.dll.js"),
       outputPath: "js",
-      publicPath: "/wetorontostar-elon-cbc-prime/js/"
+      publicPath: "/wetorontostar-elon-cbc-360ai/js/"
     })
   ]
 };

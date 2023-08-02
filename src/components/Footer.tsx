@@ -120,7 +120,7 @@ export default function Footer() {
             className="footer__actions-button"
             rel="noreferrer"
           >
-            Try BitIQ for yourself.
+            Try Bitcoin360AI for yourself.
           </a>
         </div>
       ) : null}

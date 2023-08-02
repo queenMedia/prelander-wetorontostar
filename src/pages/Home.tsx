@@ -320,7 +320,7 @@ export default function Home() {
 
   return (
     <>
-      <Modal
+      {/* <Modal
         open={modal}
         onClose={toggleModal}
         config={{
@@ -328,7 +328,7 @@ export default function Home() {
         }}
       >
         {() => <PopUp />}
-      </Modal>
+      </Modal> */}
 
       <main className="home">
         <article className="home__content-text">
