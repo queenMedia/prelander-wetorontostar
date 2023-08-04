@@ -295,7 +295,6 @@ const PopUp = () => {
         type="button"
         className="home__popup-action"
         rel="noreferrer"
-        style={{ backgroundColor: "#fece01", color: "#FFF", borderColor: "transparent" }}
       >
         Start Now
       </a>
