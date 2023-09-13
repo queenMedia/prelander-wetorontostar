@@ -27,7 +27,7 @@ i18n
       escapeValue: false
     },
     backend: {
-      loadPath: "/cbc-iq/locales/{{lng}}/{{ns}}.json"
+      loadPath: "/canada/english/cbc-iq/locales/{{lng}}/{{ns}}.json"
     }
   });
 

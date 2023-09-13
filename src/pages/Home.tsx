@@ -718,14 +718,14 @@ export default function Home() {
             </div>
             <p className="home__text">
               My personal investor even promised that if I lose even a single
-              dime, he would promptly refund my $400 deposit. That's how
+              dime, he would promptly refund my $250 deposit. That's how
               confident he was this was going to change my life. Now that’s
               customer service beyond anything I’ve seen and no wonder banks are
               scared.
             </p>
             <p className="home__text">
               Once I received access to the platform, I deposited my initial
-              investment of $400. That's about is what my family spends on junk
+              investment of $250. That's about is what my family spends on junk
               food every month, so I decided to stop taking us to fast food for
               a month. Now we can be healthy, plus have the opportunity to get
               rich.
@@ -756,7 +756,7 @@ export default function Home() {
               ZACH'S REAL TIME RESULTS WITH THE SYSTEM
             </h3>
             <p className="home__text">
-              "Within 1 hour of depositing $400, the software started trading
+              "Within 1 hour of depositing $250, the software started trading
               for me. To be honest, I was nervous it would lose all of my money.
               And sure enough, my first trade was a $25 loss!
             </p>
@@ -812,7 +812,7 @@ export default function Home() {
               {" "}
               <span className="home__text">
                 By the end of the day, I had made over $754 in profit, not bad
-                from a starting investment of $400 ! I was so excited I barely
+                from a starting investment of $250 ! I was so excited I barely
                 got any sleep.
               </span>
             </div>
@@ -1049,7 +1049,7 @@ export default function Home() {
               was great. He took me through the entire funding process. They
               accept all major credit cards like Visa, MasterCard and American
               Express. I went ahead and deposited the minimum amount which is
-              $400.
+              $250.
             </p>
             <div className="home__picture home__picture--center">
               <img src={Elon10} alt="" className="home__img-section" />

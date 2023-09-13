@@ -15,12 +15,12 @@ const configuration: Configuration = {
     path: paths.output,
     filename: "js/main.js",
     assetModuleFilename: "assets/images/[name][ext][query]",
-    publicPath: "/cbc-iq"
+    publicPath: "/canada/english/cbc-iq/"
   },
   devServer: {
     static: {
       directory: paths.output,
-      publicPath: "/cbc-iq"
+      publicPath: "/canada/english/cbc-iq/"
     },
     client: {
       logging: "info",
